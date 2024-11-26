@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smit Hospital</title>
+    <!-- TAILWIND CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- GOOGLE FONTS -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Train+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FONT AWESOME CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="bg-white">
+    <!-------------------- SECTION 1:HEADER & HERO SECTION START -------------------->
+    <header class="bg-white shadow">
+      <div
+        class="container mx-auto px-4 flex items-center justify-between py-4"
+      >
+        <h1 class="text-2xl font-bold text-blue-600">
+          <img src="assets/images/logo.png" alt="" class="src" />
+        </h1>
+        <nav class="space-x-4 text-gray-700">
+          <a href="index.html" class="hover:text-blue-600 font-semibold">Home</a>
+          <a href="aboutus.html" class="hover:text-blue-600 font-semibold">About Us</a>
+          <a href="services.html" class="hover:text-blue-600 font-semibold">Services</a>
+          <a href="#" class="hover:text-blue-600 font-semibold">Gallery</a>
+          <a href="#" class="hover:text-blue-600 font-semibold">Doctors</a>
+          <a href="#" class="hover:text-blue-600 font-semibold">Blog</a>
+          <a href="#" class="hover:text-blue-600 font-semibold">Contact Us</a>
+        </nav>
+        <a
+          href="#"
+          class="bg-blue-600 text-white font-semibold px-4 py-2 rounded-md shadow hover:brightness-90"
+          style="background: linear-gradient(180deg, #094495 0%, #094495 100%)"
+        >
+          Book Appointment <i class="fa-solid fa-arrow-right-long"></i>
+        </a>
+      </div>
+    </header>
+       <!-------------------- SERVICE SECTION START -------------------->
+       <section
+       class="relative bg-blue-50"
+       style="height: 650px; background-size: cover; background-position: center;"
+     >
+       <!-- Background Image -->
+       <div
+         class="absolute inset-0"
+         style="
+           background-image: url('assets/images/aboutus-main.png');
+           background-size: cover;
+           background-position: center;
+         "
+       ></div>
+ 
+       <!-- Content -->
+       <div
+         class="container mx-auto px-4 relative z-10 flex items-center justify-start h-full"
+       >
+         <!-- Text Content -->
+           <h3 class="text-7xl font-semibold text-gray-800 mb-4">Services</h3>
+          
+       </div>
+     </section>
+    <!-------------------- SECTION 1:HEADER & HERO SECTION END -------------------->
+
+    <!-------------------- SECTION 2:SERVICE OFFER SECTION START -------------------->
+    <section class="bg-white py-16">
+        <div class="container mx-auto text-center">
+          <h2 class="text-3xl font-bold text-gray-800 mb-8">
+            Explore Our <span class="text-green-600">Offerings</span>
+          </h2>
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-4 justify-items-center">
+            <!-- Delivery Box -->
+            <div
+              class="w-[230px] h-[210px] bg-[#094495] rounded-lg shadow-lg p-6 flex flex-col items-center justify-center text-white"
+            >
+              <div class="w-12 h-12 flex items-center justify-center rounded-full mb-4">
+                <i class="fa-solid fa-truck text-white text-4xl"></i>
+              </div>
+              <h3 class="font-bold text-lg">Delivery</h3>
+            </div>
+            <!-- Adolescence Box -->
+            <div
+              class="w-[230px] h-[210px] bg-white rounded-lg shadow-lg p-6 flex flex-col items-center justify-center hover:scale-105 transition-transform duration-300"
+            >
+              <div class="w-12 h-12 flex items-center justify-center rounded-full mb-4">
+                <i class="fa-solid fa-user text-blue-600 text-4xl"></i>
+              </div>
+              <h3 class="font-bold text-lg text-gray-800">Adolescence</h3>
+            </div>
+            <!-- Sonography Box -->
+            <div
+              class="w-[230px] h-[210px] bg-white rounded-lg shadow-lg p-6 flex flex-col items-center justify-center hover:scale-105 transition-transform duration-300"
+            >
+              <div class="w-12 h-12 flex items-center justify-center rounded-full mb-4">
+                <i class="fa-solid fa-stethoscope text-blue-600 text-4xl"></i>
+              </div>
+              <h3 class="font-bold text-lg text-gray-800">Sonography</h3>
+            </div>
+            <!-- Family Planning Box -->
+            <div
+              class="w-[230px] h-[210px] bg-white rounded-lg shadow-lg p-6 flex flex-col items-center justify-center hover:scale-105 transition-transform duration-300"
+            >
+              <div class="w-12 h-12 flex items-center justify-center rounded-full mb-4">
+                <i class="fa-solid fa-heart text-blue-600 text-4xl"></i>
+              </div>
+              <h3 class="font-bold text-lg text-gray-800">Family Planning</h3>
+            </div>
+            <!-- Menopausal Box -->
+            <div
+              class="w-[230px] h-[210px] bg-white rounded-lg shadow-lg p-6 flex flex-col items-center justify-center hover:scale-105 transition-transform duration-300"
+            >
+              <div class="w-12 h-12 flex items-center justify-center rounded-full mb-4">
+                <i class="fa-solid fa-user-circle text-blue-600 text-4xl"></i>
+              </div>
+              <h3 class="font-bold text-lg text-gray-800">Menopausal</h3>
+            </div>
+            <!-- IVF Box -->
+            <div
+              class="w-[230px] h-[210px] bg-white rounded-lg shadow-lg p-6 flex flex-col items-center justify-center hover:scale-105 transition-transform duration-300"
+            >
+              <div class="w-12 h-12 flex items-center justify-center rounded-full mb-4">
+                <i class="fa-solid fa-vial text-blue-600 text-4xl"></i>
+              </div>
+              <h3 class="font-bold text-lg text-gray-800">IVF (Lab Tie-Up)</h3>
+            </div>
+            <!-- Gynecology Box -->
+            <div
+              class="w-[230px] h-[210px] bg-white rounded-lg shadow-lg p-6 flex flex-col items-center justify-center hover:scale-105 transition-transform duration-300"
+            >
+              <div class="w-12 h-12 flex items-center justify-center rounded-full mb-4">
+                <i class="fa-solid fa-female text-blue-600 text-4xl"></i>
+              </div>
+              <h3 class="font-bold text-lg text-gray-800">Gynecology</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    <!-------------------- SECTION 2:SERVICE OFFER SECTION END -------------------->
+
+    <!-------------------- SECTION 3:FREE SERVICE SECTION START -------------------->
+    <section class="bg-white py-16">
+        <div class="container mx-auto">
+          <h2 class="text-3xl font-bold text-gray-800 text-center mb-10">
+            Our <span class="text-green-600">Free Service</span>
+          </h2>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-10">
+            <!-- Left Column -->
+            <div class="flex flex-col items-center">
+              <!-- Tab Section -->
+              <div class="bg-white shadow-md rounded-lg overflow-hidden w-[390px]">
+                <div class="flex flex-col">
+                  <button class="text-left px-6 py-4 bg-[#094495] text-white font-medium hover:bg-blue-600 transition">
+                    Garbh Sanskar Kendra
+                  </button>
+                  <button class="text-left px-6 py-4 bg-gray-100 text-gray-800 font-medium hover:bg-gray-200 transition">
+                    Menopause OPD
+                  </button>
+                  <button class="text-left px-6 py-4 bg-gray-100 text-gray-800 font-medium hover:bg-gray-200 transition">
+                    Adolescence
+                  </button>
+                  <button class="text-left px-6 py-4 bg-gray-100 text-gray-800 font-medium hover:bg-gray-200 transition">
+                    Physiotherapy
+                  </button>
+                </div>
+              </div>
+      
+              <!-- Image Section -->
+              <div class="rounded-lg overflow-hidden mt-6">
+                <img src="assets/images/baby.png" alt="Baby Image" class="w-[390px] h-[472px] shadow-md" />
+              </div>
+            </div>
+      
+            <!-- Right Column -->
+            <div class="flex flex-col items-center">
+              <!-- Anatomy Image -->
+              <div class="mb-6">
+                <img src="assets/images/anatomy.png" alt="Anatomy Image" class="w-[467px] h-auto rounded-lg shadow-md" />
+              </div>
+              <!-- Description Section -->
+              <div class="w-[467px]">
+                <p class="text-gray-600 leading-relaxed mb-4">
+                  The Sanskrit Word - "Garbh" means Foetus and "Sanskar" means Educating the Mind. It is traditionally
+                  believed that a child's mental & behavioral development starts in the womb as it can be influenced by the
+                  Mother's emotional state while she carries the baby.
+                </p>
+                <p class="font-bold text-gray-800 mb-2">Garbh Sanskar includes:</p>
+                <ul class="space-y-2 text-gray-600">
+                  <li class="flex items-center">
+                    <i class="fa-solid fa-circle-check text-blue-600 mr-3"></i>
+                    Month wise Anti-natal care, Diet & regime plan according to month of pregnancy
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fa-solid fa-circle-check text-blue-600 mr-3"></i>
+                    Music therapy (advice of listening good classical & spiritual music)
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fa-solid fa-circle-check text-blue-600 mr-3"></i>
+                    Yoga Sana
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fa-solid fa-circle-check text-blue-600 mr-3"></i>
+                    Mantra chanting
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fa-solid fa-circle-check text-blue-600 mr-3"></i>
+                    Specific liner & textile clothing.
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fa-solid fa-circle-check text-blue-600 mr-3"></i>
+                    Counselling, etc.
+                  </li>
+                </ul>
+                <p class="mt-4 text-gray-600">
+                  Smit Hospital provides all above tasks during "Garbh – Sanskar" sessions.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    <!-------------------- SECTION 3:FREE SERVICE SECTION END -------------------->
+
+    <!-------------------- SECTION 4:FACILITIES SECTION START -------------------->
+    <section class="bg-white py-16">
+        <div class="container mx-auto text-center">
+          <h2 class="text-3xl font-bold text-gray-800">
+            Our <span class="text-green-600">Facilities</span>
+          </h2>
+          <p class="text-gray-500 mt-2">
+            Our facilities add a personal touch to help make your Smit Hospital experience comfortable, pleasant, and personalized.
+          </p>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-10">
+            <!-- Facility Box 1 -->
+            <div class="border rounded-lg shadow-md p-6 flex flex-col items-center">
+              <i class="fa-solid fa-envelope text-blue-500 text-4xl mb-4"></i>
+              <h3 class="text-lg font-semibold text-gray-800">Message For Delivery</h3>
+            </div>
+            <!-- Facility Box 2 -->
+            <div class="border rounded-lg shadow-md p-6 flex flex-col items-center">
+              <i class="fa-solid fa-utensils text-blue-500 text-4xl mb-4"></i>
+              <h3 class="text-lg font-semibold text-gray-800">Daily Snacks For Patient</h3>
+            </div>
+            <!-- Facility Box 3 -->
+            <div class="border rounded-lg shadow-md p-6 flex flex-col items-center">
+              <i class="fa-solid fa-briefcase text-blue-500 text-4xl mb-4"></i>
+              <h3 class="text-lg font-semibold text-gray-800">Himalayan Baby Kit For New Born Baby</h3>
+            </div>
+            <!-- Facility Box 4 -->
+            <div class="border rounded-lg shadow-md p-6 flex flex-col items-center">
+              <i class="fa-solid fa-gift text-blue-500 text-4xl mb-4"></i>
+              <h3 class="text-lg font-semibold text-gray-800">Gift For Mother</h3>
+            </div>
+            <!-- Facility Box 5 -->
+            <div class="border rounded-lg shadow-md p-6 flex flex-col items-center">
+              <i class="fa-solid fa-pills text-blue-500 text-4xl mb-4"></i>
+              <h3 class="text-lg font-semibold text-gray-800">24*7 Pharmacy</h3>
+            </div>
+            <!-- Facility Box 6 -->
+            <div class="border rounded-lg shadow-md p-6 flex flex-col items-center">
+              <i class="fa-solid fa-egg text-blue-500 text-4xl mb-4"></i>
+              <h3 class="text-lg font-semibold text-gray-800">Women Who Want To Freeze Their Eggs</h3>
+            </div>
+            <!-- Facility Box 7 -->
+            <div class="border rounded-lg shadow-md p-6 flex flex-col items-center">
+              <i class="fa-solid fa-flask text-blue-500 text-4xl mb-4"></i>
+              <h3 class="text-lg font-semibold text-gray-800">Laboratory</h3>
+            </div>
+            <!-- Facility Box 8 -->
+            <div class="border rounded-lg shadow-md p-6 flex flex-col items-center">
+              <i class="fa-solid fa-baby text-blue-500 text-4xl mb-4"></i>
+              <h3 class="text-lg font-semibold text-gray-800">Born Baby Welcome Celebration</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    <!-------------------- SECTION 4:FACILITIES SECTION END -------------------->
+
+    
+    <!-------------------- SECTION 5: FOOTER SECTION START -------------------->
+    <footer class="bg-gray-100 py-10">
+        <!-- Newsletter Subscription Section -->
+        <div
+          class="w-2/5 mx-auto rounded-lg text-white py-8"
+          style="background: #094495"
+        >
+          <div
+            class="container px-4 text-center lg:text-left flex flex-col lg:flex-row items-center justify-between gap-6"
+          >
+            <h3 class="text-xl font-bold">Subscribe To Our Newsletter</h3>
+            <div class="flex items-center w-full lg:w-auto">
+              <input
+                type="email"
+                placeholder="Enter your email address"
+                class="w-full lg:w-80 px-4 py-2 rounded-l-md focus:outline-none text-gray-700"
+              />
+              <button
+                class="bg-blue-800 hover:bg-blue-900 px-6 py-2 text-white rounded-r-md font-medium"
+                style="background: #072854"
+              >
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Footer Main Content -->
+        <div class="container mx-auto px-4">
+          <!-- First Section: Logo and Social Icons -->
+          <div
+            class="flex flex-col lg:flex-row justify-between items-center mt-6 mb-4"
+          >
+            <div class="flex flex-col items-center lg:items-start">
+              <img
+                src="assets/images/logo.png"
+                alt="Smit Hospital Logo"
+                class="mb-4 w-40"
+              />
+            </div>
+            <div class="flex items-center gap-4">
+              <span class="text-blue-800 font-medium">Follow US:</span>
+              <a href="#" class="text-blue-800 hover:text-blue-600"
+                ><i class="fa-brands fa-facebook text-xl"></i
+              ></a>
+              <a href="#" class="text-blue-800 hover:text-blue-600"
+                ><i class="fa-brands fa-instagram text-xl"></i
+              ></a>
+              <a href="#" class="text-blue-800 hover:text-blue-600"
+                ><i class="fa-brands fa-linkedin text-xl"></i
+              ></a>
+              <a href="#" class="text-blue-800 hover:text-blue-600"
+                ><i class="fa-brands fa-twitter text-xl"></i
+              ></a>
+            </div>
+          </div>
+  
+          <!-- Second Section: Main Links and Contact Info -->
+          <div
+            class="grid grid-cols-1 border-t border-gray-300 lg:grid-cols-4 py-4 gap-8 mb-2"
+          >
+            <!-- Contact Info -->
+            <div>
+              <h4 class="text-blue-700 font-bold text-lg">Contact us</h4>
+              <p class="text-gray-600 mt-2 font-semibold">
+                <i class="fa-solid fa-location-dot text-blue-700"></i> 3rd Floor,
+                CTC Building, Varachha Main Road, near Baroda Prestage, Hans
+                Society, Surat, Gujarat 395006
+              </p>
+              <p class="text-gray-600 mt-2 font-semibold">
+                <i class="fa-solid fa-phone text-blue-700"></i> +91 9825312133 /
+                261 25632332
+              </p>
+              <p class="text-gray-600 mt-2 font-semibold">
+                <i class="fa-solid fa-envelope text-blue-700"></i>
+                <a href="mailto:info@smithospitals.com" class="text-grey-600"></a>
+                  Email : info@smithospitals.com</a
+                >
+              </p>
+            </div>
+  
+            <!-- Information -->
+            <div>
+              <h4 class="text-blue-700 font-bold text-lg">Information</h4>
+              <ul class="mt-4 space-y-2">
+                <li>
+                  <a href="#" class="text-gray-900 font-semibold hover:text-blue-600"
+                    >Services & Facilities</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-gray-900 font-semibold hover:text-blue-600"
+                    >Our Culture</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-gray-900 font-semibold hover:text-blue-600"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+  
+            <!-- Quick Links -->
+            <div>
+              <h4 class="text-blue-700 font-bold text-lg">Quick Link</h4>
+              <ul class="mt-4 space-y-2">
+                <li>
+                  <a href="#" class="text-gray-900 font-semibold hover:text-blue-600">Home</a>
+                </li>
+                <li>
+                  <a href="#" class="text-gray-900 font-semibold hover:text-blue-600">Doctor</a>
+                </li>
+                <li>
+                  <a href="#" class="text-gray-900 font-semibold hover:text-blue-600">Blogs</a>
+                </li>
+                <li>
+                  <a href="#" class="text-gray-900 font-semibold hover:text-blue-600"
+                    >Appointment</a
+                  >
+                </li>
+              </ul>
+            </div>
+  
+            <!-- Timing -->
+            <div>
+              <h4 class="text-blue-700 font-bold text-lg">Monday to Saturday</h4>
+              <ul class="mt-4 space-y-2">
+                <li class="text-gray-900 font-semibold">10:00 am - 12:00 pm</li>
+                <li class="text-gray-900 font-semibold">5:00 pm - 7:00 pm</li>
+                <li class="text-gray-900 font-semibold">Sunday Only Emergency</li>
+              </ul>
+            </div>
+          </div>
+  
+          <!-- Third Section: Copyright -->
+          <div class="border-t border-gray-300 pt-4 text-center">
+            <p class="text-gray-700 font-semibold">
+              &copy; 2023 Copyright Smit Hospital All Rights Reserved
+            </p>
+          </div>
+        </div>
+      </footer>
+  
+      <!-------------------- SECTION 5:FOOTER SECTION END -------------------->
+    </body>
+  </html>
