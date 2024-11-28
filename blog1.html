@@ -69,62 +69,110 @@
          class="container mx-auto px-4 relative z-10 flex items-center justify-start h-full"
        >
          <!-- Text Content -->
-           <h3 class="text-7xl font-semibold text-gray-800 mb-4">Gallery</h3>
+           <h3 class="text-7xl font-semibold text-gray-800 mb-4">Blog</h3>
           
        </div>
      </section>
     <!-------------------- SECTION 1:HEADER & HERO SECTION END -------------------->
 
-    <!-------------------- SECTION 2:GALLERY SECTION STRAT -------------------->
-    <section class="bg-white py-16">
-      <div class="container mx-auto">
-        <h2 class="text-3xl font-bold text-gray-800 text-center mb-10">
-          Our <span class="text-green-600">Gallery</span>
-        </h2>
-        <!-- Responsive Grid Gallery -->
-        <div class="grid grid-cols-12 gap-4">
-          <!-- Row 1 -->
-           <!-- <div class=""> -->
-          <img src="assets/images/gallery3.png" alt="Gallery Image 1" class="col-span-3 h-[326px] w-full rounded-lg shadow-md object-cover" />
-          <img src="assets/images/gallery4.png" alt="Gallery Image 2" class="col-span-3 h-[326px] w-full rounded-lg shadow-md object-cover" />
-          <img src="assets/images/gallery6.png" alt="Gallery Image 3" class="col-span-3 h-[326px] w-full rounded-lg shadow-md object-cover" />
-          <img src="assets/images/gallery7.png" alt="Gallery Image 4" class="col-span-3 h-[326px] w-full rounded-lg shadow-md object-cover" />
-        <!-- </div> -->
-        <!-- Row 2 -->
-        <img src="assets/images/gallery8.png" alt="Gallery Image 5" class="col-span-4 h-[265px] w-full rounded-lg shadow-md object-cover" />
-          <img src="assets/images/gallery9.png" alt="Gallery Image 6" class="col-span-4 h-[265px] w-full rounded-lg shadow-md object-cover" />
-          <img src="assets/images/gallery10.png" alt="Gallery Image 7" class="col-span-4 h-[265px] w-full rounded-lg shadow-md object-cover" />
+    <!-------------------- SECTION 2:BLOG SECTION START -------------------->
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <!-- Blog Container -->
+    <div class="max-w-5xl mx-auto mt-10 px-6">
+        <!-- Blog Main Section -->
+        <div class="bg-white rounded-lg ">
+            <!-- Blog Content Section -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- Left: Blog Main Image -->
+                <div class="lg:col-span-2">
+                    <img src="assets/images/blog10.png" alt="Main Blog" class="rounded-lg  w-full h-96 object-cover">
+                </div>
     
-          <!-- Row 3 -->
-          <img src="assets/images/gallery11.png" alt="Gallery Image 8" class="col-span-6 h-[611px] w-full rounded-lg shadow-md object-cover" />
-          <img src="assets/images/gallery12.png" alt="Gallery Image 9" class="col-span-3 h-[265px] w-full rounded-lg shadow-md object-cover" />
-          <img src="assets/images/gallery13.png" alt="Gallery Image 10" class="col-span-3 h-[265px] w-full rounded-lg shadow-md object-cover" />
+                <!-- Right: Recent Posts and Follow Us -->
+                <div class="p-6 space-y-10">
+                    <!-- Recent Posts Section -->
+                    <div>
+                        <h2 class="text-xl font-semibold text-gray-800 mb-4">Recent Post</h2>
+                        <div class="space-y-4">
+                            <!-- Post Item -->
+                            <div class="flex items-center space-x-4">
+                                <img src="assets/images/blog9.png" alt="Post Thumbnail" class="w-16 h-16 rounded-lg object-cover">
+                                <div>
+                                    <h3 class="text-lg font-semibold text-gray-800">Side Effects of Antibiotics</h3>
+                                    <p class="text-sm text-gray-500">July 12, 2022 | No Comments</p>
+                                </div>
+                            </div>
+                            <!-- Post Item -->
+                            <div class="flex items-center space-x-4">
+                                <img src="assets/images/blog9.png" alt="Post Thumbnail" class="w-16 h-16 rounded-lg object-cover">
+                                <div>
+                                    <h3 class="text-lg font-semibold text-gray-800">Junk Food and Concentrate</h3>
+                                    <p class="text-sm text-gray-500">July 12, 2022 | No Comments</p>
+                                </div>
+                            </div>
+                            <!-- Post Item -->
+                            <div class="flex items-center space-x-4">
+                                <img src="assets/images/blog9.png" alt="Post Thumbnail" class="w-16 h-16 rounded-lg object-cover">
+                                <div>
+                                    <h3 class="text-lg font-semibold text-gray-800">Symptoms of Malaria</h3>
+                                    <p class="text-sm text-gray-500">July 12, 2022 | No Comments</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
     
-          <!-- Row 4 -->
-          <img src="assets/images/gallery14.png" alt="Gallery Image 11" class="col-span-4 h-[265px] w-full rounded-lg shadow-md object-cover" />
-          <img src="assets/images/gallery15.png" alt="Gallery Image 12" class="col-span-4 h-[265px] w-full rounded-lg shadow-md object-cover" />
-          <img src="assets/images/gallery16.png" alt="Gallery Image 13" class="col-span-4 h-[265px] w-full rounded-lg shadow-md object-cover" />
+                    <!-- Follow Us Section -->
+                    <div>
+                        <h2 class="text-xl font-semibold text-gray-800 mb-4">Follow Us On</h2>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-blue-600 text-2xl"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="text-blue-400 text-2xl"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-pink-500 text-2xl"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="text-blue-700 text-2xl"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
     
-          <!-- Row 5 -->
-          <img src="assets/images/gallery17.png" alt="Gallery Image 14" class="col-span-6 h-[611px] w-full rounded-lg shadow-md object-cover" />
-          <img src="assets/images/gallery18.png" alt="Gallery Image 15" class="col-span-3 h-[265px] w-full rounded-lg shadow-md object-cover" />
-          <img src="assets/images/gallery19.png" alt="Gallery Image 16" class="col-span-3 h-[265px] w-full rounded-lg shadow-md object-cover" />
-    
-          <!-- Row 6 -->
-          <img src="assets/images/gallery20.png" alt="Gallery Image 17" class="col-span-3 h-[265px] w-full rounded-lg shadow-md object-cover" />
-          <img src="assets/images/gallery21.png" alt="Gallery Image 18" class="col-span-3 h-[265px] w-full rounded-lg shadow-md object-cover" />
+            <!-- Blog Text Section -->
+            <div class="">
+                <h1 class="text-4xl font-bold text-gray-800 mb-4">
+                    Sed UT Perspiciatis <span class="text-green-600">Unde Omnis</span>
+                </h1>
+                <p class="text-gray-800 font-bold text-xl mb-6">
+                    July 12, 2022 <span class="text-gray-400">|</span> No Comments
+                </p>
+                <p class="text-gray-700 leading-relaxed">
+                    If you're like most people with high blood pressure, drugs are a major part of your plan to lower your blood pressure. 
+                    Take medications as scheduled, at the same time every day. Do not stop taking or change your medications unless you first 
+                    talk with your doctor. Even if you feel good, continue to take your medications. Stopping drugs suddenly can make the 
+                    condition worse.
+                </p>
+                <p class="text-gray-700 leading-relaxed mt-4">
+                    If you're like most people with high blood pressure, drugs are a major part of your plan to lower your blood pressure. 
+                    Take medications as scheduled, at the same time every day. Do not stop taking or change your medications unless you first 
+                    talk with your doctor. Even if you feel good, continue to take your medications. Stopping drugs suddenly can make the 
+                    condition worse.
+                </p>
+            </div>
+            <div class="flex justify-center mt-8">
+              <button class="bg-blue-600 text-white font-semibold px-4 py-2 rounded-md shadow hover:brightness-90"
+        style="background: linear-gradient(180deg, #094495 0%, #094495 100%)"> <a href="blogs.html">
+          <i class="fa-solid fa-angles-left"></i> Back to Blogs</a>
+        </button>
+       </div>
         </div>
-        <!-- Load More Button -->
-        <div class="text-center mt-8">
-          <button class="bg-blue-600 text-white font-semibold px-4 py-2 rounded-md shadow hover:brightness-90"
-          style="background: linear-gradient(180deg, #094495 0%, #094495 100%)">
-            Load More <i class="fa-solid fa-arrow-right-long"></i>
-          </button>
-        </div>
-      </div>
-    </section>
+    </div>
     
-    <!-------------------- SECTION 2:GALLERY SECTION END -------------------->
+    <!-------------------- SECTION 2:BLOG SECTION END -------------------->
 
     <!-------------------- SECTION 3: FOOTER SECTION START -------------------->
     <footer class=" py-10">
