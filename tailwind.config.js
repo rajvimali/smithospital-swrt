@@ -9,6 +9,10 @@ module.exports = {
       fontFamily: {
         "train-one": ['"Train One"', "cursive"],
       },
+      maxWidth: {
+        container: "1440px",
+        mxcontainer: "1920px",
+      },
     },
   },
   plugins: [],
