@@ -25,13 +25,14 @@
   <body class="bg-white">
     <!-------------------- SECTION 1:HEADER & HERO SECTION START -------------------->
     <header class="bg-white shadow">
-      <div
-        class="container mx-auto px-4 flex items-center justify-between py-4"
-      >
+      <div class="container mx-auto px-4 flex items-center justify-between py-4">
+        <!-- Logo -->
         <h1 class="text-2xl font-bold text-blue-600">
-          <img src="assets/images/logo.png" alt="" class="src" />
+          <img src="assets/images/logo.png" class="w-auto h-8" alt="Logo" />
         </h1>
-        <nav class="space-x-4 text-gray-700">
+    
+        <!-- Navigation -->
+        <nav class="hidden md:flex space-x-4 text-gray-700">
           <a href="index.html" class="hover:text-blue-600 font-semibold">Home</a>
           <a href="aboutus.html" class="hover:text-blue-600 font-semibold">About Us</a>
           <a href="services.html" class="hover:text-blue-600 font-semibold">Services</a>
@@ -40,15 +41,62 @@
           <a href="blogs.html" class="hover:text-blue-600 font-semibold">Blog</a>
           <a href="contactus.html" class="hover:text-blue-600 font-semibold">Contact Us</a>
         </nav>
+    
+        <!-- Book Appointment Button (visible only on larger screens) -->
         <a
           href="#"
-          class="bg-blue-600 text-white font-semibold px-4 py-2 rounded-md shadow hover:brightness-90"
+          class="bg-blue-600 text-white font-semibold px-4 py-2 rounded-md shadow hover:brightness-90 hidden md:inline-block"
           style="background: linear-gradient(180deg, #094495 0%, #094495 100%)"
         >
           Book Appointment <i class="fa-solid fa-arrow-right-long"></i>
         </a>
+    
+        <!-- Hamburger Menu for Mobile -->
+        <div class="md:hidden flex items-center">
+          <button id="hamburger-menu" class="text-gray-700 focus:outline-none">
+            <i id="hamburger-icon" class="fas fa-bars text-2xl transition-all duration-300"></i>
+          </button>
+        </div>
+      </div>
+    
+      <!-- Mobile Menu (hidden by default) -->
+      <div id="mobile-menu" class="md:hidden hidden bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4">
+          <!-- Navigation Centered -->
+          <nav class="flex flex-col items-center space-y-4 text-gray-700">
+            <a href="index.html" class="hover:text-blue-600 font-semibold">Home</a>
+            <a href="aboutus.html" class="hover:text-blue-600 font-semibold">About Us</a>
+            <a href="services.html" class="hover:text-blue-600 font-semibold">Services</a>
+            <a href="gallery.html" class="hover:text-blue-600 font-semibold">Gallery</a>
+            <a href="doctors.html" class="hover:text-blue-600 font-semibold">Doctors</a>
+            <a href="blogs.html" class="hover:text-blue-600 font-semibold">Blog</a>
+            <a href="contactus.html" class="hover:text-blue-600 font-semibold">Contact Us</a>
+          </nav>
+        </div>
       </div>
     </header>
+    
+    <!-- Add this JavaScript to toggle the mobile menu visibility and change the icon -->
+    <script>
+      const hamburgerButton = document.getElementById("hamburger-menu");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const hamburgerIcon = document.getElementById("hamburger-icon");
+    
+      // Toggle the mobile menu and the icon
+      hamburgerButton.addEventListener("click", function () {
+        mobileMenu.classList.toggle("hidden");
+        if (mobileMenu.classList.contains("hidden")) {
+          hamburgerIcon.classList.remove("fa-times");
+          hamburgerIcon.classList.add("fa-bars");
+          hamburgerIcon.style.transform = "rotate(0deg)";
+        } else {
+          hamburgerIcon.classList.remove("fa-bars");
+          hamburgerIcon.classList.add("fa-times");
+          hamburgerIcon.style.transform = "rotate(180deg)"; // Rotate cross icon
+        }
+      });
+    </script>
+    
        <!-------------------- ABOUT US SECTION START -------------------->
        <section
        class="relative bg-blue-50"
