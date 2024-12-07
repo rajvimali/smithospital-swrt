@@ -1,38 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Smit Hospital</title>
-    <!-- TAILWIND CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- GOOGLE FONTS -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Train+One&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smit Hospital</title>
+  <!-- TAILWIND CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- FONT AWESOME CDN -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
-      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-  <body class="bg-white">
-    <!-------------------- SECTION 1:HEADER & HERO SECTION START -------------------->
-    <header class="bg-white shadow">
-      <div class="container mx-auto px-4 flex items-center justify-between py-4">
-        <!-- Logo -->
-        <h1 class="text-2xl font-bold text-blue-600">
-          <img src="assets/images/logo.png" class="w-auto h-8" alt="Logo" />
-        </h1>
-    
-        <!-- Navigation -->
-        <nav class="hidden md:flex space-x-4 text-gray-700">
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Train+One&display=swap" rel="stylesheet" />
+
+  <!-- FONT AWESOME CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-white">
+  <!-------------------- SECTION 1:HEADER & HERO SECTION START -------------------->
+  <header class="bg-white shadow">
+    <div class="container mx-auto px-4 flex items-center justify-between py-4">
+      <!-- Logo -->
+      <h1 class="text-2xl font-bold text-blue-600">
+        <img src="assets/images/logo.png" class="w-auto h-8" alt="Logo" />
+      </h1>
+
+      <!-- Navigation -->
+      <nav class="hidden md:flex space-x-4 text-gray-700">
+        <a href="index.html" class="hover:text-blue-600 font-semibold">Home</a>
+        <a href="aboutus.html" class="hover:text-blue-600 font-semibold">About Us</a>
+        <a href="services.html" class="hover:text-blue-600 font-semibold">Services</a>
+        <a href="gallery.html" class="hover:text-blue-600 font-semibold">Gallery</a>
+        <a href="doctors.html" class="hover:text-blue-600 font-semibold">Doctors</a>
+        <a href="blogs.html" class="hover:text-blue-600 font-semibold">Blog</a>
+        <a href="contactus.html" class="hover:text-blue-600 font-semibold">Contact Us</a>
+      </nav>
+
+      <!-- Book Appointment Button (visible only on larger screens) -->
+      <a href="#"
+        class="bg-blue-600 text-white font-semibold px-4 py-2 rounded-md shadow hover:brightness-90 hidden md:inline-block"
+        style="background: linear-gradient(180deg, #094495 0%, #094495 100%)">
+        Book Appointment <i class="fa-solid fa-arrow-right-long"></i>
+      </a>
+
+      <!-- Hamburger Menu for Mobile -->
+      <div class="md:hidden flex items-center">
+        <button id="hamburger-menu" class="text-gray-700 focus:outline-none">
+          <i id="hamburger-icon" class="fas fa-bars text-2xl transition-all duration-300"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu (hidden by default) -->
+    <div id="mobile-menu" class="md:hidden hidden bg-white shadow-md">
+      <div class="container mx-auto px-4 py-4">
+        <!-- Navigation Centered -->
+        <nav class="flex flex-col items-center space-y-4 text-gray-700">
           <a href="index.html" class="hover:text-blue-600 font-semibold">Home</a>
           <a href="aboutus.html" class="hover:text-blue-600 font-semibold">About Us</a>
           <a href="services.html" class="hover:text-blue-600 font-semibold">Services</a>
@@ -41,500 +65,420 @@
           <a href="blogs.html" class="hover:text-blue-600 font-semibold">Blog</a>
           <a href="contactus.html" class="hover:text-blue-600 font-semibold">Contact Us</a>
         </nav>
-    
-        <!-- Book Appointment Button (visible only on larger screens) -->
-        <a
-          href="#"
-          class="bg-blue-600 text-white font-semibold px-4 py-2 rounded-md shadow hover:brightness-90 hidden md:inline-block"
-          style="background: linear-gradient(180deg, #094495 0%, #094495 100%)"
-        >
-          Book Appointment <i class="fa-solid fa-arrow-right-long"></i>
-        </a>
-    
-        <!-- Hamburger Menu for Mobile -->
-        <div class="md:hidden flex items-center">
-          <button id="hamburger-menu" class="text-gray-700 focus:outline-none">
-            <i id="hamburger-icon" class="fas fa-bars text-2xl transition-all duration-300"></i>
-          </button>
-        </div>
       </div>
-    
-      <!-- Mobile Menu (hidden by default) -->
-      <div id="mobile-menu" class="md:hidden hidden bg-white shadow-md">
-        <div class="container mx-auto px-4 py-4">
-          <!-- Navigation Centered -->
-          <nav class="flex flex-col items-center space-y-4 text-gray-700">
-            <a href="index.html" class="hover:text-blue-600 font-semibold">Home</a>
-            <a href="aboutus.html" class="hover:text-blue-600 font-semibold">About Us</a>
-            <a href="services.html" class="hover:text-blue-600 font-semibold">Services</a>
-            <a href="gallery.html" class="hover:text-blue-600 font-semibold">Gallery</a>
-            <a href="doctors.html" class="hover:text-blue-600 font-semibold">Doctors</a>
-            <a href="blogs.html" class="hover:text-blue-600 font-semibold">Blog</a>
-            <a href="contactus.html" class="hover:text-blue-600 font-semibold">Contact Us</a>
-          </nav>
-        </div>
-      </div>
-    </header>
-    
-    <!-- Add this JavaScript to toggle the mobile menu visibility and change the icon -->
-    <script>
-      const hamburgerButton = document.getElementById("hamburger-menu");
-      const mobileMenu = document.getElementById("mobile-menu");
-      const hamburgerIcon = document.getElementById("hamburger-icon");
-    
-      // Toggle the mobile menu and the icon
-      hamburgerButton.addEventListener("click", function () {
-        mobileMenu.classList.toggle("hidden");
-        if (mobileMenu.classList.contains("hidden")) {
-          hamburgerIcon.classList.remove("fa-times");
-          hamburgerIcon.classList.add("fa-bars");
-          hamburgerIcon.style.transform = "rotate(0deg)";
-        } else {
-          hamburgerIcon.classList.remove("fa-bars");
-          hamburgerIcon.classList.add("fa-times");
-          hamburgerIcon.style.transform = "rotate(180deg)"; // Rotate cross icon
-        }
-      });
-    </script>
-    
-       <!-------------------- SERVICE SECTION START -------------------->
-       <section
-       class="relative bg-blue-50"
-       style="height: 570px; background-size: cover; background-position: center;"
-     >
-       <!-- Background Image -->
-       <div
-         class="absolute inset-0"
-         style="
+    </div>
+  </header>
+
+  <!-- Add this JavaScript to toggle the mobile menu visibility and change the icon -->
+  <script>
+    const hamburgerButton = document.getElementById("hamburger-menu");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const hamburgerIcon = document.getElementById("hamburger-icon");
+
+    // Toggle the mobile menu and the icon
+    hamburgerButton.addEventListener("click", function () {
+      mobileMenu.classList.toggle("hidden");
+      if (mobileMenu.classList.contains("hidden")) {
+        hamburgerIcon.classList.remove("fa-times");
+        hamburgerIcon.classList.add("fa-bars");
+        hamburgerIcon.style.transform = "rotate(0deg)";
+      } else {
+        hamburgerIcon.classList.remove("fa-bars");
+        hamburgerIcon.classList.add("fa-times");
+        hamburgerIcon.style.transform = "rotate(180deg)"; // Rotate cross icon
+      }
+    });
+  </script>
+
+  <!-------------------- SERVICE SECTION START -------------------->
+  <section class="relative bg-blue-50" style="height: 570px; background-size: cover; background-position: center;">
+    <!-- Background Image -->
+    <div class="absolute inset-0" style="
            background-image: url('assets/images/aboutus-main.png');
            background-size: cover;
            background-position: center;
-         "
-       ></div>
- 
-       <!-- Content -->
-       <div
-         class="container mx-auto px-4 relative z-10 flex items-center justify-start h-full"
-       >
-         <!-- Text Content -->
-           <h3 class="text-7xl font-semibold text-gray-800 mb-4">Blog</h3>
-          
-       </div>
-     </section>
-    <!-------------------- SECTION 1:HEADER & HERO SECTION END -------------------->
+         "></div>
 
-    <!-------------------- SECTION 2:BLOG SECTION START -------------------->
-    <section class="bg-gray-50 py-10">
-        <div class="max-w-7xl mx-auto px-6">
-            <!-- Header Section -->
-            <div class="text-center mb-10">
-                <h1 class="text-4xl font-bold text-gray-800">Smit <span class="text-green-600">Women's Club</span></h1>
-            </div>
-    
-            <!-- Blog Cards Section -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Blog Card -->
-                <div class="bg-white shadow-lg mb-3 rounded-lg flex overflow-hidden">
-                    
-                    <img src="assets/images/blog1.png" alt="Blog Image" class="w-40 object-cover">
-                    <div class="p-4 flex-1">
-                        <div class="flex items-center space-x-2 mb-2">
-                            <span
-                              class="bg-blue-600 text-white text-sm font-bold py-1 px-2 rounded"
-                              style="
-                                background: linear-gradient(
-                                  180deg,
-                                  #094495 0%,
-                                  #094495 100%
-                                );
-                              "
-                            >
-                              28 Sep
-                            </span>
-                          </div>
-                        <h3 class="text-lg font-bold text-gray-800 mb-2">Sed UT Perspiciatis Unde Omnis</h3>
-                        <p class="text-gray-600 text-sm mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's printer type specimen book.</p>
-                        <div class="flex items-center text-gray-500 text-sm">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5 mr-2" viewBox="0 0 20 20">
-                                <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm2-11a2 2 0 11-4 0 2 2 0 014 0zm-1.465 3.016a3.042 3.042 0 00-1.07-.016c-.787.126-1.569.488-2.203.91-.24.16-.508.254-.782.268-.274.014-.54-.068-.751-.229-.167-.124-.354-.253-.534-.344a1 1 0 10-.986 1.734c.259.134.5.308.74.508 1.273 1.083 3.115 1.874 5.28 1.06 2.013-.764 3.448-2.584 3.913-4.567.191-.775-.238-1.51-.95-1.784a3.979 3.979 0 00-1.527-.253c-.71.05-1.405.245-2.08.634z" />
-                            </svg>
-                            <p>Druid Wensleydale</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Blog 2 -->
-                <div class="bg-white shadow-lg mb-3 rounded-lg flex overflow-hidden">
-                    
-                    <img src="assets/images/blog2.png" alt="Blog Image" class="w-40 object-cover">
-                    <div class="p-4 flex-1">
-                        <div class="flex items-center space-x-2 mb-2">
-                            <span
-                              class="bg-blue-600 text-white text-sm font-bold py-1 px-2 rounded"
-                              style="
-                                background: linear-gradient(
-                                  180deg,
-                                  #094495 0%,
-                                  #094495 100%
-                                );
-                              "
-                            >
-                              28 Sep
-                            </span>
-                          </div>
-                        <h3 class="text-lg font-bold text-gray-800 mb-2">Sed UT Perspiciatis Unde Omnis</h3>
-                        <p class="text-gray-600 text-sm mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's printer type specimen book.</p>
-                        <div class="flex items-center text-gray-500 text-sm">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5 mr-2" viewBox="0 0 20 20">
-                                <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm2-11a2 2 0 11-4 0 2 2 0 014 0zm-1.465 3.016a3.042 3.042 0 00-1.07-.016c-.787.126-1.569.488-2.203.91-.24.16-.508.254-.782.268-.274.014-.54-.068-.751-.229-.167-.124-.354-.253-.534-.344a1 1 0 10-.986 1.734c.259.134.5.308.74.508 1.273 1.083 3.115 1.874 5.28 1.06 2.013-.764 3.448-2.584 3.913-4.567.191-.775-.238-1.51-.95-1.784a3.979 3.979 0 00-1.527-.253c-.71.05-1.405.245-2.08.634z" />
-                            </svg>
-                            <p>Druid Wensleydale</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Use unique images for each blog -->
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Blog Card -->
-                <div class="bg-white shadow-lg mb-3 rounded-lg flex overflow-hidden">
-                    
-                    <img src="assets/images/blog3.png" alt="Blog Image" class="w-40 object-cover">
-                    <div class="p-4 flex-1">
-                        <div class="flex items-center space-x-2 mb-2">
-                            <span
-                              class="bg-blue-600 text-white text-sm font-bold py-1 px-2 rounded"
-                              style="
-                                background: linear-gradient(
-                                  180deg,
-                                  #094495 0%,
-                                  #094495 100%
-                                );
-                              "
-                            >
-                              28 Sep
-                            </span>
-                          </div>
-                        <h3 class="text-lg font-bold text-gray-800 mb-2">Sed UT Perspiciatis Unde Omnis</h3>
-                        <p class="text-gray-600 text-sm mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's printer type specimen book.</p>
-                        <div class="flex items-center text-gray-500 text-sm">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5 mr-2" viewBox="0 0 20 20">
-                                <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm2-11a2 2 0 11-4 0 2 2 0 014 0zm-1.465 3.016a3.042 3.042 0 00-1.07-.016c-.787.126-1.569.488-2.203.91-.24.16-.508.254-.782.268-.274.014-.54-.068-.751-.229-.167-.124-.354-.253-.534-.344a1 1 0 10-.986 1.734c.259.134.5.308.74.508 1.273 1.083 3.115 1.874 5.28 1.06 2.013-.764 3.448-2.584 3.913-4.567.191-.775-.238-1.51-.95-1.784a3.979 3.979 0 00-1.527-.253c-.71.05-1.405.245-2.08.634z" />
-                            </svg>
-                            <p>Druid Wensleydale</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Blog 2 -->
-                <div class="bg-white shadow-lg mb-3 rounded-lg flex overflow-hidden">
-                    
-                    <img src="assets/images/blog4.png" alt="Blog Image" class="w-40 object-cover">
-                    <div class="p-4 flex-1">
-                        <div class="flex items-center space-x-2 mb-2">
-                            <span
-                              class="bg-blue-600 text-white text-sm font-bold py-1 px-2 rounded"
-                              style="
-                                background: linear-gradient(
-                                  180deg,
-                                  #094495 0%,
-                                  #094495 100%
-                                );
-                              "
-                            >
-                              28 Sep
-                            </span>
-                          </div>
-                        <h3 class="text-lg font-bold text-gray-800 mb-2">Sed UT Perspiciatis Unde Omnis</h3>
-                        <p class="text-gray-600 text-sm mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's printer type specimen book.</p>
-                        <div class="flex items-center text-gray-500 text-sm">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5 mr-2" viewBox="0 0 20 20">
-                                <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm2-11a2 2 0 11-4 0 2 2 0 014 0zm-1.465 3.016a3.042 3.042 0 00-1.07-.016c-.787.126-1.569.488-2.203.91-.24.16-.508.254-.782.268-.274.014-.54-.068-.751-.229-.167-.124-.354-.253-.534-.344a1 1 0 10-.986 1.734c.259.134.5.308.74.508 1.273 1.083 3.115 1.874 5.28 1.06 2.013-.764 3.448-2.584 3.913-4.567.191-.775-.238-1.51-.95-1.784a3.979 3.979 0 00-1.527-.253c-.71.05-1.405.245-2.08.634z" />
-                            </svg>
-                            <p>Druid Wensleydale</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Use unique images for each blog -->
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Blog Card -->
-                <div class="bg-white shadow-lg mb-3 rounded-lg flex overflow-hidden">
-                    
-                    <img src="assets/images/blog5.png" alt="Blog Image" class="w-40 object-cover">
-                    <div class="p-4 flex-1">
-                        <div class="flex items-center space-x-2 mb-2">
-                            <span
-                              class="bg-blue-600 text-white text-sm font-bold py-1 px-2 rounded"
-                              style="
-                                background: linear-gradient(
-                                  180deg,
-                                  #094495 0%,
-                                  #094495 100%
-                                );
-                              "
-                            >
-                              28 Sep
-                            </span>
-                          </div>
-                        <h3 class="text-lg font-bold text-gray-800 mb-2">Sed UT Perspiciatis Unde Omnis</h3>
-                        <p class="text-gray-600 text-sm mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's printer type specimen book.</p>
-                        <div class="flex items-center text-gray-500 text-sm">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5 mr-2" viewBox="0 0 20 20">
-                                <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm2-11a2 2 0 11-4 0 2 2 0 014 0zm-1.465 3.016a3.042 3.042 0 00-1.07-.016c-.787.126-1.569.488-2.203.91-.24.16-.508.254-.782.268-.274.014-.54-.068-.751-.229-.167-.124-.354-.253-.534-.344a1 1 0 10-.986 1.734c.259.134.5.308.74.508 1.273 1.083 3.115 1.874 5.28 1.06 2.013-.764 3.448-2.584 3.913-4.567.191-.775-.238-1.51-.95-1.784a3.979 3.979 0 00-1.527-.253c-.71.05-1.405.245-2.08.634z" />
-                            </svg>
-                            <p>Druid Wensleydale</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Blog 2 -->
-                <div class="bg-white shadow-lg mb-3 rounded-lg flex overflow-hidden">
-                    
-                    <img src="assets/images/blog6.png" alt="Blog Image" class="w-40 object-cover">
-                    <div class="p-4 flex-1">
-                        <div class="flex items-center space-x-2 mb-2">
-                            <span
-                              class="bg-blue-600 text-white text-sm font-bold py-1 px-2 rounded"
-                              style="
-                                background: linear-gradient(
-                                  180deg,
-                                  #094495 0%,
-                                  #094495 100%
-                                );
-                              "
-                            >
-                              28 Sep
-                            </span>
-                          </div>
-                        <h3 class="text-lg font-bold text-gray-800 mb-2">Sed UT Perspiciatis Unde Omnis</h3>
-                        <p class="text-gray-600 text-sm mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's printer type specimen book.</p>
-                        <div class="flex items-center text-gray-500 text-sm">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5 mr-2" viewBox="0 0 20 20">
-                                <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm2-11a2 2 0 11-4 0 2 2 0 014 0zm-1.465 3.016a3.042 3.042 0 00-1.07-.016c-.787.126-1.569.488-2.203.91-.24.16-.508.254-.782.268-.274.014-.54-.068-.751-.229-.167-.124-.354-.253-.534-.344a1 1 0 10-.986 1.734c.259.134.5.308.74.508 1.273 1.083 3.115 1.874 5.28 1.06 2.013-.764 3.448-2.584 3.913-4.567.191-.775-.238-1.51-.95-1.784a3.979 3.979 0 00-1.527-.253c-.71.05-1.405.245-2.08.634z" />
-                            </svg>
-                            <p>Druid Wensleydale</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Use unique images for each blog -->
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Blog Card -->
-                <div class="bg-white shadow-lg rounded-lg flex overflow-hidden">
-                    <img src="assets/images/blog7.png" alt="Blog Image" class="w-40 object-cover">
-                    <div class="p-4 flex-1">
-                        <div class="flex items-center space-x-2 mb-2">
-                            <span
-                              class="bg-blue-600 text-white text-sm font-bold py-1 px-2 rounded"
-                              style="
-                                background: linear-gradient(
-                                  180deg,
-                                  #094495 0%,
-                                  #094495 100%
-                                );
-                              "
-                            >
-                              28 Sep
-                            </span>
-                          </div>
-                        <h3 class="text-lg font-bold text-gray-800 mb-2">Sed UT Perspiciatis Unde Omnis</h3>
-                        <p class="text-gray-600 text-sm mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's printer type specimen book.</p>
-                        <div class="flex items-center text-gray-500 text-sm">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5 mr-2" viewBox="0 0 20 20">
-                                <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm2-11a2 2 0 11-4 0 2 2 0 014 0zm-1.465 3.016a3.042 3.042 0 00-1.07-.016c-.787.126-1.569.488-2.203.91-.24.16-.508.254-.782.268-.274.014-.54-.068-.751-.229-.167-.124-.354-.253-.534-.344a1 1 0 10-.986 1.734c.259.134.5.308.74.508 1.273 1.083 3.115 1.874 5.28 1.06 2.013-.764 3.448-2.584 3.913-4.567.191-.775-.238-1.51-.95-1.784a3.979 3.979 0 00-1.527-.253c-.71.05-1.405.245-2.08.634z" />
-                            </svg>
-                            <p>Druid Wensleydale</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Blog 2 -->
-                <div class="bg-white shadow-lg rounded-lg flex overflow-hidden">
-                    <img src="assets/images/blog8.png" alt="Blog Image" class="w-40 object-cover">
-                    <div class="p-4 flex-1">
-                        <div class="flex items-center space-x-2 mb-2">
-                            <span
-                              class="bg-blue-600 text-white text-sm font-bold py-1 px-2 rounded"
-                              style="
-                                background: linear-gradient(
-                                  180deg,
-                                  #094495 0%,
-                                  #094495 100%
-                                );
-                              "
-                            >
-                              28 Sep
-                            </span>
-                          </div>
-                        <h3 class="text-lg font-bold text-gray-800 mb-2">Sed UT Perspiciatis Unde Omnis</h3>
-                        <p class="text-gray-600 text-sm mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's printer type specimen book.</p>
-                        <div class="flex items-center text-gray-500 text-sm">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5 mr-2" viewBox="0 0 20 20">
-                                <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm2-11a2 2 0 11-4 0 2 2 0 014 0zm-1.465 3.016a3.042 3.042 0 00-1.07-.016c-.787.126-1.569.488-2.203.91-.24.16-.508.254-.782.268-.274.014-.54-.068-.751-.229-.167-.124-.354-.253-.534-.344a1 1 0 10-.986 1.734c.259.134.5.308.74.508 1.273 1.083 3.115 1.874 5.28 1.06 2.013-.764 3.448-2.584 3.913-4.567.191-.775-.238-1.51-.95-1.784a3.979 3.979 0 00-1.527-.253c-.71.05-1.405.245-2.08.634z" />
-                            </svg>
-                            <p>Druid Wensleydale</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Use unique images for each blog -->
-            </div>
-    
-            <!-- Load More Button -->
-            <div class="flex justify-center mt-8">
-                <button class="bg-blue-600 text-white font-semibold px-4 py-2 rounded-md shadow hover:brightness-90"
-          style="background: linear-gradient(180deg, #094495 0%, #094495 100%)">
-            Load More <i class="fa-solid fa-arrow-right-long"></i>
-          </button>
-          <button class="bg-blue-600 ms-2 text-white font-semibold px-4 py-2 rounded-md shadow hover:brightness-90"
-          style="background: linear-gradient(180deg, #094495 0%, #094495 100%)"> <a href="blog1.html" >
-           View <i class="fa-solid fa-arrow-right-long"></i></a>
-          </button>
-            </div>
-        </div>
-    </section>
-    
-    <!-------------------- SECTION 2:BLOG SECTION END -------------------->
+    <!-- Content -->
+    <div class="container mx-auto px-4 relative z-10 flex items-center justify-start h-full">
+      <!-- Text Content -->
+      <h3 class="text-7xl font-semibold text-gray-800 mb-4">Blog</h3>
 
-    <!-------------------- SECTION 3: FOOTER SECTION START -------------------->
-    <footer class=" py-10">
-        <!-- Newsletter Subscription Section -->
-        <div
-          class="w-2/5 mx-auto rounded-lg text-white py-8"
-          style="background: #094495"
-        >
-          <div
-            class="container px-4 text-center lg:text-left flex flex-col lg:flex-row items-center justify-between gap-6"
-          >
-            <h3 class="text-xl font-bold">Subscribe To Our Newsletter</h3>
-            <div class="flex items-center w-full lg:w-auto">
-              <input
-                type="email"
-                placeholder="Enter your email address"
-                class="w-full lg:w-80 px-4 py-2 rounded-l-md focus:outline-none text-gray-700"
-              />
-              <button
-                class="bg-blue-800 hover:bg-blue-900 px-6 py-2 text-white rounded-r-md font-medium"
-                style="background: #072854"
-              >
-                Subscribe
-              </button>
+    </div>
+  </section>
+  <!-------------------- SECTION 1:HEADER & HERO SECTION END -------------------->
+
+  <!-------------------- SECTION 2:BLOG SECTION START -------------------->
+  <section class="bg-gray-50 py-10">
+    <div class="max-w-7xl mx-auto px-6">
+      <!-- Header Section -->
+      <div class="text-center mb-10">
+        <h1 class="text-4xl font-bold text-gray-800">Smit <span class="text-green-600">Women's Club</span></h1>
+      </div>
+
+      <!-- Blog Cards Section -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Blog Card -->
+        <div class="bg-white shadow-lg mb-3 rounded-lg flex overflow-hidden">
+
+          <img src="assets/images/blog1.png" alt="Blog Image" class="w-40 object-cover">
+          <div class="p-4 flex-1">
+            <div class="flex items-center space-x-2 mb-2">
+              <span class="bg-blue-600 text-white text-sm font-bold py-1 px-2 rounded" style="
+                                background: linear-gradient(
+                                  180deg,
+                                  #094495 0%,
+                                  #094495 100%
+                                );
+                              ">
+                28 Sep
+              </span>
+            </div>
+            <h3 class="text-lg font-bold text-gray-800 mb-2">Sed UT Perspiciatis Unde Omnis</h3>
+            <p class="text-gray-600 text-sm mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's printer type specimen book.</p>
+            <div class="flex items-center text-gray-500 text-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5 mr-2" viewBox="0 0 20 20">
+                <path
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm2-11a2 2 0 11-4 0 2 2 0 014 0zm-1.465 3.016a3.042 3.042 0 00-1.07-.016c-.787.126-1.569.488-2.203.91-.24.16-.508.254-.782.268-.274.014-.54-.068-.751-.229-.167-.124-.354-.253-.534-.344a1 1 0 10-.986 1.734c.259.134.5.308.74.508 1.273 1.083 3.115 1.874 5.28 1.06 2.013-.764 3.448-2.584 3.913-4.567.191-.775-.238-1.51-.95-1.784a3.979 3.979 0 00-1.527-.253c-.71.05-1.405.245-2.08.634z" />
+              </svg>
+              <p>Druid Wensleydale</p>
             </div>
           </div>
         </div>
-  
-        <!-- Footer Main Content -->
-        <div class="container mx-auto px-4">
-          <!-- First Section: Logo and Social Icons -->
-          <div
-            class="flex flex-col lg:flex-row justify-between items-center mt-6 mb-4"
-          >
-            <div class="flex flex-col items-center lg:items-start">
-              <img
-                src="assets/images/logo.png"
-                alt="Smit Hospital Logo"
-                class="mb-4 w-40"
-              />
+        <!-- Blog 2 -->
+        <div class="bg-white shadow-lg mb-3 rounded-lg flex overflow-hidden">
+
+          <img src="assets/images/blog2.png" alt="Blog Image" class="w-40 object-cover">
+          <div class="p-4 flex-1">
+            <div class="flex items-center space-x-2 mb-2">
+              <span class="bg-blue-600 text-white text-sm font-bold py-1 px-2 rounded" style="
+                                background: linear-gradient(
+                                  180deg,
+                                  #094495 0%,
+                                  #094495 100%
+                                );
+                              ">
+                28 Sep
+              </span>
             </div>
-            <div class="flex items-center gap-4">
-              <span class="text-blue-800 font-medium">Follow US:</span>
-              <a href="#" class="text-blue-800 hover:text-blue-600"
-                ><i class="fa-brands fa-facebook text-xl"></i
-              ></a>
-              <a href="#" class="text-blue-800 hover:text-blue-600"
-                ><i class="fa-brands fa-instagram text-xl"></i
-              ></a>
-              <a href="#" class="text-blue-800 hover:text-blue-600"
-                ><i class="fa-brands fa-linkedin text-xl"></i
-              ></a>
-              <a href="#" class="text-blue-800 hover:text-blue-600"
-                ><i class="fa-brands fa-twitter text-xl"></i
-              ></a>
+            <h3 class="text-lg font-bold text-gray-800 mb-2">Sed UT Perspiciatis Unde Omnis</h3>
+            <p class="text-gray-600 text-sm mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's printer type specimen book.</p>
+            <div class="flex items-center text-gray-500 text-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5 mr-2" viewBox="0 0 20 20">
+                <path
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm2-11a2 2 0 11-4 0 2 2 0 014 0zm-1.465 3.016a3.042 3.042 0 00-1.07-.016c-.787.126-1.569.488-2.203.91-.24.16-.508.254-.782.268-.274.014-.54-.068-.751-.229-.167-.124-.354-.253-.534-.344a1 1 0 10-.986 1.734c.259.134.5.308.74.508 1.273 1.083 3.115 1.874 5.28 1.06 2.013-.764 3.448-2.584 3.913-4.567.191-.775-.238-1.51-.95-1.784a3.979 3.979 0 00-1.527-.253c-.71.05-1.405.245-2.08.634z" />
+              </svg>
+              <p>Druid Wensleydale</p>
             </div>
-          </div>
-  
-          <!-- Second Section: Main Links and Contact Info -->
-          <div
-            class="grid grid-cols-1 border-t border-gray-300 lg:grid-cols-4 py-4 gap-8 mb-2"
-          >
-            <!-- Contact Info -->
-            <div>
-              <h4 class="text-blue-700 font-bold text-lg">Contact us</h4>
-              <p class="text-gray-600 mt-2 font-semibold">
-                <i class="fa-solid fa-location-dot text-blue-700"></i> 3rd Floor,
-                CTC Building, Varachha Main Road, near Baroda Prestage, Hans
-                Society, Surat, Gujarat 395006
-              </p>
-              <p class="text-gray-600 mt-2 font-semibold">
-                <i class="fa-solid fa-phone text-blue-700"></i> +91 9825312133 /
-                261 25632332
-              </p>
-              <p class="text-gray-600 mt-2 font-semibold">
-                <i class="fa-solid fa-envelope text-blue-700"></i>
-                <a href="mailto:info@smithospitals.com" class="text-grey-600"></a>
-                  Email : info@smithospitals.com</a
-                >
-              </p>
-            </div>
-  
-            <!-- Information -->
-            <div>
-              <h4 class="text-blue-700 font-bold text-lg">Information</h4>
-              <ul class="mt-4 space-y-2">
-                <li>
-                  <a href="services.html" class="text-gray-900 font-semibold hover:text-blue-600"
-                    >Services & Facilities</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="text-gray-900 font-semibold hover:text-blue-600"
-                    >Our Culture</a
-                  >
-                </li>
-                <li>
-                  <a href="contactus.html" class="text-gray-900 font-semibold hover:text-blue-600"
-                    >Contact</a
-                  >
-                </li>
-              </ul>
-            </div>
-  
-            <!-- Quick Links -->
-            <div>
-              <h4 class="text-blue-700 font-bold text-lg">Quick Link</h4>
-              <ul class="mt-4 space-y-2">
-                <li>
-                  <a href="index.html" class="text-gray-900 font-semibold hover:text-blue-600">Home</a>
-                </li>
-                <li>
-                  <a href="doctors.html" class="text-gray-900 font-semibold hover:text-blue-600">Doctor</a>
-                </li>
-                <li>
-                  <a href="blogs.html" class="text-gray-900 font-semibold hover:text-blue-600">Blogs</a>
-                </li>
-                <li>
-                  <a href="#" class="text-gray-900 font-semibold hover:text-blue-600"
-                    >Appointment</a
-                  >
-                </li>
-              </ul>
-            </div>
-  
-            <!-- Timing -->
-            <div>
-              <h4 class="text-blue-700 font-bold text-lg">Monday to Saturday</h4>
-              <ul class="mt-4 space-y-2">
-                <li class="text-gray-900 font-semibold">10:00 am - 12:00 pm</li>
-                <li class="text-gray-900 font-semibold">5:00 pm - 7:00 pm</li>
-                <li class="text-gray-900 font-semibold">Sunday Only Emergency</li>
-              </ul>
-            </div>
-          </div>
-  
-          <!-- Third Section: Copyright -->
-          <div class="border-t border-gray-300 pt-4 text-center">
-            <p class="text-gray-700 font-semibold">
-              &copy; 2023 Copyright Smit Hospital All Rights Reserved
-            </p>
           </div>
         </div>
-      </footer>
-  
-      <!-------------------- SECTION 3:FOOTER SECTION END -------------------->
-    </body>
-  </html>
+        <!-- Use unique images for each blog -->
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Blog Card -->
+        <div class="bg-white shadow-lg mb-3 rounded-lg flex overflow-hidden">
+
+          <img src="assets/images/blog3.png" alt="Blog Image" class="w-40 object-cover">
+          <div class="p-4 flex-1">
+            <div class="flex items-center space-x-2 mb-2">
+              <span class="bg-blue-600 text-white text-sm font-bold py-1 px-2 rounded" style="
+                                background: linear-gradient(
+                                  180deg,
+                                  #094495 0%,
+                                  #094495 100%
+                                );
+                              ">
+                28 Sep
+              </span>
+            </div>
+            <h3 class="text-lg font-bold text-gray-800 mb-2">Sed UT Perspiciatis Unde Omnis</h3>
+            <p class="text-gray-600 text-sm mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's printer type specimen book.</p>
+            <div class="flex items-center text-gray-500 text-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5 mr-2" viewBox="0 0 20 20">
+                <path
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm2-11a2 2 0 11-4 0 2 2 0 014 0zm-1.465 3.016a3.042 3.042 0 00-1.07-.016c-.787.126-1.569.488-2.203.91-.24.16-.508.254-.782.268-.274.014-.54-.068-.751-.229-.167-.124-.354-.253-.534-.344a1 1 0 10-.986 1.734c.259.134.5.308.74.508 1.273 1.083 3.115 1.874 5.28 1.06 2.013-.764 3.448-2.584 3.913-4.567.191-.775-.238-1.51-.95-1.784a3.979 3.979 0 00-1.527-.253c-.71.05-1.405.245-2.08.634z" />
+              </svg>
+              <p>Druid Wensleydale</p>
+            </div>
+          </div>
+        </div>
+        <!-- Blog 2 -->
+        <div class="bg-white shadow-lg mb-3 rounded-lg flex overflow-hidden">
+
+          <img src="assets/images/blog4.png" alt="Blog Image" class="w-40 object-cover">
+          <div class="p-4 flex-1">
+            <div class="flex items-center space-x-2 mb-2">
+              <span class="bg-blue-600 text-white text-sm font-bold py-1 px-2 rounded" style="
+                                background: linear-gradient(
+                                  180deg,
+                                  #094495 0%,
+                                  #094495 100%
+                                );
+                              ">
+                28 Sep
+              </span>
+            </div>
+            <h3 class="text-lg font-bold text-gray-800 mb-2">Sed UT Perspiciatis Unde Omnis</h3>
+            <p class="text-gray-600 text-sm mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's printer type specimen book.</p>
+            <div class="flex items-center text-gray-500 text-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5 mr-2" viewBox="0 0 20 20">
+                <path
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm2-11a2 2 0 11-4 0 2 2 0 014 0zm-1.465 3.016a3.042 3.042 0 00-1.07-.016c-.787.126-1.569.488-2.203.91-.24.16-.508.254-.782.268-.274.014-.54-.068-.751-.229-.167-.124-.354-.253-.534-.344a1 1 0 10-.986 1.734c.259.134.5.308.74.508 1.273 1.083 3.115 1.874 5.28 1.06 2.013-.764 3.448-2.584 3.913-4.567.191-.775-.238-1.51-.95-1.784a3.979 3.979 0 00-1.527-.253c-.71.05-1.405.245-2.08.634z" />
+              </svg>
+              <p>Druid Wensleydale</p>
+            </div>
+          </div>
+        </div>
+        <!-- Use unique images for each blog -->
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Blog Card -->
+        <div class="bg-white shadow-lg mb-3 rounded-lg flex overflow-hidden">
+
+          <img src="assets/images/blog5.png" alt="Blog Image" class="w-40 object-cover">
+          <div class="p-4 flex-1">
+            <div class="flex items-center space-x-2 mb-2">
+              <span class="bg-blue-600 text-white text-sm font-bold py-1 px-2 rounded" style="
+                                background: linear-gradient(
+                                  180deg,
+                                  #094495 0%,
+                                  #094495 100%
+                                );
+                              ">
+                28 Sep
+              </span>
+            </div>
+            <h3 class="text-lg font-bold text-gray-800 mb-2">Sed UT Perspiciatis Unde Omnis</h3>
+            <p class="text-gray-600 text-sm mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's printer type specimen book.</p>
+            <div class="flex items-center text-gray-500 text-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5 mr-2" viewBox="0 0 20 20">
+                <path
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm2-11a2 2 0 11-4 0 2 2 0 014 0zm-1.465 3.016a3.042 3.042 0 00-1.07-.016c-.787.126-1.569.488-2.203.91-.24.16-.508.254-.782.268-.274.014-.54-.068-.751-.229-.167-.124-.354-.253-.534-.344a1 1 0 10-.986 1.734c.259.134.5.308.74.508 1.273 1.083 3.115 1.874 5.28 1.06 2.013-.764 3.448-2.584 3.913-4.567.191-.775-.238-1.51-.95-1.784a3.979 3.979 0 00-1.527-.253c-.71.05-1.405.245-2.08.634z" />
+              </svg>
+              <p>Druid Wensleydale</p>
+            </div>
+          </div>
+        </div>
+        <!-- Blog 2 -->
+        <div class="bg-white shadow-lg mb-3 rounded-lg flex overflow-hidden">
+
+          <img src="assets/images/blog6.png" alt="Blog Image" class="w-40 object-cover">
+          <div class="p-4 flex-1">
+            <div class="flex items-center space-x-2 mb-2">
+              <span class="bg-blue-600 text-white text-sm font-bold py-1 px-2 rounded" style="
+                                background: linear-gradient(
+                                  180deg,
+                                  #094495 0%,
+                                  #094495 100%
+                                );
+                              ">
+                28 Sep
+              </span>
+            </div>
+            <h3 class="text-lg font-bold text-gray-800 mb-2">Sed UT Perspiciatis Unde Omnis</h3>
+            <p class="text-gray-600 text-sm mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's printer type specimen book.</p>
+            <div class="flex items-center text-gray-500 text-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5 mr-2" viewBox="0 0 20 20">
+                <path
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm2-11a2 2 0 11-4 0 2 2 0 014 0zm-1.465 3.016a3.042 3.042 0 00-1.07-.016c-.787.126-1.569.488-2.203.91-.24.16-.508.254-.782.268-.274.014-.54-.068-.751-.229-.167-.124-.354-.253-.534-.344a1 1 0 10-.986 1.734c.259.134.5.308.74.508 1.273 1.083 3.115 1.874 5.28 1.06 2.013-.764 3.448-2.584 3.913-4.567.191-.775-.238-1.51-.95-1.784a3.979 3.979 0 00-1.527-.253c-.71.05-1.405.245-2.08.634z" />
+              </svg>
+              <p>Druid Wensleydale</p>
+            </div>
+          </div>
+        </div>
+        <!-- Use unique images for each blog -->
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Blog Card -->
+        <div class="bg-white shadow-lg rounded-lg flex overflow-hidden">
+          <img src="assets/images/blog7.png" alt="Blog Image" class="w-40 object-cover">
+          <div class="p-4 flex-1">
+            <div class="flex items-center space-x-2 mb-2">
+              <span class="bg-blue-600 text-white text-sm font-bold py-1 px-2 rounded" style="
+                                background: linear-gradient(
+                                  180deg,
+                                  #094495 0%,
+                                  #094495 100%
+                                );
+                              ">
+                28 Sep
+              </span>
+            </div>
+            <h3 class="text-lg font-bold text-gray-800 mb-2">Sed UT Perspiciatis Unde Omnis</h3>
+            <p class="text-gray-600 text-sm mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's printer type specimen book.</p>
+            <div class="flex items-center text-gray-500 text-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5 mr-2" viewBox="0 0 20 20">
+                <path
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm2-11a2 2 0 11-4 0 2 2 0 014 0zm-1.465 3.016a3.042 3.042 0 00-1.07-.016c-.787.126-1.569.488-2.203.91-.24.16-.508.254-.782.268-.274.014-.54-.068-.751-.229-.167-.124-.354-.253-.534-.344a1 1 0 10-.986 1.734c.259.134.5.308.74.508 1.273 1.083 3.115 1.874 5.28 1.06 2.013-.764 3.448-2.584 3.913-4.567.191-.775-.238-1.51-.95-1.784a3.979 3.979 0 00-1.527-.253c-.71.05-1.405.245-2.08.634z" />
+              </svg>
+              <p>Druid Wensleydale</p>
+            </div>
+          </div>
+        </div>
+        <!-- Blog 2 -->
+        <div class="bg-white shadow-lg rounded-lg flex overflow-hidden">
+          <img src="assets/images/blog8.png" alt="Blog Image" class="w-40 object-cover">
+          <div class="p-4 flex-1">
+            <div class="flex items-center space-x-2 mb-2">
+              <span class="bg-blue-600 text-white text-sm font-bold py-1 px-2 rounded" style="
+                                background: linear-gradient(
+                                  180deg,
+                                  #094495 0%,
+                                  #094495 100%
+                                );
+                              ">
+                28 Sep
+              </span>
+            </div>
+            <h3 class="text-lg font-bold text-gray-800 mb-2">Sed UT Perspiciatis Unde Omnis</h3>
+            <p class="text-gray-600 text-sm mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's printer type specimen book.</p>
+            <div class="flex items-center text-gray-500 text-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5 mr-2" viewBox="0 0 20 20">
+                <path
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm2-11a2 2 0 11-4 0 2 2 0 014 0zm-1.465 3.016a3.042 3.042 0 00-1.07-.016c-.787.126-1.569.488-2.203.91-.24.16-.508.254-.782.268-.274.014-.54-.068-.751-.229-.167-.124-.354-.253-.534-.344a1 1 0 10-.986 1.734c.259.134.5.308.74.508 1.273 1.083 3.115 1.874 5.28 1.06 2.013-.764 3.448-2.584 3.913-4.567.191-.775-.238-1.51-.95-1.784a3.979 3.979 0 00-1.527-.253c-.71.05-1.405.245-2.08.634z" />
+              </svg>
+              <p>Druid Wensleydale</p>
+            </div>
+          </div>
+        </div>
+        <!-- Use unique images for each blog -->
+      </div>
+
+      <!-- Load More Button -->
+      <div class="flex justify-center mt-8">
+        <button
+          class="bg-[#094495] text-white px-6 py-2 flex items-center rounded-md hover:bg-[#072f73] font-semibold transition">
+          <a href="blog1.html" class="flex items-center space-x-2">
+            <span>Load more</span>
+            <img src="assets/images/Frame.svg" alt="" class="w-[24px] h-[22px]">
+          </a>
+        </button>
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-------------------- SECTION 2:BLOG SECTION END -------------------->
+
+  <!-------------------- SECTION 3: FOOTER SECTION START -------------------->
+  <footer class=" py-10">
+    <!-- Newsletter Subscription Section -->
+    <div class="w-2/5 mx-auto rounded-lg text-white py-8" style="background: #094495">
+      <div class="container px-4 text-center lg:text-left flex flex-col lg:flex-row items-center justify-between gap-6">
+        <h3 class="text-xl font-bold">Subscribe To Our Newsletter</h3>
+        <div class="flex items-center w-full lg:w-auto">
+          <input type="email" placeholder="Enter your email address"
+            class="w-full lg:w-80 px-4 py-2 rounded-l-md focus:outline-none text-gray-700" />
+          <button class="bg-blue-800 hover:bg-blue-900 px-6 py-2 text-white rounded-r-md font-medium"
+            style="background: #072854">
+            Subscribe
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Main Content -->
+    <div class="container mx-auto px-4">
+      <!-- First Section: Logo and Social Icons -->
+      <div class="flex flex-col lg:flex-row justify-between items-center mt-6 mb-4">
+        <div class="flex flex-col items-center lg:items-start">
+          <img src="assets/images/logo.png" alt="Smit Hospital Logo" class="mb-4 w-40" />
+        </div>
+        <div class="flex items-center gap-4">
+          <span class="text-blue-800 font-medium">Follow US:</span>
+          <a href="#" class="text-blue-800 hover:text-blue-600"><i class="fa-brands fa-facebook text-xl"></i></a>
+          <a href="#" class="text-blue-800 hover:text-blue-600"><i class="fa-brands fa-instagram text-xl"></i></a>
+          <a href="#" class="text-blue-800 hover:text-blue-600"><i class="fa-brands fa-linkedin text-xl"></i></a>
+          <a href="#" class="text-blue-800 hover:text-blue-600"><i class="fa-brands fa-twitter text-xl"></i></a>
+        </div>
+      </div>
+
+      <!-- Second Section: Main Links and Contact Info -->
+      <div class="grid grid-cols-1 border-t border-gray-300 lg:grid-cols-4 py-4 gap-8 mb-2">
+        <!-- Contact Info -->
+        <div>
+          <h4 class="text-blue-700 font-bold text-lg">Contact us</h4>
+          <p class="text-gray-600 mt-2 font-semibold">
+            <i class="fa-solid fa-location-dot text-blue-700"></i> 3rd Floor,
+            CTC Building, Varachha Main Road, near Baroda Prestage, Hans
+            Society, Surat, Gujarat 395006
+          </p>
+          <p class="text-gray-600 mt-2 font-semibold">
+            <i class="fa-solid fa-phone text-blue-700"></i> +91 9825312133 /
+            261 25632332
+          </p>
+          <p class="text-gray-600 mt-2 font-semibold">
+            <i class="fa-solid fa-envelope text-blue-700"></i>
+            <a href="mailto:info@smithospitals.com" class="text-grey-600"></a>
+            Email : info@smithospitals.com</a>
+          </p>
+        </div>
+
+        <!-- Information -->
+        <div>
+          <h4 class="text-blue-700 font-bold text-lg">Information</h4>
+          <ul class="mt-4 space-y-2">
+            <li>
+              <a href="services.html" class="text-gray-900 font-semibold hover:text-blue-600">Services & Facilities</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-900 font-semibold hover:text-blue-600">Our Culture</a>
+            </li>
+            <li>
+              <a href="contactus.html" class="text-gray-900 font-semibold hover:text-blue-600">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-blue-700 font-bold text-lg">Quick Link</h4>
+          <ul class="mt-4 space-y-2">
+            <li>
+              <a href="index.html" class="text-gray-900 font-semibold hover:text-blue-600">Home</a>
+            </li>
+            <li>
+              <a href="doctors.html" class="text-gray-900 font-semibold hover:text-blue-600">Doctor</a>
+            </li>
+            <li>
+              <a href="blogs.html" class="text-gray-900 font-semibold hover:text-blue-600">Blogs</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-900 font-semibold hover:text-blue-600">Appointment</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Timing -->
+        <div>
+          <h4 class="text-blue-700 font-bold text-lg">Monday to Saturday</h4>
+          <ul class="mt-4 space-y-2">
+            <li class="text-gray-900 font-semibold">10:00 am - 12:00 pm</li>
+            <li class="text-gray-900 font-semibold">5:00 pm - 7:00 pm</li>
+            <li class="text-gray-900 font-semibold">Sunday Only Emergency</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Third Section: Copyright -->
+      <div class="border-t border-gray-300 pt-4 text-center">
+        <p class="text-gray-700 font-semibold">
+          &copy; 2023 Copyright Smit Hospital All Rights Reserved
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-------------------- SECTION 3:FOOTER SECTION END -------------------->
+</body>
+
+</html>
