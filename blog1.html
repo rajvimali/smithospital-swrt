@@ -1,38 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Smit Hospital</title>
-    <!-- TAILWIND CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- GOOGLE FONTS -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Train+One&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smit Hospital</title>
+  <!-- TAILWIND CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- FONT AWESOME CDN -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
-      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-  <body class="bg-white">
-    <!-------------------- SECTION 1:HEADER & HERO SECTION START -------------------->
-    <header class="bg-white shadow">
-      <div class="container mx-auto px-4 flex items-center justify-between py-4">
-        <!-- Logo -->
-        <h1 class="text-2xl font-bold text-blue-600">
-          <img src="assets/images/logo.png" class="w-auto h-8" alt="Logo" />
-        </h1>
-    
-        <!-- Navigation -->
-        <nav class="hidden md:flex space-x-4 text-gray-700">
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Train+One&display=swap" rel="stylesheet">
+
+  <!-- FONT AWESOME CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            trainone: ['"Train One"', 'sans-serif'],
+          },
+          colors: {
+            primary: "#1d4ed8",
+            secondary: "#9333ea",
+          },
+          maxWidth: {
+            container: "1440px",
+            mxcontainer: "1920px",
+          },
+          fontSize: {
+            'custom-size': '110px',
+          },
+          lineHeight: {
+            'custom-line': '111px',
+          },
+        },
+      },
+      plugins: [],
+    };
+  </script>
+</head>
+
+<body class="bg-white">
+  <!-------------------- SECTION 1:HEADER & HERO SECTION START -------------------->
+  <header class="bg-white shadow">
+    <div class="container mx-auto px-4 flex items-center justify-between py-4">
+      <!-- Logo -->
+      <h1 class="text-2xl font-bold text-blue-600">
+        <img src="assets/images/logo.png" class="w-auto h-8" alt="Logo" />
+      </h1>
+
+      <!-- Navigation -->
+      <nav class="hidden md:flex space-x-4 text-gray-700">
+        <a href="index.html" class="hover:text-blue-600 font-semibold">Home</a>
+        <a href="aboutus.html" class="hover:text-blue-600 font-semibold">About Us</a>
+        <a href="services.html" class="hover:text-blue-600 font-semibold">Services</a>
+        <a href="gallery.html" class="hover:text-blue-600 font-semibold">Gallery</a>
+        <a href="doctors.html" class="hover:text-blue-600 font-semibold">Doctors</a>
+        <a href="blogs.html" class="hover:text-blue-600 font-semibold">Blog</a>
+        <a href="contactus.html" class="hover:text-blue-600 font-semibold">Contact Us</a>
+      </nav>
+
+      <!-- Book Appointment Button (visible only on larger screens) -->
+      <a href="#"
+        class="bg-blue-600 text-white font-semibold px-4 py-2 rounded-md shadow hover:brightness-90 hidden md:inline-block"
+        style="background: linear-gradient(180deg, #094495 0%, #094495 100%)">
+        Book Appointment <i class="fa-solid fa-arrow-right-long"></i>
+      </a>
+
+      <!-- Hamburger Menu for Mobile -->
+      <div class="md:hidden flex items-center">
+        <button id="hamburger-menu" class="text-gray-700 focus:outline-none">
+          <i id="hamburger-icon" class="fas fa-bars text-2xl transition-all duration-300"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu (hidden by default) -->
+    <div id="mobile-menu" class="md:hidden hidden bg-white shadow-md">
+      <div class="container mx-auto px-4 py-4">
+        <!-- Navigation Centered -->
+        <nav class="flex flex-col items-center space-y-4 text-gray-700">
           <a href="index.html" class="hover:text-blue-600 font-semibold">Home</a>
           <a href="aboutus.html" class="hover:text-blue-600 font-semibold">About Us</a>
           <a href="services.html" class="hover:text-blue-600 font-semibold">Services</a>
@@ -41,331 +94,290 @@
           <a href="blogs.html" class="hover:text-blue-600 font-semibold">Blog</a>
           <a href="contactus.html" class="hover:text-blue-600 font-semibold">Contact Us</a>
         </nav>
-    
-        <!-- Book Appointment Button (visible only on larger screens) -->
-        <a
-          href="#"
-          class="bg-blue-600 text-white font-semibold px-4 py-2 rounded-md shadow hover:brightness-90 hidden md:inline-block"
-          style="background: linear-gradient(180deg, #094495 0%, #094495 100%)"
-        >
-          Book Appointment <i class="fa-solid fa-arrow-right-long"></i>
-        </a>
-    
-        <!-- Hamburger Menu for Mobile -->
-        <div class="md:hidden flex items-center">
-          <button id="hamburger-menu" class="text-gray-700 focus:outline-none">
-            <i id="hamburger-icon" class="fas fa-bars text-2xl transition-all duration-300"></i>
-          </button>
-        </div>
       </div>
-    
-      <!-- Mobile Menu (hidden by default) -->
-      <div id="mobile-menu" class="md:hidden hidden bg-white shadow-md">
-        <div class="container mx-auto px-4 py-4">
-          <!-- Navigation Centered -->
-          <nav class="flex flex-col items-center space-y-4 text-gray-700">
-            <a href="index.html" class="hover:text-blue-600 font-semibold">Home</a>
-            <a href="aboutus.html" class="hover:text-blue-600 font-semibold">About Us</a>
-            <a href="services.html" class="hover:text-blue-600 font-semibold">Services</a>
-            <a href="gallery.html" class="hover:text-blue-600 font-semibold">Gallery</a>
-            <a href="doctors.html" class="hover:text-blue-600 font-semibold">Doctors</a>
-            <a href="blogs.html" class="hover:text-blue-600 font-semibold">Blog</a>
-            <a href="contactus.html" class="hover:text-blue-600 font-semibold">Contact Us</a>
-          </nav>
-        </div>
-      </div>
-    </header>
-    
-    <!-- Add this JavaScript to toggle the mobile menu visibility and change the icon -->
-    <script>
-      const hamburgerButton = document.getElementById("hamburger-menu");
-      const mobileMenu = document.getElementById("mobile-menu");
-      const hamburgerIcon = document.getElementById("hamburger-icon");
-    
-      // Toggle the mobile menu and the icon
-      hamburgerButton.addEventListener("click", function () {
-        mobileMenu.classList.toggle("hidden");
-        if (mobileMenu.classList.contains("hidden")) {
-          hamburgerIcon.classList.remove("fa-times");
-          hamburgerIcon.classList.add("fa-bars");
-          hamburgerIcon.style.transform = "rotate(0deg)";
-        } else {
-          hamburgerIcon.classList.remove("fa-bars");
-          hamburgerIcon.classList.add("fa-times");
-          hamburgerIcon.style.transform = "rotate(180deg)"; // Rotate cross icon
-        }
-      });
-    </script>
-    
-       <!-------------------- SERVICE SECTION START -------------------->
-       <section
-       class="relative bg-blue-50"
-       style="height: 570px; background-size: cover; background-position: center;"
-     >
-       <!-- Background Image -->
-       <div
-         class="absolute inset-0"
-         style="
+    </div>
+  </header>
+
+  <!-- Add this JavaScript to toggle the mobile menu visibility and change the icon -->
+  <script>
+    const hamburgerButton = document.getElementById("hamburger-menu");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const hamburgerIcon = document.getElementById("hamburger-icon");
+
+    // Toggle the mobile menu and the icon
+    hamburgerButton.addEventListener("click", function () {
+      mobileMenu.classList.toggle("hidden");
+      if (mobileMenu.classList.contains("hidden")) {
+        hamburgerIcon.classList.remove("fa-times");
+        hamburgerIcon.classList.add("fa-bars");
+        hamburgerIcon.style.transform = "rotate(0deg)";
+      } else {
+        hamburgerIcon.classList.remove("fa-bars");
+        hamburgerIcon.classList.add("fa-times");
+        hamburgerIcon.style.transform = "rotate(180deg)"; // Rotate cross icon
+      }
+    });
+  </script>
+
+  <!-------------------- SERVICE SECTION START -------------------->
+  <section class="relative bg-blue-50" style="height: 570px; background-size: cover; background-position: center;">
+    <!-- Background Image -->
+    <div class="absolute inset-0" style="
            background-image: url('assets/images/aboutus-main.png');
            background-size: cover;
            background-position: center;
-         "
-       ></div>
- 
-       <!-- Content -->
-       <div
-         class="container mx-auto px-4 relative z-10 flex items-center justify-start h-full"
-       >
-         <!-- Text Content -->
-           <h3 class="text-7xl font-semibold text-gray-800 mb-4">Blog</h3>
-          
-       </div>
-     </section>
-    <!-------------------- SECTION 1:HEADER & HERO SECTION END -------------------->
+         "></div>
 
-    <!-------------------- SECTION 2:BLOG SECTION START -------------------->
-    <!DOCTYPE html>
-<html lang="en">
-<head>
+    <!-- Content -->
+    <div class="container mx-auto px-4 relative z-10 flex items-center justify-start h-full">
+      <!-- Text Content -->
+      <h3 class="text-7xl font-semibold text-gray-800 mb-4">Blog</h3>
+
+    </div>
+    <div
+      class="font-trainone text-custom-size font-normal leading-custom-line  underline-offset-[from-font] decoration-skip-ink"
+      style="color: #0457A70D;">
+      Blog
+    </div>
+  </section>
+  <!-------------------- SECTION 1:HEADER & HERO SECTION END -------------------->
+
+  <!-------------------- SECTION 2:BLOG SECTION START -------------------->
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Page</title>
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-100">
+  </head>
+
+  <body class="bg-gray-100">
     <!-- Blog Container -->
     <div class="max-w-5xl mx-auto mt-10 px-6">
-        <!-- Blog Main Section -->
-        <div class="bg-white rounded-lg ">
-            <!-- Blog Content Section -->
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                <!-- Left: Blog Main Image -->
-                <div class="lg:col-span-2">
-                    <img src="assets/images/blog10.png" alt="Main Blog" class="rounded-lg  w-full h-96 object-cover">
+      <!-- Blog Main Section -->
+      <div class="bg-white rounded-lg " style="
+      margin-top: 10%;">
+        <!-- Blog Content Section -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <!-- Left: Blog Main Image -->
+          <div class="lg:col-span-2">
+            <img src="assets/images/blog10.png" alt="Main Blog" class="rounded-lg  w-full h-96 object-cover">
+          </div>
+
+          <!-- Right: Recent Posts and Follow Us -->
+          <div class="p-6 space-y-10">
+            <!-- Recent Posts Section -->
+            <div>
+              <h2 class="text-xl font-semibold text-gray-800 mb-4">Recent Post</h2>
+              <div class="space-y-4">
+                <!-- Post Item -->
+                <div class="flex items-center space-x-4">
+                  <img src="assets/images/blog9.png" alt="Post Thumbnail" class="w-16 h-16 rounded-lg object-cover">
+                  <div>
+                    <h3 class="text-lg font-semibold text-gray-800">Side Effects of Antibiotics</h3>
+                    <p class="text-sm text-gray-500">July 12, 2022 | No Comments</p>
+                  </div>
                 </div>
-    
-                <!-- Right: Recent Posts and Follow Us -->
-                <div class="p-6 space-y-10">
-                    <!-- Recent Posts Section -->
-                    <div>
-                        <h2 class="text-xl font-semibold text-gray-800 mb-4">Recent Post</h2>
-                        <div class="space-y-4">
-                            <!-- Post Item -->
-                            <div class="flex items-center space-x-4">
-                                <img src="assets/images/blog9.png" alt="Post Thumbnail" class="w-16 h-16 rounded-lg object-cover">
-                                <div>
-                                    <h3 class="text-lg font-semibold text-gray-800">Side Effects of Antibiotics</h3>
-                                    <p class="text-sm text-gray-500">July 12, 2022 | No Comments</p>
-                                </div>
-                            </div>
-                            <!-- Post Item -->
-                            <div class="flex items-center space-x-4">
-                                <img src="assets/images/blog9.png" alt="Post Thumbnail" class="w-16 h-16 rounded-lg object-cover">
-                                <div>
-                                    <h3 class="text-lg font-semibold text-gray-800">Junk Food and Concentrate</h3>
-                                    <p class="text-sm text-gray-500">July 12, 2022 | No Comments</p>
-                                </div>
-                            </div>
-                            <!-- Post Item -->
-                            <div class="flex items-center space-x-4">
-                                <img src="assets/images/blog9.png" alt="Post Thumbnail" class="w-16 h-16 rounded-lg object-cover">
-                                <div>
-                                    <h3 class="text-lg font-semibold text-gray-800">Symptoms of Malaria</h3>
-                                    <p class="text-sm text-gray-500">July 12, 2022 | No Comments</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <!-- Follow Us Section -->
-                    <div>
-                        <h2 class="text-xl font-semibold text-gray-800 mb-4">Follow Us On</h2>
-                        <div class="flex space-x-4">
-                            <a href="#" class="text-blue-600 text-2xl"><i class="fab fa-facebook"></i></a>
-                            <a href="#" class="text-blue-400 text-2xl"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="text-pink-500 text-2xl"><i class="fab fa-instagram"></i></a>
-                            <a href="#" class="text-blue-700 text-2xl"><i class="fab fa-linkedin"></i></a>
-                        </div>
-                    </div>
+                <!-- Post Item -->
+                <div class="flex items-center space-x-4">
+                  <img src="assets/images/blog9.png" alt="Post Thumbnail" class="w-16 h-16 rounded-lg object-cover">
+                  <div>
+                    <h3 class="text-lg font-semibold text-gray-800">Junk Food and Concentrate</h3>
+                    <p class="text-sm text-gray-500">July 12, 2022 | No Comments</p>
+                  </div>
                 </div>
+                <!-- Post Item -->
+                <div class="flex items-center space-x-4">
+                  <img src="assets/images/blog9.png" alt="Post Thumbnail" class="w-16 h-16 rounded-lg object-cover">
+                  <div>
+                    <h3 class="text-lg font-semibold text-gray-800">Symptoms of Malaria</h3>
+                    <p class="text-sm text-gray-500">July 12, 2022 | No Comments</p>
+                  </div>
+                </div>
+              </div>
             </div>
-    
-            <!-- Blog Text Section -->
-            <div class="">
-                <h1 class="text-4xl font-bold text-gray-800 mb-4">
-                    Sed UT Perspiciatis <span class="text-green-600">Unde Omnis</span>
-                </h1>
-                <p class="text-gray-800 font-bold text-xl mb-6">
-                    July 12, 2022 <span class="text-gray-400">|</span> No Comments
-                </p>
-                <p class="text-gray-700 leading-relaxed">
-                    If you're like most people with high blood pressure, drugs are a major part of your plan to lower your blood pressure. 
-                    Take medications as scheduled, at the same time every day. Do not stop taking or change your medications unless you first 
-                    talk with your doctor. Even if you feel good, continue to take your medications. Stopping drugs suddenly can make the 
-                    condition worse.
-                </p>
-                <p class="text-gray-700 leading-relaxed mt-4">
-                    If you're like most people with high blood pressure, drugs are a major part of your plan to lower your blood pressure. 
-                    Take medications as scheduled, at the same time every day. Do not stop taking or change your medications unless you first 
-                    talk with your doctor. Even if you feel good, continue to take your medications. Stopping drugs suddenly can make the 
-                    condition worse.
-                </p>
+
+            <!-- Follow Us Section -->
+            <div>
+              <h2 class="text-xl font-semibold text-gray-800 mb-4">Follow Us On</h2>
+              <div class="flex space-x-4">
+                <a href="#" class="text-blue-600 text-2xl">
+                  <div class="bg-grey-600 p-4 rounded-full">
+                    <img src="assets/images/facebook.png" alt="Facebook" class="w-6 h-6">
+                  </div>
+                </a>
+                <a href="#" class="text-blue-400 text-2xl">
+                  <div class="bg-grey-600 p-4 rounded-full">
+                    <img src="assets/images/instagram.png" alt="Instagram" class="w-6 h-6">
+                  </div>
+                </a>
+                <a href="#" class="text-pink-500 text-2xl">
+                  <div class="bg-grey-600 p-4 rounded-full">
+                    <img src="assets/images/indid.png" alt="LinkedIn" class="w-6 h-6">
+                  </div>
+                </a>
+                <a href="#" class="text-blue-700 text-2xl">
+                  <div class="bg-grey-600 p-4 rounded-full">
+                    <img src="assets/images/twitter.png" alt="Twitter" class="w-6 h-6">
+                  </div>
+                </a>
+              </div>
             </div>
-            <div class="flex justify-center mt-8">
-              <button class="bg-blue-600 text-white font-semibold px-4 py-2 rounded-md shadow hover:brightness-90"
-        style="background: linear-gradient(180deg, #094495 0%, #094495 100%)"> <a href="blogs.html">
-          <i class="fa-solid fa-angles-left"></i> Back to Blogs</a>
-        </button>
-       </div>
+          </div>
         </div>
+
+        <!-- Blog Text Section -->
+        <div class="">
+          <h1 class="text-4xl font-bold text-gray-800 mb-4">
+            Sed UT Perspiciatis <span class="text-green-600">Unde Omnis</span>
+          </h1>
+          <p class="text-gray-800 font-bold text-xl mb-6">
+            July 12, 2022 <span class="text-gray-400">|</span> No Comments
+          </p>
+          <p class="text-gray-700 leading-relaxed">
+            If you're like most people with high blood pressure, drugs are a major part of your plan to lower your blood
+            pressure.
+            Take medications as scheduled, at the same time every day. Do not stop taking or change your medications
+            unless you first
+            talk with your doctor. Even if you feel good, continue to take your medications. Stopping drugs suddenly can
+            make the
+            condition worse.
+          </p>
+          <p class="text-gray-700 leading-relaxed mt-4">
+            If you're like most people with high blood pressure, drugs are a major part of your plan to lower your blood
+            pressure.
+            Take medications as scheduled, at the same time every day. Do not stop taking or change your medications
+            unless you first
+            talk with your doctor. Even if you feel good, continue to take your medications. Stopping drugs suddenly can
+            make the
+            condition worse.
+          </p>
+        </div>
+        <div class="flex justify-center mt-8">
+          <button class="bg-blue-600 text-white font-semibold px-4 py-2 rounded-md shadow hover:brightness-90"
+            style="background: linear-gradient(180deg, #094495 0%, #094495 100%)"> <a href="blogs.html">
+              <i class="fa-solid fa-angles-left"></i> Back to Blogs</a>
+          </button>
+        </div>
+      </div>
     </div>
-    
+
     <!-------------------- SECTION 2:BLOG SECTION END -------------------->
 
     <!-------------------- SECTION 3: FOOTER SECTION START -------------------->
     <footer class=" py-10">
-        <!-- Newsletter Subscription Section -->
+      <!-- Newsletter Subscription Section -->
+      <div class="w-2/5 mx-auto rounded-lg text-white py-8" style="background: #094495">
         <div
-          class="w-2/5 mx-auto rounded-lg text-white py-8"
-          style="background: #094495"
-        >
-          <div
-            class="container px-4 text-center lg:text-left flex flex-col lg:flex-row items-center justify-between gap-6"
-          >
-            <h3 class="text-xl font-bold">Subscribe To Our Newsletter</h3>
-            <div class="flex items-center w-full lg:w-auto">
-              <input
-                type="email"
-                placeholder="Enter your email address"
-                class="w-full lg:w-80 px-4 py-2 rounded-l-md focus:outline-none text-gray-700"
-              />
-              <button
-                class="bg-blue-800 hover:bg-blue-900 px-6 py-2 text-white rounded-r-md font-medium"
-                style="background: #072854"
-              >
-                Subscribe
-              </button>
-            </div>
+          class="container px-4 text-center lg:text-left flex flex-col lg:flex-row items-center justify-between gap-6">
+          <h3 class="text-xl font-bold">Subscribe To Our Newsletter</h3>
+          <div class="flex items-center w-full lg:w-auto">
+            <input type="email" placeholder="Enter your email address"
+              class="w-full lg:w-80 px-4 py-2 rounded-l-md focus:outline-none text-gray-700" />
+            <button class="bg-blue-800 hover:bg-blue-900 px-6 py-2 text-white rounded-r-md font-medium"
+              style="background: #072854">
+              Subscribe
+            </button>
           </div>
         </div>
-  
-        <!-- Footer Main Content -->
-        <div class="container mx-auto px-4">
-          <!-- First Section: Logo and Social Icons -->
-          <div
-            class="flex flex-col lg:flex-row justify-between items-center mt-6 mb-4"
-          >
-            <div class="flex flex-col items-center lg:items-start">
-              <img
-                src="assets/images/logo.png"
-                alt="Smit Hospital Logo"
-                class="mb-4 w-40"
-              />
-            </div>
-            <div class="flex items-center gap-4">
-              <span class="text-blue-800 font-medium">Follow US:</span>
-              <a href="#" class="text-blue-800 hover:text-blue-600"
-                ><i class="fa-brands fa-facebook text-xl"></i
-              ></a>
-              <a href="#" class="text-blue-800 hover:text-blue-600"
-                ><i class="fa-brands fa-instagram text-xl"></i
-              ></a>
-              <a href="#" class="text-blue-800 hover:text-blue-600"
-                ><i class="fa-brands fa-linkedin text-xl"></i
-              ></a>
-              <a href="#" class="text-blue-800 hover:text-blue-600"
-                ><i class="fa-brands fa-twitter text-xl"></i
-              ></a>
-            </div>
+      </div>
+
+      <!-- Footer Main Content -->
+      <div class="container mx-auto px-4">
+        <!-- First Section: Logo and Social Icons -->
+        <div class="flex flex-col lg:flex-row justify-between items-center mt-6 mb-4">
+          <div class="flex flex-col items-center lg:items-start">
+            <img src="assets/images/logo.png" alt="Smit Hospital Logo" class="mb-4 w-40" />
           </div>
-  
-          <!-- Second Section: Main Links and Contact Info -->
-          <div
-            class="grid grid-cols-1 border-t border-gray-300 lg:grid-cols-4 py-4 gap-8 mb-2"
-          >
-            <!-- Contact Info -->
-            <div>
-              <h4 class="text-blue-700 font-bold text-lg">Contact us</h4>
-              <p class="text-gray-600 mt-2 font-semibold">
-                <i class="fa-solid fa-location-dot text-blue-700"></i> 3rd Floor,
-                CTC Building, Varachha Main Road, near Baroda Prestage, Hans
-                Society, Surat, Gujarat 395006
-              </p>
-              <p class="text-gray-600 mt-2 font-semibold">
-                <i class="fa-solid fa-phone text-blue-700"></i> +91 9825312133 /
-                261 25632332
-              </p>
-              <p class="text-gray-600 mt-2 font-semibold">
-                <i class="fa-solid fa-envelope text-blue-700"></i>
-                <a href="mailto:info@smithospitals.com" class="text-grey-600"></a>
-                  Email : info@smithospitals.com</a
-                >
-              </p>
-            </div>
-  
-            <!-- Information -->
-            <div>
-              <h4 class="text-blue-700 font-bold text-lg">Information</h4>
-              <ul class="mt-4 space-y-2">
-                <li>
-                  <a href="services.html" class="text-gray-900 font-semibold hover:text-blue-600"
-                    >Services & Facilities</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="text-gray-900 font-semibold hover:text-blue-600"
-                    >Our Culture</a
-                  >
-                </li>
-                <li>
-                  <a href="contactus.html" class="text-gray-900 font-semibold hover:text-blue-600"
-                    >Contact</a
-                  >
-                </li>
-              </ul>
-            </div>
-  
-            <!-- Quick Links -->
-            <div>
-              <h4 class="text-blue-700 font-bold text-lg">Quick Link</h4>
-              <ul class="mt-4 space-y-2">
-                <li>
-                  <a href="index.html" class="text-gray-900 font-semibold hover:text-blue-600">Home</a>
-                </li>
-                <li>
-                  <a href="doctors.html" class="text-gray-900 font-semibold hover:text-blue-600">Doctor</a>
-                </li>
-                <li>
-                  <a href="blogs.html" class="text-gray-900 font-semibold hover:text-blue-600">Blogs</a>
-                </li>
-                <li>
-                  <a href="#" class="text-gray-900 font-semibold hover:text-blue-600"
-                    >Appointment</a
-                  >
-                </li>
-              </ul>
-            </div>
-  
-            <!-- Timing -->
-            <div>
-              <h4 class="text-blue-700 font-bold text-lg">Monday to Saturday</h4>
-              <ul class="mt-4 space-y-2">
-                <li class="text-gray-900 font-semibold">10:00 am - 12:00 pm</li>
-                <li class="text-gray-900 font-semibold">5:00 pm - 7:00 pm</li>
-                <li class="text-gray-900 font-semibold">Sunday Only Emergency</li>
-              </ul>
-            </div>
+          <div class="flex items-center gap-4">
+            <span class="text-blue-800 font-medium">Follow US:</span>
+            <a href="#" class="text-blue-800 hover:text-blue-600"><i class="fa-brands fa-facebook text-xl"></i></a>
+            <a href="#" class="text-blue-800 hover:text-blue-600"><i class="fa-brands fa-instagram text-xl"></i></a>
+            <a href="#" class="text-blue-800 hover:text-blue-600"><i class="fa-brands fa-linkedin text-xl"></i></a>
+            <a href="#" class="text-blue-800 hover:text-blue-600"><i class="fa-brands fa-twitter text-xl"></i></a>
           </div>
-  
-          <!-- Third Section: Copyright -->
-          <div class="border-t border-gray-300 pt-4 text-center">
-            <p class="text-gray-700 font-semibold">
-              &copy; 2023 Copyright Smit Hospital All Rights Reserved
+        </div>
+
+        <!-- Second Section: Main Links and Contact Info -->
+        <div class="grid grid-cols-1 border-t border-gray-300 lg:grid-cols-4 py-4 gap-8 mb-2">
+          <!-- Contact Info -->
+          <div>
+            <h4 class="text-blue-700 font-bold text-lg">Contact us</h4>
+            <p class="text-gray-600 mt-2 font-semibold">
+              <i class="fa-solid fa-location-dot text-blue-700"></i> 3rd Floor,
+              CTC Building, Varachha Main Road, near Baroda Prestage, Hans
+              Society, Surat, Gujarat 395006
+            </p>
+            <p class="text-gray-600 mt-2 font-semibold">
+              <i class="fa-solid fa-phone text-blue-700"></i> +91 9825312133 /
+              261 25632332
+            </p>
+            <p class="text-gray-600 mt-2 font-semibold">
+              <i class="fa-solid fa-envelope text-blue-700"></i>
+              <a href="mailto:info@smithospitals.com" class="text-grey-600"></a>
+              Email : info@smithospitals.com</a>
             </p>
           </div>
+
+          <!-- Information -->
+          <div>
+            <h4 class="text-blue-700 font-bold text-lg">Information</h4>
+            <ul class="mt-4 space-y-2">
+              <li>
+                <a href="services.html" class="text-gray-900 font-semibold hover:text-blue-600">Services &
+                  Facilities</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-900 font-semibold hover:text-blue-600">Our Culture</a>
+              </li>
+              <li>
+                <a href="contactus.html" class="text-gray-900 font-semibold hover:text-blue-600">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h4 class="text-blue-700 font-bold text-lg">Quick Link</h4>
+            <ul class="mt-4 space-y-2">
+              <li>
+                <a href="index.html" class="text-gray-900 font-semibold hover:text-blue-600">Home</a>
+              </li>
+              <li>
+                <a href="doctors.html" class="text-gray-900 font-semibold hover:text-blue-600">Doctor</a>
+              </li>
+              <li>
+                <a href="blogs.html" class="text-gray-900 font-semibold hover:text-blue-600">Blogs</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-900 font-semibold hover:text-blue-600">Appointment</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Timing -->
+          <div>
+            <h4 class="text-blue-700 font-bold text-lg">Monday to Saturday</h4>
+            <ul class="mt-4 space-y-2">
+              <li class="text-gray-900 font-semibold">10:00 am - 12:00 pm</li>
+              <li class="text-gray-900 font-semibold">5:00 pm - 7:00 pm</li>
+              <li class="text-gray-900 font-semibold">Sunday Only Emergency</li>
+            </ul>
+          </div>
         </div>
-      </footer>
-  
-      <!-------------------- SECTION 3:FOOTER SECTION END -------------------->
-    </body>
+
+        <!-- Third Section: Copyright -->
+        <div class="border-t border-gray-300 pt-4 text-center">
+          <p class="text-gray-700 font-semibold">
+            &copy; 2023 Copyright Smit Hospital All Rights Reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-------------------- SECTION 3:FOOTER SECTION END -------------------->
+  </body>
+
   </html>

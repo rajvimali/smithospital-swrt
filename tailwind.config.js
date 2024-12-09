@@ -6,9 +6,6 @@ module.exports = {
         primary: "#1d4ed8",
         secondary: "#9333ea",
       },
-      fontFamily: {
-        "train-one": ['"Train One"', "cursive"],
-      },
       maxWidth: {
         container: "1440px",
         mxcontainer: "1920px",
