@@ -8,13 +8,50 @@
   <!-- TAILWIND CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- GOOGLE FONTS -->
-  <link href="https://fonts.googleapis.com/css2?family=Train+One&display=swap" rel="stylesheet" />
-
   <!-- FONT AWESOME CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
     integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Train+One&amp;display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            trainone: ['"Train One"', 'sans-serif'],
+          },
+          colors: {
+            primary: "#1d4ed8",
+            secondary: "#9333ea",
+          },
+          maxWidth: {
+            container: "1440px",
+            mxcontainer: "1920px",
+          },
+          fontSize: {
+            'custom-size': '110px',
+          },
+          lineHeight: {
+            'custom-line': '111px',
+          },
+        },
+      },
+      plugins: [],
+    };
+  </script>
+
+  <!-- ANIMATE CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
+
 </head>
 
 <body class="bg-white">
@@ -105,12 +142,17 @@
     <div class="container mx-auto px-4 relative z-10 flex items-center justify-start h-full">
       <!-- Text Content -->
       <h3 class="text-7xl font-semibold text-gray-800 mb-4">About Us</h3>
-
+      <img src="assets/images/pngwing 2.png" alt="" class="" style="width: 16%;
+      position: absolute;
+      top: 50%;
+      left: 12%;">
     </div>
   </section>
   <!-------------------- SECTION 1:HEADER & HERO SECTION END -------------------->
 
   <!-------------------- SECTION 2:ABOUT US SECTION START -------------------->
+  <h1 class="font-trainone text-7xl" style="position: absolute; color:#0457A70D;right: 0%
+;">ABOUT US</h1>
   <section class="container mx-auto bg-white py-16">
     <div class=" px-4 grid grid-cols-1 lg:grid-cols-2 items-center">
       <!-- Left: Images -->
@@ -158,14 +200,14 @@
         </p>
         <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
           <!-- Mission -->
-          <div class="bg-white border border-gray-200 rounded-lg shadow-lg p-6 flex flex-col">
+          <div class="bg-white border border-gray-200 rounded-md shadow-md p-6 flex flex-col">
             <div class="flex items-center space-x-3">
-              <div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center">
-                <i class="fa-solid fa-bullseye text-blue-600 text-2xl"></i>
+              <div class="w-8 h-8 bg-blue-50 rounded-full flex items-center justify-center">
+                <img src="assets/images/Frame (10).svg" alt="" class="src">
               </div>
               <h3 class="text-lg font-bold text-gray-800">Our Mission</h3>
             </div>
-            <div class="mt-4">
+            <div class="mt-2">
               <p class="text-gray-600 text-sm leading-relaxed">
                 It has survived not only be a five centuries, but also the printing
                 a leap into remaining essentially. Ipsum has close been the dummy.
@@ -173,14 +215,14 @@
             </div>
           </div>
           <!-- Vision -->
-          <div class="bg-white border border-gray-200 rounded-lg shadow-lg p-6 flex flex-col">
+          <div class="bg-white border border-gray-200 rounded-md shadow-md p-6 flex flex-col">
             <div class="flex items-center space-x-3">
-              <div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center">
-                <i class="fa-solid fa-eye text-blue-600 text-2xl"></i>
+              <div class="w-10 h-10  rounded-full flex items-center justify-center">
+                <img src="assets/images/Frame (11).svg" alt="" class="src">
               </div>
               <h3 class="text-lg font-bold text-gray-800">Our Vision</h3>
             </div>
-            <div class="mt-4">
+            <div class="mt-2">
               <p class="text-gray-600 text-sm leading-relaxed">
                 It has survived not only be a five centuries, but also the printing
                 a leap into remaining essentially. Ipsum has close been the dummy.
@@ -195,127 +237,144 @@
   <!-------------------- SECTION 2:ABOUT US SECTION END -------------------->
 
   <!-------------------- SECTION 3:CULTURE, VALUE SECTION START -------------------->
-  <section class="bg-white py-16">
-    <div class="container mx-auto space-y-16">
+  <section class=" bg-gray-50 py-16">
+    <div class="container mx-auto space-y-16 ">
       <!-- Culture Section -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <!-- Text Content -->
-        <div class="bg-white shadow-lg sm:w-[85%] left--8 rounded-lg p-8">
-          <h3 class="text-2xl font-bold">
-            Our <span class="text-green-600">Culture</span>
-          </h3>
-          <ul class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-y-4">
-            <li class="flex items-center">
-              <i class="fa-solid fa-circle-check text-blue-600 mr-3"></i>
-              Newborn Baby Celebration
-            </li>
-            <li class="flex items-center">
-              <i class="fa-solid fa-circle-check text-blue-600 mr-3"></i>
-              Tour & Picnic
-            </li>
-            <li class="flex items-center">
-              <i class="fa-solid fa-circle-check text-blue-600 mr-3"></i>
-              All Festival Celebrations
-            </li>
-            <li class="flex items-center">
-              <i class="fa-solid fa-circle-check text-blue-600 mr-3"></i>
-              Tree Plantation
-            </li>
-            <li class="flex items-center">
-              <i class="fa-solid fa-circle-check text-blue-600 mr-3"></i>
-              Staff Birthday Celebration
-            </li>
-            <li class="flex items-center">
-              <i class="fa-solid fa-circle-check text-blue-600 mr-3"></i>
-              Special Event for G.P.
-            </li>
-            <li class="flex items-center">
-              <i class="fa-solid fa-circle-check text-blue-600 mr-3"></i>
-              Function for Patient
-            </li>
-            <li class="flex items-center">
-              <i class="fa-solid fa-circle-check text-blue-600 mr-3"></i>
-              Value Creating for G.P.
-            </li>
-          </ul>
-        </div>
-        <!-- Image -->
-        <div class="flex justify-center">
-          <img src="assets/images/culture.png" alt="Culture Image" class="rounded-lg shadow-lg w-[85%] sm:w-[75%] " />
+      <div class="max-w-7xl mx-auto flex px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center gap-4 relative z-10">
+        <div class="flex relative z-10 ">
+          <div class="bg-white rounded-lg relative  shadow-md bg-white shadow-lg sm:w-[85%] left--8 p-8">
+            <img src="assets/images/pngwing 14.svg" alt="" class="src" style="position: absolute;
+            width: 92%;
+            overflow: hidden;
+            top: 1%;">
+            <h3 class="text-2xl font-bold">
+              Our <span class="text-green-600">Culture</span>
+            </h3>
+            <ul class="mt-6 grid grid-cols-1 sm:grid-cols-2 space-y-4">
+              <li class="flex items-center space-x-3">
+                <img src="assets/images/correct-sign.png" alt="Correct Sign" class="w-6 h-6">
+                <span class="text-gray-500 text-sm">Newborn Baby Celebration</span>
+              </li>
+              <li class="flex items-center space-x-3">
+                <img src="assets/images/correct-sign.png" alt="Correct Sign" class="w-6 h-6">
+                <span class="text-gray-500 text-sm">Tour & Picnic</span>
+              </li>
+              <li class="flex items-center space-x-3">
+                <img src="assets/images/correct-sign.png" alt="Correct Sign" class="w-6 h-6">
+                <span class="text-gray-500 text-sm">All Festival Celebrations</span>
+              </li>
+              <li class="flex items-center space-x-3">
+                <img src="assets/images/correct-sign.png" alt="Correct Sign" class="w-6 h-6">
+                <span class="text-gray-500 text-sm">Tree Plantation</span>
+              </li>
+              <li class="flex items-center space-x-3">
+                <img src="assets/images/correct-sign.png" alt="Correct Sign" class="w-6 h-6">
+                <span class="text-gray-500 text-sm">Staff Birthday Celebration</span>
+              </li>
+              <li class="flex items-center space-x-3">
+                <img src="assets/images/correct-sign.png" alt="Correct Sign" class="w-6 h-6">
+                <span class="text-gray-500 text-sm">Special Event for G.P.</span>
+              </li>
+              <li class="flex items-center space-x-3">
+                <img src="assets/images/correct-sign.png" alt="Correct Sign" class="w-6 h-6">
+                <span class="text-gray-500 text-sm">Special Event for G.P.</span>
+              </li>
+              <li class="flex items-center space-x-3">
+                <img src="assets/images/correct-sign.png" alt="Correct Sign" class="w-6 h-6">
+                <span class="text-gray-500 text-sm">Value Creating for G.P.</span>
+              </li>
+            </ul>
+          </div>
+
+          <img src="assets/images/culture.png" alt="Doctor in Lab" class="rounded-lg order-2  shadow-lg object-cover"
+            style="width: 100%;position: absolute;
+            left: 75%;
+            z-index: -1;
+            top: -11%;">
         </div>
       </div>
 
       <!-- Value Section -->
-      <div class="grid grid-cols-1 lg:grid-cols-2  gap-8 items-center">
-        <!-- Image -->
-        <div>
-          <img src="assets/images/value.png" alt="Value Image" class="rounded-lg shadow-md  sm:w-[75%] h-auto" />
+      <div class="max-w-7xl mx-auto flex px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center gap-4 relative z-10">
+        <div class="relative">
+          <img src="assets/images/value.png" alt="Value Image" class="rounded-lg shadow-lg object-cover w-full">
         </div>
-        <!-- Text Content -->
-        <div class="bg-white shadow-md rounded-lg sm:w-[75%] p-8">
-          <h3 class="text-2xl font-bold ">
+        <div class="bg-white rounded-lg shadow-md p-8 sm:w-[85%] relative z-10" style="
+    left: -13%;">
+          <img src="assets/images/pngwing 14.svg" alt="" class="src" style="position: absolute;
+    width: 94%;
+    overflow: hidden;
+    top: 4%;">
+          <h3 class="text-2xl font-bold">
             Our <span class="text-green-600">Value</span>
           </h3>
-          <ul class="mt-4 space-y-2">
-            <li class="flex items-center">
-              <i class="fa-solid fa-circle-check text-blue-600 mr-3"></i>
-              Well Experienced Doctors
+          <ul class="mt-6 space-y-4">
+            <li class="flex items-center space-x-3">
+              <img src="assets/images/correct-sign.png" alt="Correct Sign" class="w-6 h-6">
+              <span class="text-gray-500 text-sm">Well Experienced Doctors</span>
             </li>
-            <li class="flex items-center">
-              <i class="fa-solid fa-circle-check text-blue-600 mr-3"></i>
-              Homely Atmosphere
+            <li class="flex items-center space-x-3">
+              <img src="assets/images/correct-sign.png" alt="Correct Sign" class="w-6 h-6">
+              <span class="text-gray-500 text-sm">Homely Atmosphere</span>
             </li>
-            <li class="flex items-center">
-              <i class="fa-solid fa-circle-check text-blue-600 mr-3"></i>
-              Committed & Visionary Management
+            <li class="flex items-center space-x-3">
+              <img src="assets/images/correct-sign.png" alt="Correct Sign" class="w-6 h-6">
+              <span class="text-gray-500 text-sm">Committed & Visionary Management</span>
             </li>
-            <li class="flex items-center">
-              <i class="fa-solid fa-circle-check text-blue-600 mr-3"></i>
-              Fast 24 Paramedical Services
+            <li class="flex items-center space-x-3">
+              <img src="assets/images/correct-sign.png" alt="Correct Sign" class="w-6 h-6">
+              <span class="text-gray-500 text-sm">Fast 24 Paramedical Services</span>
             </li>
-            <li class="flex items-center">
-              <i class="fa-solid fa-circle-check text-blue-600 mr-3"></i>
-              Polite, Caring & Well-Trained Nursing Staff
+            <li class="flex items-center space-x-3">
+              <img src="assets/images/correct-sign.png" alt="Correct Sign" class="w-6 h-6">
+              <span class="text-gray-500 text-sm">Polite, Caring & Well-Trained Nursing Staff</span>
             </li>
           </ul>
         </div>
       </div>
 
       <!-- Initiatives Section -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-        <!-- Text Content -->
-        <div class="bg-white shadow-md sm:w-[75%] rounded-lg p-8">
-          <h3 class="text-2xl font-bold">
-            Our <span class="text-green-600">Initiatives</span>
-          </h3>
-          <ul class="mt-4 space-y-2">
-            <li class="flex items-center">
-              <i class="fa-solid fa-circle-check text-blue-600 mr-3"></i>
-              Garbh Sankar Kendra
-            </li>
-            <li class="flex items-center">
-              <i class="fa-solid fa-circle-check text-blue-600 mr-3"></i>
-              Physiotherapy
-            </li>
-            <li class="flex items-center">
-              <i class="fa-solid fa-circle-check text-blue-600 mr-3"></i>
-              Counseling
-            </li>
-            <li class="flex items-center">
-              <i class="fa-solid fa-circle-check text-blue-600 mr-3"></i>
-              Smit Women’s Club
-            </li>
-            <li class="flex items-center">
-              <i class="fa-solid fa-circle-check text-blue-600 mr-3"></i>
-              Medical Camp
-            </li>
-          </ul>
+      <div class="max-w-7xl mx-auto flex px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center gap-4 relative z-10">
+        <div class="flex relative z-10 ">
+          <div class="bg-white rounded-lg relative  shadow-md bg-white shadow-lg sm:w-[85%] p-8">
+            <img src="assets/images/pngwing 14.svg" alt="" class="src" style="position: absolute;
+            width: 95%;
+            overflow: hidden;
+            top: 1%;">
+            <h3 class="text-2xl font-bold">
+              Our <span class="text-green-600">Initiatives</span>
+            </h3>
+            <ul class="mt-6 space-y-4">
+              <li class="flex items-center space-x-3">
+                <img src="assets/images/correct-sign.png" alt="Correct Sign" class="w-6 h-6">
+                <span class="text-gray-500 text-sm">Garbh Sankar Kendra</span>
+              </li>
+              <li class="flex items-center space-x-3">
+                <img src="assets/images/correct-sign.png" alt="Correct Sign" class="w-6 h-6">
+                <span class="text-gray-500 text-sm"> Physiotherapy</span>
+              </li>
+              <li class="flex items-center space-x-3">
+                <img src="assets/images/correct-sign.png" alt="Correct Sign" class="w-6 h-6">
+                <span class="text-gray-500 text-sm">Counseling</span>
+              </li>
+              <li class="flex items-center space-x-3">
+                <img src="assets/images/correct-sign.png" alt="Correct Sign" class="w-6 h-6">
+                <span class="text-gray-500 text-sm">Smit Women’s Club</span>
+              </li>
+              <li class="flex items-center space-x-3">
+                <img src="assets/images/correct-sign.png" alt="Correct Sign" class="w-6 h-6">
+                <span class="text-gray-500 text-sm">Medical Camp</span>
+              </li>
+            </ul>
+          </div>
+
+          <img src="assets/images/initiative.png" alt="Doctor in Lab" class="rounded-lg order-2  shadow-lg object-cover"
+            style="width: 100%;position: absolute;
+            left: 75%;
+            z-index: -1;
+            top: -6%;">
         </div>
-        <!-- Image -->
-        <div>
-          <img src="assets/images/initiative.png" alt="Initiatives Image"
-            class="rounded-lg shadow-md sm:w-[75%] h-auto" />
-        </div>
+        <img src="assets/images/Frame (9).svg" alt="" class="src" style="position: absolute; right: 0%;">
       </div>
     </div>
   </section>
@@ -346,11 +405,15 @@
           <img src="assets/images/logo.png" alt="Smit Hospital Logo" class="mb-4 w-40" />
         </div>
         <div class="flex items-center gap-4">
-          <span class="text-blue-800 font-medium">Follow US:</span>
-          <a href="#" class="bg-blue-800 text-white py-1 px-2 rounded-full hover:text-blue-600"><i class="fa-brands fa-facebook text-xl"></i></a>
-          <a href="#" class="bg-blue-800 text-white py-1 px-2 rounded-full hover:text-blue-600"><i class="fa-brands fa-instagram text-xl"></i></a>
-          <a href="#" class="bg-blue-800 text-white py-1 px-2 rounded-full hover:text-blue-600"><i class="fa-brands fa-linkedin text-xl"></i></a>
-          <a href="#" class="bg-blue-800 text-white py-1 px-2 rounded-full hover:text-blue-600"><i class="fa-brands fa-twitter text-xl"></i></a>
+          <span class=" font-medium" style="color: #094495;">Follow US:</span>
+          <a href="#" class=" text-white py-1 px-2 rounded-full hover:text-blue-600" style="background: #094495;"><i
+              class="fa-brands fa-facebook text-md"></i></a>
+          <a href="#" class=" text-white py-1 px-2 rounded-full hover:text-blue-600" style="background: #094495;"><i
+              class="fa-brands fa-instagram text-md"></i></a>
+          <a href="#" class=" text-white py-1 px-2 rounded-full hover:text-blue-600" style="background: #094495;"><i
+              class="fa-brands fa-linkedin text-md"></i></a>
+          <a href="#" class=" text-white py-1 px-2 rounded-full hover:text-blue-600" style="background: #094495;"><i
+              class="fa-brands fa-twitter text-md"></i></a>
         </div>
       </div>
 
@@ -358,18 +421,18 @@
       <div class="grid grid-cols-1 border-t border-gray-300 lg:grid-cols-4 py-4 gap-8 mb-2">
         <!-- Contact Info -->
         <div>
-          <h4 class="text-blue-700 font-bold text-lg">Contact us</h4>
+          <h4 class=" font-bold text-lg" style="color: #094495;">Contact us</h4>
           <p class="text-gray-600 mt-2 font-semibold">
-            <i class="fa-solid fa-location-dot text-blue-700"></i> 3rd Floor,
+            <i class="fa-solid fa-location-dot " style="color: #094495;"></i> 3rd Floor,
             CTC Building, Varachha Main Road, near Baroda Prestage, Hans
             Society, Surat, Gujarat 395006
           </p>
           <p class="text-gray-600 mt-2 font-semibold">
-            <i class="fa-solid fa-phone text-blue-700"></i> +91 9825312133 /
+            <i class="fa-solid fa-phone " style="color: #094495;"></i> +91 9825312133 /
             261 25632332
           </p>
           <p class="text-gray-600 mt-2 font-semibold">
-            <i class="fa-solid fa-envelope text-blue-700"></i>
+            <i class="fa-solid fa-envelope " style="color: #094495;"></i>
             <a href="mailto:info@smithospitals.com" class="text-grey-600"></a>
             Email : info@smithospitals.com</a>
           </p>
@@ -377,7 +440,7 @@
 
         <!-- Information -->
         <div>
-          <h4 class="text-blue-700 font-bold text-lg">Information</h4>
+          <h4 class=" font-bold text-lg" style="color: #094495;">Information</h4>
           <ul class="mt-4 space-y-2">
             <li>
               <a href="services.html" class="text-gray-900 font-semibold hover:text-blue-600">Services & Facilities</a>
@@ -393,7 +456,7 @@
 
         <!-- Quick Links -->
         <div>
-          <h4 class="text-blue-700 font-bold text-lg">Quick Link</h4>
+          <h4 class=" font-bold text-lg" style="color: #094495;">Quick Link</h4>
           <ul class="mt-4 space-y-2">
             <li>
               <a href="index.html" class="text-gray-900 font-semibold hover:text-blue-600">Home</a>
@@ -412,7 +475,7 @@
 
         <!-- Timing -->
         <div>
-          <h4 class="text-blue-700 font-bold text-lg">Monday to Saturday</h4>
+          <h4 class=" font-bold text-lg" style="color: #094495;">Monday to Saturday</h4>
           <ul class="mt-4 space-y-2">
             <li class="text-gray-900 font-semibold">10:00 am - 12:00 pm</li>
             <li class="text-gray-900 font-semibold">5:00 pm - 7:00 pm</li>

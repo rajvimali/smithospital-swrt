@@ -67,11 +67,11 @@
 
       <!-- Book Appointment Button (visible only on larger screens) -->
       <a href="#"
-   class="flex items-center justify-center bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:brightness-90 transition-all duration-300"
-   style="background: linear-gradient(180deg, #094495 0%, #094495 100%);">
-   <span>Book Appointment</span>
-   <img src="assets/images/Frame.svg" alt="Arrow Icon" class="w-6 h-6 ml-2">
-</a>
+        class="flex items-center justify-center bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:brightness-90 transition-all duration-300"
+        style="background: linear-gradient(180deg, #094495 0%, #094495 100%);">
+        <span>Book Appointment</span>
+        <img src="assets/images/Frame.svg" alt="Arrow Icon" class="w-6 h-6 ml-2">
+      </a>
 
 
       <!-- Hamburger Menu for Mobile -->
@@ -133,9 +133,10 @@
     <div class="container mx-auto px-4 relative z-10 flex items-center justify-start h-full">
       <!-- Text Content -->
       <h3 class="text-7xl font-semibold text-gray-800 mb-4">Doctors</h3>
-      <div class="inner-arrow">
-        <img src="assets/images/pngwing 2.png" alt="" class="src">
-      </div>
+      <img src="assets/images/pngwing 2.png" alt="" class="" style="width: 16%;
+      position: absolute;
+      top: 50%;
+      left: 12%;">
     </div>
     <div
       class="font-trainone text-custom-size font-normal leading-custom-line  underline-offset-[from-font] decoration-skip-ink"
@@ -147,6 +148,12 @@
 
   <!-------------------- SECTION 2:DOCTORS SECTION START -------------------->
   <section class="py-10" style="background: #E2F1FF; ">
+    <div class="vector">
+      <img src="assets/images/Vector.png" alt="" class="src" style="position: absolute;
+      top: 136%;
+      width: 6%;
+      left: 9%;">
+    </div>
     <div class="max-w-7xl mx-auto px-6" style="
     margin-top: 3%;">
       <!-- Header Section -->
@@ -154,10 +161,10 @@
           class="text-green-600">Doctors</span></h1>
 
       <!-- Doctor Profile Section -->
-      <div class=" rounded-lg p-2 grid md:grid-cols-4 gap-3">
+      <div class=" rounded-lg p-2 grid md:grid-cols-4 gap-8">
         <!-- Image Section -->
         <div class="col-span-2 flex justify-center items-center">
-          <img src="assets/images/doctor.png" alt="Doctor" class="rounded-lg h-full md:w-53 object-cover shadow-lg">
+          <img src="assets/images/doctor.png" alt="Doctor" class="rounded-md h-full md:w-53 object-cover shadow-lg">
         </div>
         <!-- Text Section -->
         <div class="col-span-2 space-y-4">
@@ -194,17 +201,19 @@
               </li>
             </ul>
           </div>
-          
+
         </div>
+
       </div>
       <div class="mt-2">
-        <div class="vector">
-          <img src="assets/images/Vector.png" alt="" class="src">
-        </div>
         <p class="text-gray-600">
           <i class="fa-solid fa-angles-right text-gray-700"></i> Lorem ipsum, dolor sit amet consectetur adipisicing
           elit. Veniam vero quod voluptates voluptatem placeat eos magni accusantium obcaecati inventore vel.Lorem ipsum
           dolor sit amet consectetur adipisicing elit. Numquam, iusto.
+        </p>
+        <p class="text-gray-600 mt-4">
+          <i class="fa-solid fa-angles-right text-gray-700"></i> Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Vero, laboriosam.
         </p>
         <p class="text-gray-600 mt-4">
           <i class="fa-solid fa-angles-right text-gray-700"></i> Lorem ipsum, dolor sit amet consectetur adipisicing
@@ -220,39 +229,42 @@
   <!-------------------- SECTION 2:DOCTORS SECTION END -------------------->
 
   <!-------------------- SECTION 3:BIOGRAPHY SECTION START -------------------->
-  <section class="py-10 bg-gray-50 ">
-    <div class="max-w-6xl mx-auto flex px-6 grid md:grid-cols-2 items-center gap-8">
-      <div class="bg-white p-6 rounded-lg shadow-md  relative z-10">
-        <h2 class="text-3xl font-bold text-gray-800 mb-6">Personal Biography</h2>
-        <ul class="space-y-4">
-          <li class="flex items-center space-x-3">
-            <img src="assets/images/correct-sign.png" alt="Correct Sign" class="w-6 h-6">
-            <span class="text-gray-500 text-sm">Lorem ipsum dolor sit amet.</span>
-          </li>
-          <li class="flex items-center space-x-3">
-            <img src="assets/images/correct-sign.png" alt="Correct Sign" class="w-6 h-6">
-            <span class="text-gray-500 text-sm">Lorem ipsum dolor sit amet.</span>
-          </li>
-          <li class="flex items-center space-x-3">
-            <img src="assets/images/correct-sign.png" alt="Correct Sign" class="w-6 h-6">
-            <span class="text-gray-500 text-sm">Lorem ipsum dolor sit amet.</span>
-          </li>
-          <li class="flex items-center space-x-3">
-            <img src="assets/images/correct-sign.png" alt="Correct Sign" class="w-6 h-6">
-            <span class="text-gray-500 text-sm">Lorem ipsum dolor sit amet.</span>
-          </li>
-        </ul>
-        <img src="assets/images/doctors_compound.png" alt="Vector"
-          class="absolute top-2/4  -translate-y-1/2  w-40 h-auto" style="right:15%">
-      </div>
-  
-      <div class="absolute z-0 " >
-        <img src="assets/images/biography.png" alt="Doctor in Lab"
-          class="rounded-lg shadow-lg w-full object-cover" >
+  <section class=" bg-gray-50 py-16">
+    <div class="max-w-7xl mx-auto flex px-6 grid md:grid-cols-2 items-center gap-4 relative z-10">
+      <div class="flex relative z-10 ">
+        <div class="bg-white p-6 rounded-lg relative flex-1 shadow-md ">
+          <h2 class="text-3xl font-bold text-gray-800 mb-6">Personal Biography</h2>
+          <ul class="space-y-4">
+            <li class="flex items-center space-x-3">
+              <img src="assets/images/correct-sign.png" alt="Correct Sign" class="w-6 h-6">
+              <span class="text-gray-500 text-sm">Lorem ipsum dolor sit amet.</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <img src="assets/images/correct-sign.png" alt="Correct Sign" class="w-6 h-6">
+              <span class="text-gray-500 text-sm">Lorem ipsum dolor sit amet.</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <img src="assets/images/correct-sign.png" alt="Correct Sign" class="w-6 h-6">
+              <span class="text-gray-500 text-sm">Lorem ipsum dolor sit amet.</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <img src="assets/images/correct-sign.png" alt="Correct Sign" class="w-6 h-6">
+              <span class="text-gray-500 text-sm">Lorem ipsum dolor sit amet.</span>
+            </li>
+          </ul>
+          <img src="assets/images/doctors_compound.png" alt="Vector"
+            class="absolute top-2/4  -translate-y-1/2  w-40 h-auto" style="right:15%">
+        </div>
+
+        <img src="assets/images/biography.png" alt="Doctor in Lab" class="rounded-lg order-2  shadow-lg object-cover"
+          style="width: 100%;position: absolute;
+            left: 90%;
+            z-index: -1;
+            top: -14%;">
       </div>
     </div>
   </section>
-  
+
   <!-------------------- SECTION 3:BIOGRAPHY SECTION END -------------------->
 
 
@@ -282,10 +294,14 @@
         </div>
         <div class="flex items-center gap-4">
           <span class=" font-medium" style="color: #094495;">Follow US:</span>
-          <a href="#" class="text-white py-1 px-2 rounded-full hover:text-blue-600" style="background: #094495;" ><i class="fa-brands fa-facebook text-md"></i></a>
-          <a href="#" class="text-white py-1 px-2 rounded-full hover:text-blue-600" style="background: #094495;" ><i class="fa-brands fa-instagram text-md"></i></a>
-          <a href="#" class="text-white py-1 px-2 rounded-full hover:text-blue-600" style="background: #094495;" ><i class="fa-brands fa-linkedin text-md"></i></a>
-          <a href="#" class="text-white py-1 px-2 rounded-full hover:text-blue-600" style="background: #094495;" ><i class="fa-brands fa-twitter text-md"></i></a>
+          <a href="#" class="text-white py-1 px-2 rounded-full hover:text-blue-600" style="background: #094495;"><i
+              class="fa-brands fa-facebook text-md"></i></a>
+          <a href="#" class="text-white py-1 px-2 rounded-full hover:text-blue-600" style="background: #094495;"><i
+              class="fa-brands fa-instagram text-md"></i></a>
+          <a href="#" class="text-white py-1 px-2 rounded-full hover:text-blue-600" style="background: #094495;"><i
+              class="fa-brands fa-linkedin text-md"></i></a>
+          <a href="#" class="text-white py-1 px-2 rounded-full hover:text-blue-600" style="background: #094495;"><i
+              class="fa-brands fa-twitter text-md"></i></a>
         </div>
       </div>
 
