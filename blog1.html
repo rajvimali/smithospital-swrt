@@ -68,11 +68,11 @@
 
       <!-- Book Appointment Button (visible only on larger screens) -->
       <a href="#"
-   class="flex items-center justify-center bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:brightness-90 transition-all duration-300"
-   style="background: linear-gradient(180deg, #094495 0%, #094495 100%);">
-   <span>Book Appointment</span>
-   <img src="assets/images/Frame.svg" alt="Arrow Icon" class="w-6 h-6 ml-2">
-</a>
+        class="flex items-center justify-center bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:brightness-90 transition-all duration-300"
+        style="background: linear-gradient(180deg, #094495 0%, #094495 100%);">
+        <span>Book Appointment</span>
+        <img src="assets/images/Frame.svg" alt="Arrow Icon" class="w-6 h-6 ml-2">
+      </a>
 
 
       <!-- Hamburger Menu for Mobile -->
@@ -134,9 +134,10 @@
     <div class="container mx-auto px-4 relative z-10 flex items-center justify-start h-full">
       <!-- Text Content -->
       <h3 class="text-7xl font-semibold text-gray-800 mb-4">Blog</h3>
-      <div class="inner-arrow">
-        <img src="assets/images/pngwing 2.png" alt="" class="src">
-      </div>
+      <img src="assets/images/pngwing 2.png" alt="" class="" style="width: 16%;
+      position: absolute;
+      top: 50%;
+      left: 12%;">
     </div>
     <div
       class="font-trainone text-custom-size font-normal leading-custom-line  underline-offset-[from-font] decoration-skip-ink"
@@ -204,28 +205,28 @@
             </div>
 
             <!-- Follow Us Section -->
-            <div style="background: #F4DEFF;">
-              <h2 class="text-xl font-semibold text-gray-800 mb-4">Follow Us On</h2>
-              <div class="flex space-x-4">
-                <a href="#" class="text-blue-600 text-2xl">
-                  <div class="bg-grey-600 p-4 rounded-full">
-                    <img src="assets/images/facebook.png" alt="Facebook" class="w-6 h-6">
-                  </div>
+            <div class="bg-[#F9F7FE] p-4 rounded-sm max-w-sm mx-auto" style="position: absolute;">
+              <h2 class="text-lg font-semibold text-gray-800 mb-3">Follow Us On</h2>
+              <div class="flex justify-center space-x-4">
+                <!-- Facebook -->
+                <a href="#" class="flex items-center justify-center p-3 bg-white rounded-full " style="height: 21%;
+    width: 18%;">
+                  <img src="assets/images/facebook.png" alt="Facebook">
                 </a>
-                <a href="#" class="text-blue-400 text-2xl">
-                  <div class="bg-grey-600 p-4 rounded-full">
-                    <img src="assets/images/instagram.png" alt="Instagram" class="w-6 h-6">
-                  </div>
+                <!-- Instagram -->
+                <a href="#" class="flex items-center justify-center p-3 bg-white rounded-full " style="height: 20%;
+    width: 18%;">
+                  <img src="assets/images/instagram.png" alt="Instagram">
                 </a>
-                <a href="#" class="text-pink-500 text-2xl">
-                  <div class="bg-grey-600 p-4 rounded-full">
-                    <img src="assets/images/indid.png" alt="LinkedIn" class="w-6 h-6">
-                  </div>
+                <!-- LinkedIn -->
+                <a href="#" class="flex items-center justify-center p-3 bg-white rounded-full " style="height: 20%;
+    width: 18%;">
+                  <img src="assets/images/linkedin.png">
                 </a>
-                <a href="#" class="text-blue-700 text-2xl">
-                  <div class="bg-grey-600 p-4 rounded-full">
-                    <img src="assets/images/twitter.png" alt="Twitter" class="w-6 h-6">
-                  </div>
+                <!-- Twitter -->
+                <a href="#" class="flex items-center justify-center p-3 bg-white rounded-full " style="height: 20%;
+    width: 18%;">
+                  <img src="assets/images/twitter.png" alt="Twitter">
                 </a>
               </div>
             </div>
@@ -234,13 +235,13 @@
 
         <!-- Blog Text Section -->
         <div class="">
-          <h1 class="text-4xl font-bold text-gray-800 mb-4">
+          <h1 class="text-4xl font-bold text-gray-800 mt-4 mb-4">
             Sed UT Perspiciatis <span class="text-green-600">Unde Omnis</span>
           </h1>
           <p class="text-gray-800 font-bold text-xl mb-6">
             July 12, 2022 <span class="text-gray-400">|</span> No Comments
           </p>
-          <p class="text-gray-700 leading-relaxed">
+          <p class="text-gray-700 text-sm leading-relaxed">
             If you're like most people with high blood pressure, drugs are a major part of your plan to lower your blood
             pressure.
             Take medications as scheduled, at the same time every day. Do not stop taking or change your medications
@@ -249,7 +250,7 @@
             make the
             condition worse.
           </p>
-          <p class="text-gray-700 leading-relaxed mt-4">
+          <p class="text-gray-700 text-sm leading-relaxed mt-4">
             If you're like most people with high blood pressure, drugs are a major part of your plan to lower your blood
             pressure.
             Take medications as scheduled, at the same time every day. Do not stop taking or change your medications
@@ -295,12 +296,16 @@
           <div class="flex flex-col items-center lg:items-start">
             <img src="assets/images/logo.png" alt="Smit Hospital Logo" class="mb-4 w-40" />
           </div>
-          <div class="flex items-center gap-4">
-            <span class="text-blue-800 font-medium">Follow US:</span>
-            <a href="#" class="text-blue-800 hover:text-blue-600"><i class="fa-brands fa-facebook text-xl"></i></a>
-            <a href="#" class="text-blue-800 hover:text-blue-600"><i class="fa-brands fa-instagram text-xl"></i></a>
-            <a href="#" class="text-blue-800 hover:text-blue-600"><i class="fa-brands fa-linkedin text-xl"></i></a>
-            <a href="#" class="text-blue-800 hover:text-blue-600"><i class="fa-brands fa-twitter text-xl"></i></a>
+          <div class="flex items-center gap-4" style="color: #094495;">
+            <span class=" font-medium">Follow US:</span>
+            <a href="#" class="text-white py-1 px-2 rounded-full hover:text-blue-600" style="background: #094495;"><i
+                class="fa-brands fa-facebook text-md"></i></a>
+            <a href="#" class="text-white py-1 px-2 rounded-full hover:text-blue-600" style="background: #094495;"><i
+                class="fa-brands fa-instagram text-md"></i></a>
+            <a href="#" class="text-white py-1 px-2 rounded-full hover:text-blue-600" style="background: #094495;"><i
+                class="fa-brands fa-linkedin text-md"></i></a>
+            <a href="#" class="text-white py-1 px-2 rounded-full hover:text-blue-600" style="background: #094495;"><i
+                class="fa-brands fa-twitter text-md"></i></a>
           </div>
         </div>
 
@@ -308,18 +313,18 @@
         <div class="grid grid-cols-1 border-t border-gray-300 lg:grid-cols-4 py-4 gap-8 mb-2">
           <!-- Contact Info -->
           <div>
-            <h4 class="text-blue-700 font-bold text-lg">Contact us</h4>
+            <h4 class=" font-bold text-lg" style="color: #094495;">Contact us</h4>
             <p class="text-gray-600 mt-2 font-semibold">
-              <i class="fa-solid fa-location-dot text-blue-700"></i> 3rd Floor,
+              <i class="fa-solid fa-location-dot " style="color: #094495;"></i> 3rd Floor,
               CTC Building, Varachha Main Road, near Baroda Prestage, Hans
               Society, Surat, Gujarat 395006
             </p>
             <p class="text-gray-600 mt-2 font-semibold">
-              <i class="fa-solid fa-phone text-blue-700"></i> +91 9825312133 /
+              <i class="fa-solid fa-phone " style="color: #094495;"></i> +91 9825312133 /
               261 25632332
             </p>
             <p class="text-gray-600 mt-2 font-semibold">
-              <i class="fa-solid fa-envelope text-blue-700"></i>
+              <i class="fa-solid fa-envelope " style="color: #094495;"></i>
               <a href="mailto:info@smithospitals.com" class="text-grey-600"></a>
               Email : info@smithospitals.com</a>
             </p>
@@ -327,7 +332,7 @@
 
           <!-- Information -->
           <div>
-            <h4 class="text-blue-700 font-bold text-lg">Information</h4>
+            <h4 class=" font-bold text-lg" style="color: #094495;">Information</h4>
             <ul class="mt-4 space-y-2">
               <li>
                 <a href="services.html" class="text-gray-900 font-semibold hover:text-blue-600">Services &
@@ -344,7 +349,7 @@
 
           <!-- Quick Links -->
           <div>
-            <h4 class="text-blue-700 font-bold text-lg">Quick Link</h4>
+            <h4 class=" font-bold text-lg" style="color: #094495;">Quick Link</h4>
             <ul class="mt-4 space-y-2">
               <li>
                 <a href="index.html" class="text-gray-900 font-semibold hover:text-blue-600">Home</a>
@@ -363,7 +368,7 @@
 
           <!-- Timing -->
           <div>
-            <h4 class="text-blue-700 font-bold text-lg">Monday to Saturday</h4>
+            <h4 class=" font-bold text-lg" style="color: #094495;">Monday to Saturday</h4>
             <ul class="mt-4 space-y-2">
               <li class="text-gray-900 font-semibold">10:00 am - 12:00 pm</li>
               <li class="text-gray-900 font-semibold">5:00 pm - 7:00 pm</li>
