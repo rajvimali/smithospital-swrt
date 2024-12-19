@@ -7,8 +7,8 @@ module.exports = {
         secondary: "#9333ea",
       },
       maxWidth: {
-        container: "1440px",
-        mxcontainer: "1920px",
+        max-w-[1440px]: "1440px",
+        mxmax-w-[1440px]: "1920px",
       },
     },
   },

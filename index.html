@@ -36,10 +36,7 @@
             primary: "#1d4ed8",
             secondary: "#9333ea",
           },
-          maxWidth: {
-            container: "1440px",
-            mxcontainer: "1920px",
-          },
+
           fontSize: {
             'custom-size': '110px',
           },
@@ -62,10 +59,10 @@
 
 </head>
 
-<body class="bg-white">
+<body>
   <!-------------------- SECTION 1:HEADER & HERO SECTION START -------------------->
   <header class="bg-white shadow">
-    <div class="container mx-auto px-4 flex items-center justify-between py-4">
+    <div class="max-w-[1440px] mx-auto px-4 flex items-center justify-between py-4">
       <!-- Logo -->
       <h1 class="text-2xl font-bold text-blue-600">
         <img src="assets/images/logo.png" class="w-auto h-8" alt="Logo" />
@@ -83,13 +80,14 @@
       </nav>
 
       <!-- Book Appointment Button (visible only on larger screens) -->
-      <a href="#"
-        class="flex items-center justify-center bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:brightness-90 transition-all duration-300"
-        style="background: linear-gradient(180deg, #094495 0%, #094495 100%);">
-        <span>Book Appointment</span>
-        <img src="assets/images/Frame.svg" alt="Arrow Icon" class="w-6 h-6 ml-2">
-      </a>
-
+      <div class="hidden md:block">
+        <a href="contactus.html"
+          class=" inline-flex items-center bg-blue-600 text-white font-semibold px-6 py-3 rounded-md shadow-lg hover:brightness-90 transition duration-300 "
+          style="background: linear-gradient(180deg, #094495 0%, #094495 100%);">
+          Book Appointment
+          <img src="assets/images/Frame.svg" alt="Arrow Icon" class="w-5 h-5 ml-2">
+        </a>
+      </div>
 
       <!-- Hamburger Menu for Mobile -->
       <div class="md:hidden flex items-center">
@@ -101,7 +99,7 @@
 
     <!-- Mobile Menu (hidden by default) -->
     <div id="mobile-menu" class="md:hidden hidden bg-white shadow-md">
-      <div class="container mx-auto px-4 py-4">
+      <div class="max-w-[1440px] mx-auto px-4 py-4">
         <!-- Navigation Centered -->
         <nav class="flex flex-col items-center space-y-4 text-gray-700">
           <a href="index.html" class="hover:text-blue-600 font-semibold">Home</a>
@@ -116,75 +114,49 @@
     </div>
   </header>
 
-  <!-- Add this JavaScript to toggle the mobile menu visibility and change the icon -->
-  <script>
-    const hamburgerButton = document.getElementById("hamburger-menu");
-    const mobileMenu = document.getElementById("mobile-menu");
-    const hamburgerIcon = document.getElementById("hamburger-icon");
-
-    // Toggle the mobile menu and the icon
-    hamburgerButton.addEventListener("click", function () {
-      mobileMenu.classList.toggle("hidden");
-      if (mobileMenu.classList.contains("hidden")) {
-        hamburgerIcon.classList.remove("fa-times");
-        hamburgerIcon.classList.add("fa-bars");
-        hamburgerIcon.style.transform = "rotate(0deg)";
-      } else {
-        hamburgerIcon.classList.remove("fa-bars");
-        hamburgerIcon.classList.add("fa-times");
-        hamburgerIcon.style.transform = "rotate(180deg)"; // Rotate cross icon
-      }
-    });
-  </script>
-
-
-  <main class="bg-gray-50">
+  <section class="relative">
     <div class="">
-      <img src="assets/images/pngwing 18.png" alt="" class="src" style="position: absolute;width: 1000px;
-      height: 609px;
-      top: 101px;
-      left: -17px;
-      gap: 0px;
-      opacity: 0px;
-      ">
+      <img src="assets/images/pngwing 18.png" alt="" class="absolute w-[1000px] h-[609px] top-[101px] left-[-17px]">
     </div>
-    <div class="container mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <div
+      class="max-w-[1440px] mx-auto md:px-6  px-3 md:py-16 py-2 grid grid-cols-1 md:grid-cols-2 md:gap-12 gap-4 items-center">
       <!-- Left Content -->
-      <div class="wow animate__backInLeft" data-wow-duration="2s" data-wow-delay="0.5s">
+      <div class="wow animate__backInLeft md:order-1 order-2 relative" data-wow-duration="2s" data-wow-delay="0.5s">
         <!-- Subtitle -->
-        <p class="text-sm text-orange-500 font-bold tracking-wide">
+        <p class="md:text-base text-[14px] text-orange-500 font-medium tracking-wide">
           THE BEST MATERNITY COMES CLOSER TO YOU IN SURAT
         </p>
         <!-- Main Heading -->
-        <h1 class="text-5xl md:text-6xl font-semibold text-gray-900 mt-4 leading-tight">
+        <h1 class="text-4xl md:text-[80px]  font-semibold text-gray-900 mt-4 leading-tight">
           Feel Safe With <br />
           <span class="text-green-600">Mom's</span> Care
         </h1>
         <!-- Description -->
         <p class="text-gray-500 mt-4 text-md leading-relaxed">
-          There are many variations of passages of Lorem Ipsum available, <br> but the majority have suffered which
+          There are many variations of passages of Lorem Ipsum available, <br class="md:block hidden"> but the majority
+          have suffered which
           don't
           look
           believable.
         </p>
         <!-- Call to Action -->
-        <a href="contactus.html"
-          class="mt-6 inline-flex items-center bg-blue-600 text-white font-semibold px-6 py-3 rounded-md shadow-lg hover:brightness-90 transition duration-300"
-          style="background: linear-gradient(180deg, #094495 0%, #094495 100%);">
-          Book Appointment
-          <img src="assets/images/Frame.svg" alt="Arrow Icon" class="w-5 h-5 ml-2">
-        </a>
+        <div class="md:mb-0 mb-4">
+          <a href="contactus.html"
+            class="mt-6 inline-flex items-center bg-blue-600 text-white font-semibold px-6 py-3 rounded-md shadow-lg hover:brightness-90 transition duration-300 "
+            style="background: linear-gradient(180deg, #094495 0%, #094495 100%);">
+            Book Appointment
+            <img src="assets/images/Frame.svg" alt="Arrow Icon" class="w-5 h-5 ml-2">
+          </a>
+        </div>
 
         <div class="">
-          <img src="assets/images/pngwing 3.png" alt="" class="src" style="position: absolute;
-        left: 21%;
-        width: 9%;
-        bottom: 33%;">
+          <img src="assets/images/pngwing 3.png" alt=""
+            class="absolute md:left-[28%] left-0 w-[25%] md:bottom-[-21%] bottom-0">
         </div>
       </div>
 
       <!-- Right Images Section -->
-      <div class="relative grid grid-cols-2 gap-6 items-center wow animate__fadeInRight px-4 md:px-0"
+      <div class="relative grid grid-cols-2 gap-6 items-center wow animate__fadeInRight px-4 md:px-0 md:order-2 order-1"
         data-wow-duration="2s" data-wow-delay="0.5s">
         <!-- Left Image -->
         <div>
@@ -194,40 +166,41 @@
 
         <!-- Right Image with Text Overlay -->
         <div class="">
-          <h1 class="font-trainone text-5xl " style="color: #0457A733;"> WOMEN'S <br /> HEALTH</h1>
+          <h1 class="font-trainone md:text-[75px] md:leading-[76px] leading-[36px] text-4xl md:pb-7 pb-3"
+            style="color: #0457A733;"> WOMEN'S <br /> HEALTH</h1>
           <img src="assets/images/womenhealth2.png" alt="Mother and baby"
             class="rounded-lg top-6 shadow-lg w-full h-auto" />
         </div>
       </div>
     </div>
-  </main>
+  </section>
 
   <!-------------------- SECTION 1:HEADER & HERO SECTION END -------------------->
 
   <!-------------------- SECTION 2:HEALTHY PREGNANCY CENTER START -------------------->
-  <section class=" py-16" style="background: #E2F1FF;">
-    <div class="">
-      <h1 class="font-trainone text-8xl absolute" style="color: #0457A733; right: 0%; top: 81%; color: #0457A70D;
-">ABOUT US</h1>
+  <section class="bg-[#E2F1FF]">
+    <div class="relative">
+      <h1 class="font-trainone text-8xl absolute xl:block hidden text-[#0457A733] right-0 top-[0%]">ABOUT US</h1>
     </div>
-    <div class="container mx-auto wow animate__zoomIn grid grid-cols-1 lg:grid-cols-3 gap-12 px-4 lg:px-8 items-center"
+    <div
+      class="max-w-[1440px] mx-auto py-16 wow animate__zoomIn grid grid-cols-1 lg:grid-cols-3 gap-12 px-4 lg:px-8 items-center"
       data-wow-duration="2s" data-wow-delay="0.5s">
       <!-- Left Image -->
       <div class="lg:col-span-1 flex justify-center">
         <img src="assets/images/pregnancy-center.png" alt="Pregnant Woman"
-          class="rounded-lg shadow-lg w-[426px] h-[548px] object-cover" />
+          class="rounded-lg shadow-lg w-full sm:w-[426px] h-auto object-cover" />
       </div>
 
       <!-- Middle Content -->
       <div class="lg:col-span-1 flex flex-col items-center lg:items-start space-y-6 text-center lg:text-left">
         <!-- Heading -->
-        <h2 class="text-4xl font-bold text-gray-800 leading-snug">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 leading-snug">
           Welcome to the <span class="text-green-600">Healthy</span> Pregnancy
           Center!
         </h2>
 
         <!-- Description -->
-        <p class="text-gray-600 max-w-xl">
+        <p class="text-gray-600 max-w-xl text-sm md:text-base">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text
           ever since the 1500s, when an unknown printer took a galley of type
@@ -235,159 +208,67 @@
         </p>
 
         <!-- Features -->
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div class="grid grid-cols-3 sm:grid-cols-3 gap-4">
           <!-- Feature 1 -->
-          <div class="flex flex-col items-center bg-white shadow rounded-md p-4 text-center ">
-            <svg width="45" height="39" viewBox="0 0 49 39" class="text-2xl mb-2 mt-2" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M48.6699 12.4177C48.6699 15.6113 47.4271 18.6127 45.169 20.8707L27.5046 38.5352L13.7589 24.7905H16.6399L21.8864 16.113L26.6914 29.0853L30.5317 20.7966H38.4101V18.6481H29.1589L26.9127 23.4972L22.3537 11.1888L15.4282 22.6421H11.6104L9.83906 20.8707C5.1791 16.2097 5.1791 8.62676 9.83906 3.96572C12.0971 1.70771 15.0995 0.464844 18.2921 0.464844C21.4847 0.464844 24.4871 1.70771 26.7451 3.96572L27.5046 4.72519L28.2641 3.96572C30.5221 1.70771 33.5234 0.464844 36.716 0.464844C39.9097 0.464844 42.911 1.70771 45.169 3.96572C47.4271 6.22373 48.6699 9.2251 48.6699 12.4177ZM11.6104 22.6421H0.330078V24.7905H13.7589L11.6104 22.6421Z"
-                fill="url(#paint0_linear_98_721)" />
-              <defs>
-                <linearGradient id="paint0_linear_98_721" x1="15.355" y1="33.4652" x2="35.7883" y2="-1.92647"
-                  gradientUnits="userSpaceOnUse">
-                  <stop offset="0.33" stop-color="#52C5DC" />
-                  <stop offset="0.63" stop-color="#3C99D4" />
-                  <stop offset="0.895" stop-color="#3E7ABC" />
-                </linearGradient>
-              </defs>
-            </svg>
-            <p class="text-gray-700 font-medium">Medical Care</p>
+          <div class="flex flex-col items-center bg-white shadow rounded-md p-2 sm:p-4 text-center">
+            <img src="assets/images/Frame (12).svg" alt="" class="w-8 h-8 sm:w-10 sm:h-10">
+            <p class="text-gray-700 text-xs sm:text-sm font-medium">Medical Care</p>
           </div>
           <!-- Feature 2 -->
-          <div class="flex flex-col items-center bg-white shadow rounded-md p-4 text-center">
-            <svg width="50" height="50" viewBox="0 0 50 50" class="text-2xl mb-2" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <g clip-path="url(#clip0_98_726)">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M13.6834 44.6875C14.0819 42.3539 15.1982 40.2025 16.8767 38.533C19.0326 36.3816 21.9539 35.1734 24.9997 35.1734C28.0454 35.1734 30.9667 36.3816 33.1226 38.533C34.8014 40.2024 35.9176 42.3538 36.316 44.6875C33.221 47.5061 29.1856 49.0683 24.9995 49.0683C20.8134 49.0683 16.778 47.5061 13.6831 44.6875H13.6834ZM7.31528 21.1662L8.25962 17.6339L11.791 16.6895C11.9005 16.6604 11.9992 16.6 12.0752 16.5159C12.1511 16.4317 12.201 16.3273 12.2188 16.2153C12.2366 16.1034 12.2216 15.9887 12.1755 15.8851C12.1294 15.7815 12.0542 15.6935 11.9591 15.6318L8.89165 13.6426L9.08511 9.99121C9.09092 9.87806 9.06385 9.76564 9.00715 9.66755C8.95046 9.56946 8.86657 9.48988 8.76562 9.43844C8.66467 9.38699 8.55099 9.36588 8.4383 9.37766C8.32561 9.38943 8.21875 9.43358 8.13062 9.50478L5.29116 11.8075L1.87769 10.4963C1.77196 10.4558 1.65676 10.4467 1.54601 10.4703C1.43526 10.4939 1.33372 10.549 1.25365 10.6291C1.17359 10.7092 1.11844 10.8107 1.09487 10.9214C1.0713 11.0322 1.08033 11.1474 1.12085 11.2531L2.43374 14.6652L0.130909 17.506C0.0595223 17.594 0.0152095 17.7009 0.00334226 17.8136C-0.00852503 17.9263 0.0125627 18.0401 0.0640493 18.1411C0.115536 18.2421 0.195211 18.326 0.293416 18.3826C0.391621 18.4392 0.504141 18.4661 0.617335 18.4601L4.26763 18.2668L6.25767 21.3341C6.31089 21.416 6.38374 21.4833 6.46959 21.5299C6.55545 21.5764 6.65159 21.6008 6.74927 21.6008C6.77993 21.6008 6.81055 21.5985 6.84087 21.5939C6.95279 21.576 7.05714 21.5261 7.14133 21.4502C7.22553 21.3743 7.28587 21.2757 7.31528 21.1662ZM47.5664 14.6652L48.8788 11.2531C48.9196 11.1474 48.9288 11.0321 48.9053 10.9212C48.8819 10.8103 48.8267 10.7086 48.7466 10.6285C48.6664 10.5483 48.5647 10.4932 48.4539 10.4697C48.343 10.4463 48.2277 10.4555 48.1219 10.4963L44.7089 11.8077L41.869 9.50498C41.7809 9.43362 41.6741 9.38934 41.5614 9.37749C41.4486 9.36563 41.3349 9.38673 41.2339 9.43821C41.133 9.48969 41.0491 9.56936 40.9925 9.66754C40.9359 9.76573 40.909 9.87823 40.915 9.9914L41.1085 13.6428L38.041 15.6318C37.9459 15.6935 37.8707 15.7815 37.8246 15.8851C37.7785 15.9887 37.7635 16.1034 37.7813 16.2153C37.7991 16.3273 37.849 16.4317 37.9249 16.5159C38.0009 16.6 38.0996 16.6604 38.2091 16.6895L41.74 17.6339L42.6844 21.1662C42.714 21.2757 42.7745 21.3743 42.8588 21.4501C42.943 21.526 43.0474 21.576 43.1593 21.5939C43.1897 21.5986 43.2203 21.6009 43.251 21.6008C43.3486 21.6008 43.4447 21.5765 43.5305 21.5299C43.6162 21.4833 43.689 21.416 43.742 21.3341L45.7325 18.2668L49.3827 18.4601C49.4959 18.4661 49.6084 18.4392 49.7066 18.3826C49.8048 18.326 49.8845 18.2421 49.936 18.1411C49.9874 18.0401 50.0085 17.9263 49.9967 17.8136C49.9848 17.7009 49.9405 17.594 49.8691 17.506L47.5663 14.6652H47.5664ZM31.084 5.35254C31.0492 5.24472 30.9837 5.14937 30.8956 5.07813C30.8075 5.00689 30.7006 4.96285 30.5878 4.95136L27.0012 4.57627L25.5351 1.28027C25.4893 1.17654 25.4144 1.08835 25.3194 1.02645C25.2244 0.964539 25.1134 0.93158 25 0.93158C24.8867 0.93158 24.7757 0.964539 24.6807 1.02645C24.5857 1.08835 24.5108 1.17654 24.465 1.28027L22.9992 4.57627L19.4121 4.95117C19.2993 4.9629 19.1924 5.00709 19.1043 5.07837C19.0161 5.14966 18.9506 5.24498 18.9155 5.35278C18.8804 5.46058 18.8774 5.57623 18.9068 5.68572C18.9361 5.79521 18.9966 5.89383 19.0809 5.96963L21.7627 8.38174L21.0108 11.909C20.9873 12.0198 20.9964 12.1351 21.037 12.2408C21.0777 12.3465 21.1481 12.4382 21.2398 12.5048C21.3314 12.5713 21.4404 12.6099 21.5536 12.6158C21.6667 12.6216 21.7791 12.5946 21.8772 12.5379L25 10.7334L28.1233 12.5381C28.2122 12.59 28.3133 12.6174 28.4163 12.6173C28.5036 12.6173 28.5898 12.5978 28.6686 12.5602C28.7474 12.5226 28.8168 12.4678 28.8717 12.3999C28.9266 12.3321 28.9657 12.2528 28.9861 12.1679C29.0064 12.083 29.0075 11.9946 28.9893 11.9092L28.2374 8.38193L30.9188 5.96982C31.0031 5.89397 31.0636 5.79526 31.093 5.68569C31.1223 5.57611 31.1192 5.46038 31.084 5.35254ZM37.3107 43.7032C39.539 41.3066 41.0193 38.3116 41.5699 35.0857C42.1205 31.8599 41.7175 28.5434 40.4104 25.5433C39.1033 22.5432 36.9488 19.9899 34.2114 18.1966C31.474 16.4033 28.2727 15.4481 25.0001 15.4481C21.7276 15.4481 18.5263 16.4033 15.7889 18.1966C13.0515 19.9899 10.897 22.5432 9.5899 25.5433C8.28277 28.5434 7.8798 31.8599 8.43042 35.0857C8.98104 38.3116 10.4613 41.3066 12.6896 43.7032C13.2303 41.4476 14.3808 39.384 16.0153 37.7381C17.6498 36.0923 19.7053 34.9275 21.9572 34.3712C20.7567 33.6981 19.8133 32.6459 19.2747 31.3794C18.736 30.1129 18.6325 28.7035 18.9804 27.3719C19.3282 26.0403 20.1078 24.8616 21.197 24.0203C22.2863 23.1791 23.6237 22.7227 25 22.7227C26.3763 22.7227 27.7138 23.1791 28.8031 24.0203C29.8923 24.8616 30.6719 26.0403 31.0197 27.3719C31.3676 28.7035 31.2641 30.1129 30.7254 31.3794C30.1868 32.6459 29.2434 33.6981 28.0429 34.3712C30.2948 34.9274 32.3505 36.0921 33.985 37.738C35.6195 39.3838 36.7699 41.4475 37.3105 43.7032H37.3107ZM21.4334 32.5195C22.2586 33.3448 23.3445 33.8584 24.5059 33.9729C25.6674 34.0873 26.8326 33.7955 27.803 33.1472C28.7734 32.4989 29.489 31.5341 29.8279 30.4174C30.1667 29.3006 30.1079 28.1008 29.6613 27.0226C29.2148 25.9443 28.4082 25.0542 27.379 24.504C26.3498 23.9538 25.1616 23.7774 24.0169 24.005C22.8723 24.2326 21.8419 24.85 21.1015 25.7521C20.361 26.6542 19.9562 27.7851 19.9561 28.9521C19.9565 30.29 20.4879 31.5731 21.4334 32.5195Z"
-                  fill="url(#paint0_linear_98_726)" />
-              </g>
-              <defs>
-                <linearGradient id="paint0_linear_98_726" x1="0.000147425" y1="25" x2="50" y2="25"
-                  gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#00C2F3" />
-                  <stop offset="1" stop-color="#4764AF" />
-                </linearGradient>
-                <clipPath id="clip0_98_726">
-                  <rect width="50" height="50" fill="white" />
-                </clipPath>
-              </defs>
-            </svg>
-            <p class="text-gray-700 font-medium">Experience</p>
+          <div class="flex flex-col items-center bg-white shadow rounded-md p-2 sm:p-4 text-center">
+            <img src="assets/images/Frame (1).svg" alt="" class="w-8 h-8 sm:w-10 sm:h-10">
+            <p class="text-gray-700 text-xs sm:text-sm font-medium">Experience</p>
           </div>
           <!-- Feature 3 -->
-          <div class="flex flex-col items-center bg-white shadow rounded-md p-4 text-center">
-            <svg width="45" height="40" viewBox="0 0 48 48" class="text-2xl mb-3" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M28.2725 33.157C27.4825 32.9465 26.637 33.143 26.0035 33.66L23.044 36.0785C22.194 36.7735 20.9875 36.8655 20.0605 36.276C16.663 34.117 13.883 31.337 11.724 27.94C11.135 27.013 11.227 25.8065 11.922 24.956L14.34 21.9965C14.857 21.3635 15.054 20.518 14.843 19.728C13.7995 15.816 11.5865 13.037 8.24796 11.3535C7.49946 10.976 6.60996 11.0255 5.87396 11.4265C4.2894 12.2873 2.76522 13.2549 1.31196 14.3225C0.52196 14.9035 0.11596 15.8815 0.28996 16.8465C1.51746 23.6665 5.23196 30.8095 11.2115 36.789C17.191 42.7685 24.3335 46.483 31.1535 47.71C32.1185 47.8835 33.0965 47.4775 33.678 46.688C34.7454 45.2347 35.7128 43.7105 36.5735 42.126C36.9745 41.3895 37.024 40.5005 36.6465 39.752C34.963 36.413 32.184 34.2005 28.2725 33.157Z"
-                fill="url(#paint0_linear_103_1779)" />
-              <path
-                d="M40.8905 7.10998C36.27 2.48848 29.864 -0.00701797 23.314 0.270482C23.0072 0.283472 22.7181 0.417744 22.5102 0.64379C22.3023 0.869836 22.1927 1.16916 22.2055 1.47598C22.232 2.11598 22.7955 2.60098 23.411 2.58548C26.3341 2.46025 29.2515 2.94322 31.9783 4.00381C34.7052 5.06441 37.1821 6.67954 39.2525 8.74698C43.4155 12.9115 45.662 18.685 45.4145 24.5885C45.4016 24.8955 45.5112 25.195 45.7192 25.4212C45.9272 25.6473 46.2165 25.7816 46.5235 25.7945C46.8305 25.8073 47.13 25.6977 47.3561 25.4898C47.5823 25.2818 47.7166 24.9925 47.7295 24.6855C48.004 18.1365 45.5115 11.73 40.8905 7.10898V7.10998Z"
-                fill="url(#paint1_linear_103_1779)" />
-              <path
-                d="M23.295 6.436C23.1431 6.44487 22.9945 6.48356 22.8576 6.54988C22.7207 6.6162 22.5982 6.70883 22.4971 6.8225C22.3961 6.93616 22.3184 7.06863 22.2685 7.21233C22.2186 7.35603 22.1975 7.50815 22.2065 7.66C22.2147 7.81212 22.253 7.9611 22.3191 8.09834C22.3852 8.23558 22.4779 8.35835 22.5918 8.45957C22.7056 8.56078 22.8384 8.63843 22.9824 8.68802C23.1265 8.73761 23.2789 8.75817 23.431 8.7485C27.6995 8.5015 31.8825 10.0835 34.9 13.1005C36.3934 14.597 37.5532 16.3926 38.3032 18.3693C39.0532 20.346 39.3763 22.459 39.2515 24.5695C39.2426 24.7214 39.2637 24.8735 39.3136 25.0172C39.3635 25.1609 39.4412 25.2934 39.5423 25.4071C39.6434 25.5208 39.7659 25.6134 39.9028 25.6798C40.0397 25.7461 40.1883 25.7849 40.3402 25.7937C40.4921 25.8026 40.6442 25.7815 40.7879 25.7316C40.9317 25.6817 41.0641 25.604 41.1778 25.5029C41.2915 25.4018 41.3842 25.2793 41.4505 25.1424C41.5168 25.0055 41.5556 24.8569 41.5645 24.705C41.7084 22.268 41.3349 19.8281 40.4686 17.5457C39.6023 15.2634 38.2627 13.1902 36.538 11.4625C34.8103 9.73758 32.737 8.39791 30.4546 7.53157C28.1721 6.66524 25.7321 6.29186 23.295 6.436Z"
-                fill="url(#paint2_linear_103_1779)" />
-              <path
-                d="M34.143 25.7905C34.4489 25.819 34.7536 25.7248 34.9901 25.5286C35.2266 25.3325 35.3755 25.0504 35.404 24.7445C35.5591 23.1108 35.3509 21.4631 34.7944 19.9193C34.2379 18.3755 33.3468 16.9739 32.185 15.815C31.026 14.6531 29.6243 13.762 28.0805 13.2055C26.5366 12.649 24.8888 12.4408 23.255 12.596C23.1035 12.6101 22.9563 12.654 22.8218 12.725C22.6872 12.7961 22.568 12.8929 22.4709 13.01C22.3738 13.1271 22.3007 13.2622 22.2558 13.4076C22.2109 13.553 22.1951 13.7058 22.2092 13.8572C22.2234 14.0087 22.2672 14.1559 22.3383 14.2905C22.4093 14.425 22.5062 14.5442 22.6233 14.6413C22.7404 14.7384 22.8755 14.8115 23.0209 14.8564C23.1662 14.9013 23.319 14.9171 23.4705 14.903C24.7651 14.7798 26.0709 14.9446 27.2943 15.3854C28.5178 15.8263 29.6285 16.5324 30.547 17.453C31.4675 18.3716 32.1734 19.4823 32.6143 20.7057C33.0551 21.9291 33.22 23.2349 33.097 24.5295C33.0685 24.8354 33.1627 25.1401 33.3588 25.3766C33.555 25.6131 33.8371 25.762 34.143 25.7905Z"
-                fill="url(#paint3_linear_103_1779)" />
-              <defs>
-                <linearGradient id="paint0_linear_103_1779" x1="-9.27454" y1="4.80799" x2="43.288" y2="56.858"
-                  gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#52C5DC" />
-                  <stop offset="0.085" stop-color="#14F6FD" />
-                  <stop offset="0.222" stop-color="#13DEF7" />
-                  <stop offset="0.394" stop-color="#10B8ED" />
-                  <stop offset="0.595" stop-color="#0C82E0" />
-                  <stop offset="0.816" stop-color="#073ECF" />
-                  <stop offset="1" stop-color="#3679BE" />
-                </linearGradient>
-                <linearGradient id="paint1_linear_103_1779" x1="11.0285" y1="-15.6955" x2="63.5915" y2="36.355"
-                  gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#15FFFF" />
-                  <stop offset="0.085" stop-color="#14F6FD" />
-                  <stop offset="0.222" stop-color="#13DEF7" />
-                  <stop offset="0.394" stop-color="#10B8ED" />
-                  <stop offset="0.595" stop-color="#0C82E0" />
-                  <stop offset="0.816" stop-color="#073ECF" />
-                  <stop offset="1" stop-color="#0300BF" />
-                </linearGradient>
-                <linearGradient id="paint2_linear_103_1779" x1="7.33697" y1="-11.9675" x2="59.9" y2="40.0825"
-                  gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#15FFFF" />
-                  <stop offset="0.085" stop-color="#14F6FD" />
-                  <stop offset="0.222" stop-color="#13DEF7" />
-                  <stop offset="0.394" stop-color="#10B8ED" />
-                  <stop offset="0.595" stop-color="#0C82E0" />
-                  <stop offset="0.816" stop-color="#073ECF" />
-                  <stop offset="1" stop-color="#0300BF" />
-                </linearGradient>
-                <linearGradient id="paint3_linear_103_1779" x1="3.647" y1="-8.24102" x2="56.21" y2="43.809"
-                  gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#0FAEE4" />
-                  <stop offset="0.085" stop-color="#11AAE2" />
-                  <stop offset="0.222" stop-color="#11ABE2" />
-                  <stop offset="0.394" stop-color="#10ACE3" />
-                  <stop offset="0.651042" stop-color="#367ABF" />
-                  <stop offset="0.816" stop-color="#3779BE" />
-                  <stop offset="1" stop-color="#357BC0" />
-                </linearGradient>
-              </defs>
-            </svg>
-            <p class="text-gray-700 font-medium">Emergency Care</p>
+          <div class="flex flex-col items-center bg-white shadow rounded-md p-2 sm:p-4 text-center">
+            <img src="assets/images/Group (1).svg" alt="" class="w-8 h-8 sm:w-10 sm:h-10">
+            <p class="text-gray-700 text-xs sm:text-sm font-medium">Emergency Care</p>
           </div>
         </div>
 
         <!-- Button -->
         <a href="#"
-          class="mt-6 inline-flex items-center bg-blue-600 text-white font-semibold px-6 py-3 rounded-md shadow-lg hover:brightness-90 transition duration-300"
+          class="mt-4 sm:mt-6 inline-flex items-center bg-blue-600 text-white font-semibold px-4 sm:px-6 py-2 sm:py-3 rounded-md shadow-lg hover:brightness-90 transition duration-300"
           style="background: linear-gradient(180deg, #094495 0%, #094495 100%);">
           Read More
-          <img src="assets/images/Frame.svg" alt="Arrow Icon" class="w-5 h-5 ml-2">
+          <img src="assets/images/Frame.svg" alt="Arrow Icon" class="w-4 h-4 sm:w-5 sm:h-5 ml-2">
         </a>
       </div>
 
       <!-- Right Image -->
-      <div class="relative  mx-auto md:mx-0" style="height: 85%; width: 80%;">
+      <div class="relative mx-auto md:mx-0 w-full sm:w-[80%]">
         <!-- Image -->
         <img src="assets/images/video-thumbnail.png" alt="Video Thumbnail"
-          class="rounded-lg shadow-lg w-full h-full object-cover" />
+          class="rounded-lg shadow-lg w-full h-auto object-cover" />
 
         <!-- Semi-Transparent Overlay -->
-        <div class="absolute inset-0 bg-[#15131399] rounded-lg" style="background: rgba(21, 19, 19, 0.6)"></div>
+        <div class="absolute inset-0 bg-[#15131399] rounded-lg"></div>
         <div class="">
-          <img src="assets/images/pngwing 3.png" alt="" class="src" style="position: absolute;
-         width: 42%;
-    right: 135%;
-    bottom: -14%; 
-    ">
+          <img src="assets/images/pngwing 3.png" alt=""
+            class="absolute w-[40%] sm:w-[42%] right-10 sm:right-[135%] bottom-[-10%] sm:bottom-[-14%]">
         </div>
         <!-- Play Button -->
         <a href="#"
-          class="absolute  transform -translate-x-1/2 -translate-y-1/2 bg-white text-blue-600 rounded-full p-4 shadow-lg"
-          style="top:50%; left:53%">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          class="absolute transform -translate-x-1/2 -translate-y-1/2 bg-white text-blue-600 rounded-full p-3 sm:p-4 shadow-lg"
+          style="top:50%; left:50%">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 sm:h-8 sm:w-8" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
               d="M14.752 11.168l-5.197-3.482A1 1 0 008 8.618v6.764a1 1 0 001.555.832l5.197-3.482a1 1 0 000-1.664z" />
           </svg>
         </a>
       </div>
-
     </div>
   </section>
+
   <!-------------------- SECTION 2:HEALTHY PREGNANCY CENTER END  -------------------->
 
   <!-------------------- SECTION 3:SERVICE SECTION START  -------------------->
   <section class="bg-white py-12">
     <div class="" style="position: absolute;">
-      <svg width="144" height="144" viewBox="0 0 144 144" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M116.207 87.8638C116.253 87.6764 116.297 87.4902 116.338 87.3053C118.237 78.7935 114.487 69.7181 107.006 64.7206C105.293 63.5758 102.586 62.0321 99.4199 61.1787C96.2228 60.3165 93.3306 60.365 90.8235 61.3222C86.6676 62.9092 83.8034 66.8887 82.3095 73.1511C80.2762 81.6709 74.0634 86.3029 68.581 90.3886C65.2621 92.8622 62.3959 94.9985 60.8167 97.6841C59.007 100.763 59.2443 104.161 61.5439 108.074C61.9507 108.768 62.4445 109.409 63.0132 109.98C65.9574 112.932 70.9326 114.032 77.5846 113.166C92.6427 111.205 113.422 99.1447 116.207 87.8638ZM100.976 57.7067C101.244 57.9753 101.536 58.2188 101.848 58.4341C103.511 59.5835 105.599 59.8668 107.727 59.2318C109.768 58.623 111.611 57.2295 112.919 55.3089C115.669 51.2684 115.177 46.0965 111.824 43.7794C110.161 42.6302 108.073 42.3469 105.945 42.9819C103.904 43.5907 102.06 44.9841 100.753 46.9048C98.2614 50.5642 98.4298 55.1525 100.976 57.7067ZM112.375 65.8283C112.458 65.9244 112.544 66.017 112.632 66.1059C114.893 68.3728 118.885 68.2844 121.73 65.8387C123.099 64.691 124.021 63.0978 124.339 61.3289C124.632 59.5505 124.19 57.8738 123.097 56.6092C120.896 54.0613 116.697 54.0572 113.741 56.5988C112.372 57.7464 111.45 59.3396 111.132 61.1083C110.84 62.8877 111.281 64.5635 112.375 65.8283ZM119.994 74.9413C120.056 75.0127 120.12 75.0814 120.186 75.1473C121.842 76.8087 124.75 76.7608 126.811 74.9885C127.797 74.1606 128.46 73.0118 128.688 71.7368C128.805 71.1299 128.782 70.5019 128.623 69.8998C128.463 69.2976 128.17 68.7366 127.767 68.2586C126.151 66.3913 123.093 66.3685 120.95 68.2111C119.963 69.0392 119.3 70.1883 119.072 71.4637C118.956 72.0707 118.978 72.6985 119.138 73.3005C119.298 73.9026 119.591 74.4634 119.994 74.9413ZM120.818 80.1136C120.577 80.606 120.451 81.1486 120.449 81.7009C120.448 82.2532 120.571 82.801 120.809 83.3036C120.98 83.6541 121.209 83.9743 121.485 84.2505C122.71 85.4789 124.802 85.8103 126.653 84.9348C127.687 84.4604 128.518 83.64 129.006 82.6126C129.247 82.1201 129.373 81.5775 129.375 81.0252C129.377 80.4729 129.254 79.9251 129.015 79.4224C128.055 77.4528 125.434 76.7212 123.172 77.7906C122.137 78.2651 121.306 79.0858 120.818 80.1136ZM126.996 89.8141C126.786 87.6458 124.573 86.0414 122.064 86.2376C120.922 86.314 119.85 86.7832 119.027 87.5657C118.627 87.9383 118.316 88.3981 118.12 88.9108C117.924 89.4236 117.847 89.9761 117.894 90.5273C117.982 91.3699 118.365 92.1595 118.976 92.7561C119.487 93.245 120.096 93.6188 120.761 93.8516C121.426 94.0843 122.131 94.1704 122.827 94.1038C123.969 94.0275 125.042 93.5582 125.864 92.7754C126.265 92.4029 126.575 91.9432 126.771 91.4304C126.967 90.9177 127.044 90.3653 126.996 89.8141ZM63.6812 48.6738C56.8116 42.8564 47.0964 41.7849 39.5061 46.0073C39.341 46.0991 39.1753 46.1935 39.009 46.2905C29.3907 51.9309 23.8962 71.737 25.4086 85.6784C26.0447 91.539 27.858 96.0422 30.6389 98.8311C31.7742 99.9874 33.1536 100.874 34.6721 101.424C38.9999 102.972 42.1747 102.656 44.6632 100.429C46.8253 98.4939 48.1578 95.3837 49.7008 91.7826C52.232 85.8746 55.1009 79.1779 62.5688 74.8785C68.1251 71.679 71.1192 67.7972 71.4674 63.3409C71.6774 60.6522 70.9116 57.847 69.1913 55.003C67.4884 52.1858 65.2551 50.0062 63.6812 48.6738ZM37.1023 54.1195C37.2517 53.9074 37.403 53.699 37.5561 53.4944C37.7237 53.2704 37.9748 53.1237 38.254 53.0868C38.5331 53.0499 38.8176 53.1256 39.0447 53.2974C39.2719 53.4692 39.4231 53.723 39.4652 54.0029C39.5073 54.2828 39.4367 54.566 39.2691 54.79C39.1278 54.9788 38.9882 55.1712 38.8502 55.3672C38.7704 55.4805 38.6688 55.5765 38.5511 55.6498C38.4335 55.7232 38.3021 55.7723 38.1645 55.7945C38.0269 55.8167 37.8858 55.8115 37.7492 55.7791C37.6126 55.7468 37.4833 55.688 37.3685 55.6061C37.2538 55.5242 37.1558 55.4208 37.0804 55.3017C37.0049 55.1827 36.9533 55.0504 36.9286 54.9124C36.9039 54.7743 36.9065 54.6333 36.9363 54.4973C36.9662 54.3613 37.0224 54.2328 37.1023 54.1195ZM31.3011 71.1956C31.165 71.1615 31.0363 71.1011 30.9226 71.0177C30.8089 70.9343 30.7122 70.8297 30.6383 70.7097C30.5643 70.5898 30.5144 70.4568 30.4915 70.3185C30.4685 70.1802 30.473 70.0393 30.5046 69.9037C31.5708 65.3237 33.1343 61.0368 35.0261 57.5074C35.0917 57.3851 35.1808 57.2774 35.2886 57.1904C35.3964 57.1034 35.5207 57.0387 35.6543 57.0002C35.9242 56.9224 36.216 56.9555 36.4654 57.0924C36.7148 57.2293 36.9014 57.4586 36.9842 57.73C37.067 58.0014 37.0392 58.2927 36.9069 58.5396C35.1007 61.9105 33.604 66.0194 32.579 70.423C32.5474 70.5586 32.4893 70.6862 32.4079 70.7984C32.3266 70.9106 32.2236 71.0054 32.105 71.0771C31.9863 71.1489 31.8542 71.1963 31.7162 71.2166C31.5783 71.237 31.4373 71.2297 31.3011 71.1956ZM70.6673 51.4686C70.8142 51.616 70.9684 51.7559 71.1292 51.8879C72.6931 53.1708 74.7533 53.6277 76.93 53.1747C79.0175 52.7401 80.9746 51.5084 82.441 49.7075C85.5248 45.9186 85.4706 40.7323 82.3155 38.1447C80.7515 36.8616 78.6914 36.4045 76.5145 36.8578C74.4268 37.2925 72.4699 38.524 71.0035 40.325C68.0773 43.9187 67.9777 48.7712 70.6673 51.4686ZM59.5749 42.7229C60.021 43.1716 60.5432 43.5374 61.1161 43.8026C62.6302 44.5029 64.3536 44.458 65.97 43.6765C67.5689 42.8729 68.8306 41.5358 69.5412 39.892C71.1368 36.3254 69.9543 32.2764 66.9049 30.8659C65.391 30.1655 63.6674 30.2105 62.0512 30.9918C60.4522 31.7955 59.1904 33.1325 58.4797 34.7764C57.1899 37.6596 57.7155 40.8579 59.5749 42.7229ZM49.1367 38.2063C49.4675 38.539 49.8547 38.8102 50.2795 39.0068C50.8491 39.2624 51.4667 39.3873 52.0862 39.3723C52.7058 39.3573 53.3115 39.2027 53.8582 38.92C55.0115 38.3416 55.922 37.3784 56.4352 36.1938C57.5921 33.6083 56.7134 30.6626 54.4764 29.6283C53.9067 29.3727 53.2891 29.2478 52.6695 29.2628C52.0498 29.2778 51.4441 29.4324 50.8973 29.7151C49.7442 30.2935 48.8338 31.2567 48.3205 32.4412C47.3878 34.5259 47.7783 36.8439 49.1367 38.2063ZM40.125 39.5376C40.6519 40.076 41.3327 40.4369 42.0698 40.5684C42.6165 40.6574 43.1741 40.6223 43.7008 40.4657C44.2276 40.3091 44.7101 40.0351 45.1124 39.6639C45.956 38.9044 46.5056 37.8717 46.6682 36.7409C47.0537 34.2574 45.6181 31.9324 43.4702 31.5593C42.9235 31.4703 42.366 31.5054 41.8392 31.662C41.3124 31.8186 40.8299 32.0926 40.4276 32.4637C39.5839 33.2232 39.0343 34.256 38.872 35.3869C38.6212 37.0022 39.14 38.5501 40.125 39.5376ZM31.1959 41.653C31.3921 42.626 31.8695 43.5249 32.5685 44.2375C33.4976 45.1694 34.7497 45.6463 35.9935 45.4093C36.533 45.3005 37.0389 45.0709 37.4733 44.7375C37.9076 44.4042 38.2594 43.9757 38.5023 43.484C39.0184 42.4707 39.165 41.3037 38.9173 40.1807C38.4002 37.7041 36.248 36.019 34.1196 36.4243C33.5801 36.5332 33.0743 36.7628 32.64 37.0961C32.2056 37.4294 31.8538 37.8577 31.6107 38.3493C31.0946 39.3625 30.948 40.5295 31.1957 41.6525L31.1959 41.653Z"
-          fill="#6C6C6C" fill-opacity="0.1" />
-      </svg>
+      <img src="assets/images/Group (2).svg" alt="" class="src">
     </div>
-    <div class="container mx-auto text-center px-4">
+    <div class="max-w-[1440px] mx-auto text-center px-4">
       <!-- Section Title -->
       <p class="text-orange-500 font-bold uppercase mb-2">Services</p>
       <h2 class="text-4xl font-bold text-gray-800 mb-8">
@@ -395,12 +276,12 @@
       </h2>
 
       <!-- Services Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div class="grid grid-cols-3 lg:grid-cols-4 gap-4">
 
         <!-- Service 1: Delivery (Highlighted) -->
         <div class="wow animate__fadeInUp bg-[#094495] text-white rounded-md shadow-sm p-8 flex flex-col items-center"
           data-wow-duration="2s" data-wow-delay="0.5s">
-          <div class="w-16 h-16 flex items-center justify-center border border-transparent" style="
+          <div class=" flex items-center justify-center border border-transparent" style="
                 border: 1px solid;
                 border-image-source: linear-gradient(
                   180deg,
@@ -423,7 +304,7 @@
                 rgba(6, 117, 188, 0) 100%
               );
             ">
-          <div class="w-16 h-16 flex items-center justify-center  border border-transparent" style="
+          <div class=" flex items-center justify-center  border border-transparent" style="
                 border: 1px solid;
                 border-image-source: linear-gradient(
                   180deg,
@@ -439,7 +320,7 @@
         <!-- Service 3: Sonography -->
         <div class="wow animate__fadeInUp bg-white rounded-sm shadow-md p-8 flex flex-col items-center"
           data-wow-duration="2s" data-wow-delay="0.5s">
-          <div class="w-16 h-16 flex items-center justify-center rounded-lg border border-transparent" style="
+          <div class=" flex items-center justify-center rounded-lg border border-transparent" style="
                 border: 1px solid;
                 border-image-source: linear-gradient(
                   180deg,
@@ -453,9 +334,10 @@
         </div>
 
         <!-- Service 4: Family Planning -->
-        <div class="wow animate__fadeInUp bg-white rounded-sm shadow-md p-8 flex flex-col items-center"
-          data-wow-duration="2s" data-wow-delay="0.5s">
-          <div class="w-16 h-16 flex items-center justify-center rounded-lg border border-transparent" style="
+        <div class="md:block hidden">
+          <div class="wow animate__fadeInUp bg-white rounded-sm  shadow-md p-8 flex flex-col items-center"
+            data-wow-duration="2s" data-wow-delay="0.5s">
+            <div class=" flex items-center justify-center rounded-lg border border-transparent" style="
                 border: 1px solid;
                 border-image-source: linear-gradient(
                   180deg,
@@ -463,11 +345,12 @@
                   rgba(6, 117, 188, 0) 100%
                 );
               ">
-            <img src="assets/images/Group 161617.svg" alt="" class="src">
+              <img src="assets/images/Group 161617.svg" alt="" class="src">
+            </div>
+            <p class="font-semibold text-lg mt-4 text-gray-800">
+              Family Planning
+            </p>
           </div>
-          <p class="font-semibold text-lg mt-4 text-gray-800">
-            Family Planning
-          </p>
         </div>
       </div>
 
@@ -488,10 +371,10 @@
 
   <section class="bg-white py-16 relative">
     <div class="w-full">
-      <h1 class=" font-trainone text-8xl " style="color:#0457A70D; position: absolute;
+      <h1 class=" font-trainone text-8xl xl:block hidden" style="color:#0457A70D; position: absolute;
     top: 15%;">GALLERY</h1>
     </div>
-    <div class="container mx-auto text-center px-4">
+    <div class="max-w-[1440px] mx-auto text-center px-4">
       <!-- Section Title -->
       <p class="text-orange-500 font-bold uppercase mb-2">Gallery</p>
       <h2 class="text-4xl font-bold text-gray-800 mb-10">
@@ -545,7 +428,6 @@
     </div>
     </div>
   </section>
-
   <!-------------------- SECTION 4: GALLERY SECTION END -------------------->
 
   <!-------------------- SECTION 5:BLOG SECTION START -------------------->
@@ -553,7 +435,7 @@
     <div class="">
       <img src="assets/images/Group 161674.png" alt="" class="src " style="position: absolute;">
     </div>
-    <div class="container mx-auto px-4 gap-8" style="position: relative;">
+    <div class="max-w-[1440px] mx-auto px-4 gap-8" style="position: relative;">
       <!-- Section Title -->
       <div class="text-center mb-10">
         <p class="text-orange-500 font-bold uppercase mb-2">Blog</p>
@@ -626,31 +508,34 @@
       <!-- blog 3 -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <!-- Blog Card -->
-        <div class="bg-white shadow-md mb-3 rounded-md flex overflow-hidden wow animate__slideInLeft"
-          data-wow-duration="2s" data-wow-delay="0.5s">
-          <!-- Blog Image -->
-          <div class="relative w-[150px] h-[180px] md:w-[180px] md:h-[200px] flex-shrink-0">
-            <!-- Date Overlay -->
-            <span class="absolute top-0 left-0 text-white text-xs font-bold py-1 px-2"
-              style="background: linear-gradient(180deg, #094495 0%, #094495 100%);">
-              28 <br> Sep
-            </span>
-            <img src="assets/images/blog3.png" alt="Blog Image" class="w-full h-full object-cover block rounded-none">
-          </div>
+        <div class="md:block hidden">
 
-          <!-- Blog Content -->
-          <div class="p-4 flex-1">
-            <h3 class="text-lg font-bold text-gray-800 mb-2">Sed UT Perspiciatis Unde Omnis</h3>
-            <p class="text-gray-600 text-sm mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's printer type specimen book.</p>
+          <div class="bg-white shadow-md mb-3 rounded-md flex  overflow-hidden wow animate__slideInLeft"
+            data-wow-duration="2s" data-wow-delay="0.5s">
+            <!-- Blog Image -->
+            <div class="relative w-[150px] h-[180px] md:w-[180px] md:h-[200px] flex-shrink-0">
+              <!-- Date Overlay -->
+              <span class="absolute top-0 left-0 text-white text-xs font-bold py-1 px-2"
+                style="background: linear-gradient(180deg, #094495 0%, #094495 100%);">
+                28 <br> Sep
+              </span>
+              <img src="assets/images/blog3.png" alt="Blog Image" class="w-full h-full object-cover block rounded-none">
+            </div>
 
-            <!-- Author Info -->
-            <div class="flex items-center text-gray-500 text-sm">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5 mr-2" viewBox="0 0 20 20">
-                <path
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm2-11a2 2 0 11-4 0 2 2 0 014 0zm-1.465 3.016a3.042 3.042 0 00-1.07-.016c-.787.126-1.569.488-2.203.91-.24.16-.508.254-.782.268-.274.014-.54-.068-.751-.229-.167-.124-.354-.253-.534-.344a1 1 0 10-.986 1.734c.259.134.5.308.74.508 1.273 1.083 3.115 1.874 5.28 1.06 2.013-.764 3.448-2.584 3.913-4.567.191-.775-.238-1.51-.95-1.784a3.979 3.979 0 00-1.527-.253c-.71.05-1.405.245-2.08.634z" />
-              </svg>
-              <p>Druid Wensleydale</p>
+            <!-- Blog Content -->
+            <div class="p-4 flex-1">
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Sed UT Perspiciatis Unde Omnis</h3>
+              <p class="text-gray-600 text-sm mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's printer type specimen book.</p>
+
+              <!-- Author Info -->
+              <div class="flex items-center text-gray-500 text-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5 mr-2" viewBox="0 0 20 20">
+                  <path
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm2-11a2 2 0 11-4 0 2 2 0 014 0zm-1.465 3.016a3.042 3.042 0 00-1.07-.016c-.787.126-1.569.488-2.203.91-.24.16-.508.254-.782.268-.274.014-.54-.068-.751-.229-.167-.124-.354-.253-.534-.344a1 1 0 10-.986 1.734c.259.134.5.308.74.508 1.273 1.083 3.115 1.874 5.28 1.06 2.013-.764 3.448-2.584 3.913-4.567.191-.775-.238-1.51-.95-1.784a3.979 3.979 0 00-1.527-.253c-.71.05-1.405.245-2.08.634z" />
+                </svg>
+                <p>Druid Wensleydale</p>
+              </div>
             </div>
           </div>
         </div>
@@ -702,7 +587,7 @@
   <!-------------------- SECTION 6:TEAM SECTION START -------------------->
   <section class="bg-blue-50 py-16">
     <!-- <img src="assets/images/pngwing 14.png" alt="" class="position: absolute border-blue-200;" style="  transform: rotate(91deg);"> -->
-    <div class="container mx-auto px-4 text-center">
+    <div class="max-w-[1440px] mx-auto px-4 text-center">
       <!-- Section Title -->
       <p class="text-orange-500 font-bold uppercase mb-2">Team</p>
       <h2 class="text-4xl font-bold text-gray-800">
@@ -710,29 +595,46 @@
       </h2>
 
       <!-- Team Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-10">
+      <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-10">
         <!-- Team Member 1 -->
         <div class="relative bg-white rounded-sm shadow-lg overflow-hidden">
-          <img src="assets/images/team1.png" alt="Doctor 1" class="w-full h-[350px] object-cover rounded-md" />
+          <img src="assets/images/team1.png" alt="Doctor 1" class="w-full object-cover rounded-md" />
         </div>
 
         <!-- Team Member 2 -->
         <div class="relative bg-white rounded-sm shadow-lg overflow-hidden">
-          <img src="assets/images/team2.png" alt="Doctor 2" class="w-full h-[350px] object-cover rounded-md" />
+          <img src="assets/images/team2.png" alt="Doctor 2" class="w-full object-cover rounded-md" />
         </div>
 
         <!-- Team Member 3 -->
-        <div class="relative bg-white rounded-sm shadow-lg overflow-hidden">
-          <img src="assets/images/team3.png" alt="Doctor 3" class="w-full h-[350px] object-cover rounded-md" />
-          <div class="absolute bottom-0 bg-white bg-opacity-100 w-full text-center p-4 rounded-b-xl">
-            <h3 class="font-bold text-lg text-gray-800">Alice Bohn</h3>
-            <p class="text-gray-600 text-sm">Gynecology</p>
+        <div class="md:block hidden">
+
+          <div class="relative bg-white rounded-sm shadow-lg overflow-hidden">
+            <img src="assets/images/team3.png" alt="Doctor 3" class="w-full object-cover rounded-md" />
+            <div class="absolute bottom-0 bg-white bg-opacity-100 w-full text-center p-4 rounded-b-xl">
+              <h3 class="font-bold text-lg text-gray-800">Alice Bohn</h3>
+              <p class="text-gray-600 text-sm">Gynecology</p>
+            </div>
           </div>
         </div>
 
         <!-- Team Member 4 -->
-        <div class="relative bg-white rounded-sm shadow-lg overflow-hidden">
-          <img src="assets/images/team4.png" alt="Doctor 4" class="w-full h-[350px] object-cover rounded-md" />
+        <div class="md:block hidden">
+
+          <div class="relative bg-white rounded-sm shadow-lg overflow-hidden">
+            <img src="assets/images/team4.png" alt="Doctor 4" class="w-full object-cover rounded-md" />
+          </div>
+        </div>
+
+        <div class="lg:hidden">
+          <div class="mt-5 text-center">
+            <a href="#"
+              class="mt-6 inline-flex items-center bg-blue-600 text-white font-semibold px-6 py-3 rounded-md shadow-lg hover:brightness-90 transition duration-300"
+              style="background: linear-gradient(180deg, #094495 0%, #094495 100%);">
+              View More
+              <img src="assets/images/Frame.svg" alt="Arrow Icon" class="w-5 h-5 ml-2">
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -742,11 +644,13 @@
 
   <!-------------------- SECTION 7: FEATURES SECTION START -------------------->
   <section class="bg-white py-16 mb-10">
-    <div class="container mx-auto px-4 text-center position-relative ">
-      <h1 class="font-trainone text-8xl top-[4220px]"
-        style="color: #0457A70D; position: absolute;  transform: rotate(90deg); left: -11%;">
-        FEATURES
-      </h1>
+    <div class="max-w-[1440px] mx-auto px-4 text-center position-relative ">
+      <div class="md:block hidden">
+        <h1 class="font-trainone text-8xl top-[4220px]"
+          style="color: #0457A70D; position: absolute;  transform: rotate(90deg); left: -11%;">
+          FEATURES
+        </h1>
+      </div>
       <!-- Section Title -->
       <div class="mb-10">
         <p class="text-orange-500 font-bold uppercase mb-2">Features</p>
@@ -764,7 +668,7 @@
         </div>
 
         <!-- Features Content -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <!-- Feature 1 -->
           <div class=" flex  items-center text-center ">
             <img src="assets/images/Group 161677.svg" alt="" class="src">
@@ -772,8 +676,10 @@
 
           <!-- Feature 2 -->
           <div class="flex  items-center text-center " style="position: relative;">
-            <img src="assets/images/Group 161678.svg" alt="" class="src" style="position: absolute; top: 25%;">
+            <img src="assets/images/Group 161678.svg" alt="" class="" style="position: absolute; top: 25%;">
           </div>
+
+          <!-- <div class="md:block hidden"> -->
 
           <!-- Feature 3 -->
           <div class="flex items-center text-center ">
@@ -794,6 +700,8 @@
           <div class="flex items-center text-center">
             <img src="assets/images/Group 161682.svg" alt="" class="src">
           </div>
+          <!-- </div> -->
+
         </div>
       </div>
     </div>
@@ -803,7 +711,7 @@
 
   <!-------------------- SECTION 8: COUNT SECTION START -------------------->
   <section class=" py-10" style="background: #E0F0FF;">
-    <div class="container mx-auto">
+    <div class="max-w-[1440px] mx-auto">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
         <!-- Total O.P.D -->
         <div>
@@ -830,89 +738,89 @@
   <!-------------------- SECTION 8: COUNT SECTION END -------------------->
 
   <!-------------------- SECTION 9:TESTIMONIALS SECTION START -------------------->
-  <h1 class="bg-gray-50 font-trainone text-7xl" style="color: #0457A70D; text-align: end;">TESTIMONIALS</h1>
-  <section class="bg-gray-50 pb-16" style="position: relative;">
-    <img src="assets/images/pngwing 4.svg" alt="" class="src" style="position: absolute; width: 520px;
-    height: 455px;
-    gap: 0px;
-    ">
-    <img src="assets/images/footprint.png" alt="" class="src" style="position: absolute;top: 35%;
-    width: 7%;">
-    <div class="container mx-auto px-4" style="position: relative;">
+  <section class="relative">
+    <h1 class=" font-trainone text-[130px] xl:block hidden text-[#0457A70D] absolute right-0 top-[-50px]">
+      TESTIMONIALS</h1>
+    <img src="assets/images/pngwing 4.svg" alt="" class="absolute w-[520px] h-[455px] ">
+    <img src="assets/images/footprint.png" alt="" class="absolute top-[37px] w-7%">
+    <div class="max-w-[1440px] mx-auto py-24" style="position: relative;">
       <!-- Section Title -->
-      <div class="text-center mb-10">
-        <p class="text-orange-500 font-bold uppercase">Testimonial</p>
-        <h2 class="text-4xl font-bold text-gray-800">
-          Our Patient <span class="text-green-600">Says</span>
-        </h2>
-      </div>
-
-      <!-- Testimonial Cards -->
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        <!-- Card 1 -->
-        <div class="bg-white shadow-lg rounded-lg p-6 flex items-center justify-between">
-          <div class="flex flex-col justify-center text-left">
-            <p class="text-gray-600 text-sm mb-4">
-              Lorem Ipsum is simply dummy text of the we a printing and
-              typesetting industry. Lorem Ipsum has been the industry's we a
-              also the unchanged.
-            </p>
-            <h4 class="font-bold text-gray-800">Moris Jameson</h4>
-            <p class="text-sm text-gray-500">CEO, Hosak Int. Ltd.</p>
-            <div class="flex justify-start mt-4 text-yellow-500">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-          </div>
-          <img src="assets/images/testimonials.png" alt="Moris Jameson"
-            class="w-16 h-16 rounded-full object-cover ml-4" />
+      <div class="">
+        <div class="text-center mb-10">
+          <p class="text-orange-500 font-bold uppercase">Testimonial</p>
+          <h2 class="text-4xl font-bold text-gray-800">
+            Our Patient <span class="text-green-600">Says</span>
+          </h2>
         </div>
 
-        <!-- Card 2 -->
-        <div class="bg-white shadow-lg rounded-lg p-6 flex items-center justify-between">
-          <div class="flex flex-col justify-center text-left">
-            <p class="text-gray-600 text-sm mb-4">
-              Lorem Ipsum is simply dummy text of the we a printing and
-              typesetting industry. Lorem Ipsum has been the industry's we a
-              also the unchanged.
-            </p>
-            <h4 class="font-bold text-gray-800">Peter Parker</h4>
-            <p class="text-sm text-gray-500">CEO, Hosak Int. Ltd.</p>
-            <div class="flex justify-start mt-4 text-yellow-500">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
+        <!-- Testimonial Cards -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <!-- Card 1 -->
+          <div class="bg-white shadow-lg rounded-lg p-6 flex items-center justify-between">
+            <div class="flex flex-col justify-center text-left">
+              <p class="text-gray-600 text-sm mb-4">
+                Lorem Ipsum is simply dummy text of the we a printing and
+                typesetting industry. Lorem Ipsum has been the industry's we a
+                also the unchanged.
+              </p>
+              <h4 class="font-bold text-gray-800">Moris Jameson</h4>
+              <p class="text-sm text-gray-500">CEO, Hosak Int. Ltd.</p>
+              <div class="flex justify-start mt-4 text-yellow-500">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
             </div>
+            <img src="assets/images/testimonials.png" alt="Moris Jameson"
+              class="w-16 h-16 rounded-full object-cover ml-4" />
           </div>
-          <img src="assets/images/testimonials.png" alt="Peter Parker"
-            class="w-16 h-16 rounded-full object-cover ml-4" />
-        </div>
 
-        <!-- Card 3 -->
-        <div class="bg-white shadow-lg rounded-lg p-6 flex items-center justify-between">
-          <div class="flex flex-col justify-center text-left">
-            <p class="text-gray-600 text-sm mb-4">
-              Lorem Ipsum is simply dummy text of the we a printing and
-              typesetting industry. Lorem Ipsum has been the industry's we a
-              also the unchanged.
-            </p>
-            <h4 class="font-bold text-gray-800">Anna Williams</h4>
-            <p class="text-sm text-gray-500">CTO, Hosak Int. Ltd.</p>
-            <div class="flex justify-start mt-4 text-yellow-500">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
+
+          <!-- Card 2 -->
+          <div class="bg-white shadow-lg rounded-lg p-6 flex items-center justify-between">
+            <div class="flex flex-col justify-center text-left">
+              <p class="text-gray-600 text-sm mb-4">
+                Lorem Ipsum is simply dummy text of the we a printing and
+                typesetting industry. Lorem Ipsum has been the industry's we a
+                also the unchanged.
+              </p>
+              <h4 class="font-bold text-gray-800">Peter Parker</h4>
+              <p class="text-sm text-gray-500">CEO, Hosak Int. Ltd.</p>
+              <div class="flex justify-start mt-4 text-yellow-500">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
             </div>
+            <img src="assets/images/testimonials.png" alt="Peter Parker"
+              class="w-16 h-16 rounded-full object-cover ml-4" />
           </div>
-          <img src="assets/images/testimonials.png" alt="Anna Williams"
-            class="w-16 h-16 rounded-full object-cover ml-4" />
+
+          <!-- Card 3 -->
+          <div class="bg-white shadow-lg rounded-lg p-6 flex items-center justify-between">
+            <div class="flex flex-col justify-center text-left">
+              <p class="text-gray-600 text-sm mb-4">
+                Lorem Ipsum is simply dummy text of the we a printing and
+                typesetting industry. Lorem Ipsum has been the industry's we a
+                also the unchanged.
+              </p>
+              <h4 class="font-bold text-gray-800">Anna Williams</h4>
+              <p class="text-sm text-gray-500">CTO, Hosak Int. Ltd.</p>
+              <div class="flex justify-start mt-4 text-yellow-500">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+            <img src="assets/images/testimonials.png" alt="Anna Williams"
+              class="w-16 h-16 rounded-full object-cover ml-4" />
+          </div>
         </div>
       </div>
 
@@ -933,6 +841,7 @@
           <i class="fa-solid fa-chevron-right"></i>
         </button>
       </div>
+    </div>
     </div>
   </section>
 
@@ -964,10 +873,11 @@
   <!-------------------- SECTION 10:SYSTEM SECTION END -------------------->
 
   <!-------------------- SECTION 11: FOOTER SECTION START -------------------->
-  <footer class=" py-10">
+  <footer class="md:py-10 py-5 md:px-0 px-4">
     <!-- Newsletter Subscription Section -->
-    <div class="w-2/5 mx-auto rounded-lg text-white py-8" style="background: #094495">
-      <div class="container px-4 text-center lg:text-left flex flex-col lg:flex-row items-center justify-between gap-6">
+    <div class="md:w-2/5 w-full mx-auto rounded-lg text-white py-8" style="background: #094495">
+      <div
+        class="max-w-[1440px] px-4 text-center lg:text-left flex flex-col lg:flex-row items-center justify-between gap-6">
         <h3 class="text-xl font-bold">Subscribe To Our Newsletter</h3>
         <div class="flex items-center w-full lg:w-auto">
           <input type="email" placeholder="Enter your email address"
@@ -981,7 +891,7 @@
     </div>
 
     <!-- Footer Main Content -->
-    <div class="container mx-auto px-4">
+    <div class="max-w-[1440px] mx-auto md:px-4 px-0">
       <!-- First Section: Logo and Social Icons -->
       <div class="flex flex-col lg:flex-row justify-between items-center mt-6 mb-4">
         <div class="flex flex-col items-center lg:items-start">
@@ -989,10 +899,14 @@
         </div>
         <div class="flex items-center gap-4">
           <span class="font-medium" style="color: #094495;">Follow US:</span>
-          <a href="#" class="text-white py-1 px-2 rounded-full hover:text-blue-600" style="background: #094495;"><i class="fa-brands fa-facebook text-md"></i></a>
-          <a href="#" class="text-white py-1 px-2 rounded-full hover:text-blue-600" style="background: #094495;"><i class="fa-brands fa-instagram text-md"></i></a>
-          <a href="#" class="text-white py-1 px-2 rounded-full hover:text-blue-600" style="background: #094495;"><i class="fa-brands fa-linkedin text-md"></i></a>
-          <a href="#" class="text-white py-1 px-2 rounded-full hover:text-blue-600" style="background: #094495;"><i class="fa-brands fa-twitter text-md"></i></a>
+          <a href="#" class="text-white py-1 px-2 rounded-full hover:text-blue-600" style="background: #094495;"><i
+              class="fa-brands fa-facebook text-md"></i></a>
+          <a href="#" class="text-white py-1 px-2 rounded-full hover:text-blue-600" style="background: #094495;"><i
+              class="fa-brands fa-instagram text-md"></i></a>
+          <a href="#" class="text-white py-1 px-2 rounded-full hover:text-blue-600" style="background: #094495;"><i
+              class="fa-brands fa-linkedin text-md"></i></a>
+          <a href="#" class="text-white py-1 px-2 rounded-full hover:text-blue-600" style="background: #094495;"><i
+              class="fa-brands fa-twitter text-md"></i></a>
         </div>
       </div>
 
@@ -1018,38 +932,42 @@
         </div>
 
         <!-- Information -->
-        <div>
-          <h4 class=" font-bold text-lg" style="color: #094495;">Information</h4>
-          <ul class="mt-4 space-y-2">
-            <li>
-              <a href="services.html" class="text-gray-900 font-semibold hover:text-blue-600">Services & Facilities</a>
-            </li>
-            <li>
-              <a href="#" class="text-gray-900 font-semibold hover:text-blue-600">Our Culture</a>
-            </li>
-            <li>
-              <a href="contactus.html" class="text-gray-900 font-semibold hover:text-blue-600">Contact</a>
-            </li>
-          </ul>
-        </div>
+        <div class="flex md:flex-col flex-row">
+          <!-- Information -->
+          <div class="info flex-1">
+            <h4 class="font-bold text-lg" style="color: #094495;">Information</h4>
+            <ul class="mt-4 space-y-2">
+              <li>
+                <a href="services.html" class="text-gray-900 font-semibold hover:text-blue-600">Services &
+                  Facilities</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-900 font-semibold hover:text-blue-600">Our Culture</a>
+              </li>
+              <li>
+                <a href="contactus.html" class="text-gray-900 font-semibold hover:text-blue-600">Contact</a>
+              </li>
+            </ul>
+          </div>
 
-        <!-- Quick Links -->
-        <div>
-          <h4 class=" font-bold text-lg" style="color: #094495;">Quick Link</h4>
-          <ul class="mt-4 space-y-2">
-            <li>
-              <a href="index.html" class="text-gray-900 font-semibold hover:text-blue-600">Home</a>
-            </li>
-            <li>
-              <a href="doctors.html" class="text-gray-900 font-semibold hover:text-blue-600">Doctor</a>
-            </li>
-            <li>
-              <a href="blogs.html" class="text-gray-900 font-semibold hover:text-blue-600">Blogs</a>
-            </li>
-            <li>
-              <a href="contactus.html" class="text-gray-900 font-semibold hover:text-blue-600">Appointment</a>
-            </li>
-          </ul>
+          <!-- Quick Links -->
+          <div class="quick flex-1">
+            <h4 class="font-bold text-lg" style="color: #094495;">Quick Link</h4>
+            <ul class="mt-4 space-y-2">
+              <li>
+                <a href="index.html" class="text-gray-900 font-semibold hover:text-blue-600">Home</a>
+              </li>
+              <li>
+                <a href="doctors.html" class="text-gray-900 font-semibold hover:text-blue-600">Doctor</a>
+              </li>
+              <li>
+                <a href="blogs.html" class="text-gray-900 font-semibold hover:text-blue-600">Blogs</a>
+              </li>
+              <li>
+                <a href="contactus.html" class="text-gray-900 font-semibold hover:text-blue-600">Appointment</a>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <!-- Timing -->
@@ -1107,7 +1025,6 @@
   </script>
 
   <!-- Counter Script -->
-  <!-- Counter Script -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const counters = document.querySelectorAll(".counter");
@@ -1137,3 +1054,24 @@
 </body>
 
 </html>
+
+<!-- JS -->
+<script>
+  const hamburgerButton = document.getElementById("hamburger-menu");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const hamburgerIcon = document.getElementById("hamburger-icon");
+
+  // Toggle the mobile menu and the icon
+  hamburgerButton.addEventListener("click", function () {
+    mobileMenu.classList.toggle("hidden");
+    if (mobileMenu.classList.contains("hidden")) {
+      hamburgerIcon.classList.remove("fa-times");
+      hamburgerIcon.classList.add("fa-bars");
+      hamburgerIcon.style.transform = "rotate(0deg)";
+    } else {
+      hamburgerIcon.classList.remove("fa-bars");
+      hamburgerIcon.classList.add("fa-times");
+      hamburgerIcon.style.transform = "rotate(180deg)"; // Rotate cross icon
+    }
+  });
+</script>

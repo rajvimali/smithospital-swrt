@@ -13,7 +13,7 @@
     integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- GOOGLE FONTS -->
+  <!-- GOOGLE FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
   <link href="https://fonts.googleapis.com/css2?family=Train+One&amp;display=swap" rel="stylesheet">
@@ -30,8 +30,8 @@
             secondary: "#9333ea",
           },
           maxWidth: {
-            container: "1440px",
-            mxcontainer: "1920px",
+            max-w-[1440px]: "1440px",
+            mxmax-w-[1440px]: "1920px",
           },
           fontSize: {
             'custom-size': '110px',
@@ -57,7 +57,7 @@
 <body class="bg-white">
   <!-------------------- SECTION 1:HEADER & HERO SECTION START -------------------->
   <header class="bg-white shadow">
-    <div class="container mx-auto px-4 flex items-center justify-between py-4">
+    <div class="max-w-[1440px] mx-auto px-4 flex items-center justify-between py-4">
       <!-- Logo -->
       <h1 class="text-2xl font-bold text-blue-600">
         <img src="assets/images/logo.png" class="w-auto h-8" alt="Logo" />
@@ -75,13 +75,14 @@
       </nav>
 
       <!-- Book Appointment Button (visible only on larger screens) -->
-      <a href="#"
-        class="flex items-center justify-center bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:brightness-90 transition-all duration-300"
-        style="background: linear-gradient(180deg, #094495 0%, #094495 100%);">
-        <span>Book Appointment</span>
-        <img src="assets/images/Frame.svg" alt="Arrow Icon" class="w-6 h-6 ml-2">
-      </a>
-
+      <div class="hidden md:block">
+        <a href="contactus.html"
+          class=" inline-flex items-center bg-blue-600 text-white font-semibold px-6 py-3 rounded-md shadow-lg hover:brightness-90 transition duration-300 "
+          style="background: linear-gradient(180deg, #094495 0%, #094495 100%);">
+          Book Appointment
+          <img src="assets/images/Frame.svg" alt="Arrow Icon" class="w-5 h-5 ml-2">
+        </a>
+      </div>
 
       <!-- Hamburger Menu for Mobile -->
       <div class="md:hidden flex items-center">
@@ -93,7 +94,7 @@
 
     <!-- Mobile Menu (hidden by default) -->
     <div id="mobile-menu" class="md:hidden hidden bg-white shadow-md">
-      <div class="container mx-auto px-4 py-4">
+      <div class="max-w-[1440px] mx-auto px-4 py-4">
         <!-- Navigation Centered -->
         <nav class="flex flex-col items-center space-y-4 text-gray-700">
           <a href="index.html" class="hover:text-blue-600 font-semibold">Home</a>
@@ -108,27 +109,6 @@
     </div>
   </header>
 
-  <!-- Add this JavaScript to toggle the mobile menu visibility and change the icon -->
-  <script>
-    const hamburgerButton = document.getElementById("hamburger-menu");
-    const mobileMenu = document.getElementById("mobile-menu");
-    const hamburgerIcon = document.getElementById("hamburger-icon");
-
-    // Toggle the mobile menu and the icon
-    hamburgerButton.addEventListener("click", function () {
-      mobileMenu.classList.toggle("hidden");
-      if (mobileMenu.classList.contains("hidden")) {
-        hamburgerIcon.classList.remove("fa-times");
-        hamburgerIcon.classList.add("fa-bars");
-        hamburgerIcon.style.transform = "rotate(0deg)";
-      } else {
-        hamburgerIcon.classList.remove("fa-bars");
-        hamburgerIcon.classList.add("fa-times");
-        hamburgerIcon.style.transform = "rotate(180deg)"; // Rotate cross icon
-      }
-    });
-  </script>
-
   <!-------------------- SERVICE SECTION START -------------------->
   <section class="relative bg-blue-50" style="height: 570px; background-size: cover; background-position: center;">
     <!-- Background Image -->
@@ -139,7 +119,7 @@
          "></div>
 
     <!-- Content -->
-    <div class="container mx-auto px-4 relative z-10 flex items-center justify-start h-full">
+    <div class="max-w-[1440px] mx-auto px-4 relative z-10 flex items-center justify-start h-full">
       <!-- Text Content -->
       <h3 class="text-7xl font-semibold text-gray-800 mb-4">Services</h3>
       <img src="assets/images/pngwing 2.png" alt="" class="" style="width: 16%;
@@ -152,9 +132,8 @@
 
   <!-------------------- SECTION 2:SERVICE OFFER SECTION START -------------------->
   <section class="bg-white py-16" style="background: #F8F8F8;">
-    <div class="container mx-auto text-center px-4">
+    <div class="max-w-[1440px] mx-auto text-center px-4">
       <!-- Section Title -->
-      <p class="text-orange-500 font-bold uppercase mb-2">Services</p>
       <h2 class="text-4xl font-bold text-gray-800 mb-8">
         Explore Our <span class="text-green-600">Offerings</span>
       </h2>
@@ -296,7 +275,7 @@
 
   <!-------------------- SECTION 3:FREE SERVICE SECTION START -------------------->
   <section class="bg-white py-16">
-    <div class="container mx-auto">
+    <div class="max-w-[1440px] mx-auto">
       <h2 class="text-3xl font-bold text-gray-800 text-center mb-10">
         Our <span class="text-green-600">Free Service</span>
       </h2>
@@ -385,7 +364,7 @@
 
   <!-------------------- SECTION 4:FACILITIES SECTION START -------------------->
   <section class="bg-white py-16">
-    <div class="container mx-auto text-center">
+    <div class="max-w-[1440px] mx-auto text-center">
       <h2 class="text-3xl font-bold text-gray-800">
         Our <span class="text-green-600">Facilities</span>
       </h2>
@@ -445,7 +424,7 @@
   <footer class=" py-10">
     <!-- Newsletter Subscription Section -->
     <div class="w-2/5 mx-auto rounded-lg text-white py-8" style="background: #094495">
-      <div class="container px-4 text-center lg:text-left flex flex-col lg:flex-row items-center justify-between gap-6">
+      <div class="max-w-[1440px] px-4 text-center lg:text-left flex flex-col lg:flex-row items-center justify-between gap-6">
         <h3 class="text-xl font-bold">Subscribe To Our Newsletter</h3>
         <div class="flex items-center w-full lg:w-auto">
           <input type="email" placeholder="Enter your email address"
@@ -459,7 +438,7 @@
     </div>
 
     <!-- Footer Main Content -->
-    <div class="container mx-auto px-4">
+    <div class="max-w-[1440px] mx-auto px-4">
       <!-- First Section: Logo and Social Icons -->
       <div class="flex flex-col lg:flex-row justify-between items-center mt-6 mb-4">
         <div class="flex flex-col items-center lg:items-start">
@@ -555,6 +534,28 @@
   </footer>
 
   <!-------------------- SECTION 5:FOOTER SECTION END -------------------->
+
+  <!-- JS -->
+  <script>
+    const hamburgerButton = document.getElementById("hamburger-menu");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const hamburgerIcon = document.getElementById("hamburger-icon");
+
+    // Toggle the mobile menu and the icon
+    hamburgerButton.addEventListener("click", function () {
+      mobileMenu.classList.toggle("hidden");
+      if (mobileMenu.classList.contains("hidden")) {
+        hamburgerIcon.classList.remove("fa-times");
+        hamburgerIcon.classList.add("fa-bars");
+        hamburgerIcon.style.transform = "rotate(0deg)";
+      } else {
+        hamburgerIcon.classList.remove("fa-bars");
+        hamburgerIcon.classList.add("fa-times");
+        hamburgerIcon.style.transform = "rotate(180deg)"; // Rotate cross icon
+      }
+    });
+  </script>
+
 </body>
 
 </html>

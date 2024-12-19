@@ -17,38 +17,34 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
     integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            trainone: ['"Train One"', 'sans-serif'],
-          },
-          colors: {
-            primary: "#1d4ed8",
-            secondary: "#9333ea",
-          },
-          maxWidth: {
-            container: "1440px",
-            mxcontainer: "1920px",
-          },
-          fontSize: {
-            'custom-size': '110px',
-          },
-          lineHeight: {
-            'custom-line': '111px',
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              trainone: ['"Train One"', 'sans-serif'],
+            },
+            colors: {
+              primary: "#1d4ed8",
+              secondary: "#9333ea",
+            },
+            fontSize: {
+              'custom-size': '110px',
+            },
+            lineHeight: {
+              'custom-line': '111px',
+            },
           },
         },
-      },
-      plugins: [],
-    };
-  </script>
+        plugins: [],
+      };
+    </script>
 </head>
 
 <body class="bg-white">
   <!-------------------- SECTION 1:HEADER & HERO SECTION START -------------------->
   <header class="bg-white shadow">
-    <div class="container mx-auto px-4 flex items-center justify-between py-4">
+    <div class="max-w-[1440px] mx-auto px-4 flex items-center justify-between py-4">
       <!-- Logo -->
       <h1 class="text-2xl font-bold text-blue-600">
         <img src="assets/images/logo.png" class="w-auto h-8" alt="Logo" />
@@ -66,13 +62,14 @@
       </nav>
 
       <!-- Book Appointment Button (visible only on larger screens) -->
-      <a href="#"
-        class="flex items-center justify-center bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:brightness-90 transition-all duration-300"
-        style="background: linear-gradient(180deg, #094495 0%, #094495 100%);">
-        <span>Book Appointment</span>
-        <img src="assets/images/Frame.svg" alt="Arrow Icon" class="w-6 h-6 ml-2">
-      </a>
-
+      <div class="hidden md:block">
+        <a href="contactus.html"
+          class=" inline-flex items-center bg-blue-600 text-white font-semibold px-6 py-3 rounded-md shadow-lg hover:brightness-90 transition duration-300 "
+          style="background: linear-gradient(180deg, #094495 0%, #094495 100%);">
+          Book Appointment
+          <img src="assets/images/Frame.svg" alt="Arrow Icon" class="w-5 h-5 ml-2">
+        </a>
+      </div>
 
       <!-- Hamburger Menu for Mobile -->
       <div class="md:hidden flex items-center">
@@ -84,7 +81,7 @@
 
     <!-- Mobile Menu (hidden by default) -->
     <div id="mobile-menu" class="md:hidden hidden bg-white shadow-md">
-      <div class="container mx-auto px-4 py-4">
+      <div class="max-w-[1440px] mx-auto px-4 py-4">
         <!-- Navigation Centered -->
         <nav class="flex flex-col items-center space-y-4 text-gray-700">
           <a href="index.html" class="hover:text-blue-600 font-semibold">Home</a>
@@ -99,27 +96,6 @@
     </div>
   </header>
 
-  <!-- Add this JavaScript to toggle the mobile menu visibility and change the icon -->
-  <script>
-    const hamburgerButton = document.getElementById("hamburger-menu");
-    const mobileMenu = document.getElementById("mobile-menu");
-    const hamburgerIcon = document.getElementById("hamburger-icon");
-
-    // Toggle the mobile menu and the icon
-    hamburgerButton.addEventListener("click", function () {
-      mobileMenu.classList.toggle("hidden");
-      if (mobileMenu.classList.contains("hidden")) {
-        hamburgerIcon.classList.remove("fa-times");
-        hamburgerIcon.classList.add("fa-bars");
-        hamburgerIcon.style.transform = "rotate(0deg)";
-      } else {
-        hamburgerIcon.classList.remove("fa-bars");
-        hamburgerIcon.classList.add("fa-times");
-        hamburgerIcon.style.transform = "rotate(180deg)"; // Rotate cross icon
-      }
-    });
-  </script>
-
   <!-------------------- SERVICE SECTION START -------------------->
   <section class="relative bg-blue-50" style="height: 570px; background-size: cover; background-position: center;">
     <!-- Background Image -->
@@ -130,7 +106,7 @@
          "></div>
 
     <!-- Content -->
-    <div class="container mx-auto px-4 relative z-10 flex items-center justify-start h-full">
+    <div class="max-w-[1440px] mx-auto px-4 relative z-10 flex items-center justify-start h-full">
       <!-- Text Content -->
       <h3 class="text-7xl font-semibold text-gray-800 mb-4">Doctors</h3>
       <img src="assets/images/pngwing 2.png" alt="" class="" style="width: 16%;
@@ -138,24 +114,24 @@
       top: 50%;
       left: 12%;">
     </div>
-    <div
-      class="font-trainone text-custom-size font-normal leading-custom-line  underline-offset-[from-font] decoration-skip-ink"
-      style="color: #0457A70D;">
-      Doctors
-    </div>
   </section>
+  <div
+    class="font-trainone text-4xl lg:text-custom-size font-normal leading-custom-line  underline-offset-[from-font] decoration-skip-ink"
+    style="color: #0457A70D; position: absolute;";>
+    Doctors
+  </div>
   <!-------------------- SECTION 1:HEADER & HERO SECTION END -------------------->
 
   <!-------------------- SECTION 2:DOCTORS SECTION START -------------------->
   <section class="py-10" style="background: #E2F1FF; ">
+    <div class="max-w-7xl mx-auto px-6" style="
+    margin-top: 3%; position: relative;">
     <div class="vector">
       <img src="assets/images/Vector.png" alt="" class="src" style="position: absolute;
-      top: 136%;
-      width: 6%;
-      left: 9%;">
+      top: 79%;
+      width: 8%;
+      left:-8%;">
     </div>
-    <div class="max-w-7xl mx-auto px-6" style="
-    margin-top: 3%;">
       <!-- Header Section -->
       <h1 class="text-4xl font-bold text-center mb-10 text-gray-800">Our Dedicated <span
           class="text-green-600">Doctors</span></h1>
@@ -230,7 +206,7 @@
 
   <!-------------------- SECTION 3:BIOGRAPHY SECTION START -------------------->
   <section class=" bg-gray-50 py-16">
-    <div class="max-w-7xl mx-auto flex px-6 grid md:grid-cols-2 items-center gap-4 relative z-10">
+    <div class="max-w-7xl mx-auto flex px-6 grid grid-cols-1 md:grid-cols-2 items-center gap-4 relative z-10">
       <div class="flex relative z-10 ">
         <div class="bg-white p-6 rounded-lg relative flex-1 shadow-md ">
           <h2 class="text-3xl font-bold text-gray-800 mb-6">Personal Biography</h2>
@@ -269,10 +245,11 @@
 
 
   <!-------------------- SECTION 4: FOOTER SECTION START -------------------->
-  <footer class=" py-10">
+  <footer class="md:py-10 py-5 md:px-0 px-4">
     <!-- Newsletter Subscription Section -->
-    <div class="w-2/5 mx-auto rounded-lg text-white py-8" style="background: #094495">
-      <div class="container px-4 text-center lg:text-left flex flex-col lg:flex-row items-center justify-between gap-6">
+    <div class="md:w-2/5 w-full mx-auto rounded-lg text-white py-8" style="background: #094495">
+      <div
+        class="max-w-[1440px] px-4 text-center lg:text-left flex flex-col lg:flex-row items-center justify-between gap-6">
         <h3 class="text-xl font-bold">Subscribe To Our Newsletter</h3>
         <div class="flex items-center w-full lg:w-auto">
           <input type="email" placeholder="Enter your email address"
@@ -286,14 +263,14 @@
     </div>
 
     <!-- Footer Main Content -->
-    <div class="container mx-auto px-4">
+    <div class="max-w-[1440px] mx-auto md:px-4 px-0">
       <!-- First Section: Logo and Social Icons -->
       <div class="flex flex-col lg:flex-row justify-between items-center mt-6 mb-4">
         <div class="flex flex-col items-center lg:items-start">
           <img src="assets/images/logo.png" alt="Smit Hospital Logo" class="mb-4 w-40" />
         </div>
         <div class="flex items-center gap-4">
-          <span class=" font-medium" style="color: #094495;">Follow US:</span>
+          <span class="font-medium" style="color: #094495;">Follow US:</span>
           <a href="#" class="text-white py-1 px-2 rounded-full hover:text-blue-600" style="background: #094495;"><i
               class="fa-brands fa-facebook text-md"></i></a>
           <a href="#" class="text-white py-1 px-2 rounded-full hover:text-blue-600" style="background: #094495;"><i
@@ -320,50 +297,54 @@
             261 25632332
           </p>
           <p class="text-gray-600 mt-2 font-semibold">
-            <i class="fa-solid fa-envelope " style="color: #094495;"></i>
+            <i class="fa-solid fa-envelope" style="color: #094495;"></i>
             <a href="mailto:info@smithospitals.com" class="text-grey-600"></a>
             Email : info@smithospitals.com</a>
           </p>
         </div>
 
         <!-- Information -->
-        <div>
-          <h4 class=" font-bold text-lg" style="color: #094495;">Information</h4>
-          <ul class="mt-4 space-y-2">
-            <li>
-              <a href="services.html" class="text-gray-900 font-semibold hover:text-blue-600">Services & Facilities</a>
-            </li>
-            <li>
-              <a href="#" class="text-gray-900 font-semibold hover:text-blue-600">Our Culture</a>
-            </li>
-            <li>
-              <a href="contactus.html" class="text-gray-900 font-semibold hover:text-blue-600">Contact</a>
-            </li>
-          </ul>
-        </div>
+        <div class="flex md:flex-col flex-row">
+          <!-- Information -->
+          <div class="info flex-1">
+            <h4 class="font-bold text-lg" style="color: #094495;">Information</h4>
+            <ul class="mt-4 space-y-2">
+              <li>
+                <a href="services.html" class="text-gray-900 font-semibold hover:text-blue-600">Services &
+                  Facilities</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-900 font-semibold hover:text-blue-600">Our Culture</a>
+              </li>
+              <li>
+                <a href="contactus.html" class="text-gray-900 font-semibold hover:text-blue-600">Contact</a>
+              </li>
+            </ul>
+          </div>
 
-        <!-- Quick Links -->
-        <div>
-          <h4 class=" font-bold text-lg" style="color: #094495;">Quick Link</h4>
-          <ul class="mt-4 space-y-2">
-            <li>
-              <a href="index.html" class="text-gray-900 font-semibold hover:text-blue-600">Home</a>
-            </li>
-            <li>
-              <a href="doctors.html" class="text-gray-900 font-semibold hover:text-blue-600">Doctor</a>
-            </li>
-            <li>
-              <a href="blogs.html" class="text-gray-900 font-semibold hover:text-blue-600">Blogs</a>
-            </li>
-            <li>
-              <a href="#" class="text-gray-900 font-semibold hover:text-blue-600">Appointment</a>
-            </li>
-          </ul>
+          <!-- Quick Links -->
+          <div class="quick flex-1">
+            <h4 class="font-bold text-lg" style="color: #094495;">Quick Link</h4>
+            <ul class="mt-4 space-y-2">
+              <li>
+                <a href="index.html" class="text-gray-900 font-semibold hover:text-blue-600">Home</a>
+              </li>
+              <li>
+                <a href="doctors.html" class="text-gray-900 font-semibold hover:text-blue-600">Doctor</a>
+              </li>
+              <li>
+                <a href="blogs.html" class="text-gray-900 font-semibold hover:text-blue-600">Blogs</a>
+              </li>
+              <li>
+                <a href="contactus.html" class="text-gray-900 font-semibold hover:text-blue-600">Appointment</a>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <!-- Timing -->
         <div>
-          <h4 class=" font-bold text-lg" style="color: #094495;">Monday to Saturday</h4>
+          <h4 class="text-blue-700 font-bold text-lg" style="color: #094495;">Monday to Saturday</h4>
           <ul class="mt-4 space-y-2">
             <li class="text-gray-900 font-semibold">10:00 am - 12:00 pm</li>
             <li class="text-gray-900 font-semibold">5:00 pm - 7:00 pm</li>
@@ -382,6 +363,27 @@
   </footer>
 
   <!-------------------- SECTION 4:FOOTER SECTION END -------------------->
+
+  <!-- JS -->
+  <script>
+    const hamburgerButton = document.getElementById("hamburger-menu");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const hamburgerIcon = document.getElementById("hamburger-icon");
+
+    // Toggle the mobile menu and the icon
+    hamburgerButton.addEventListener("click", function () {
+      mobileMenu.classList.toggle("hidden");
+      if (mobileMenu.classList.contains("hidden")) {
+        hamburgerIcon.classList.remove("fa-times");
+        hamburgerIcon.classList.add("fa-bars");
+        hamburgerIcon.style.transform = "rotate(0deg)";
+      } else {
+        hamburgerIcon.classList.remove("fa-bars");
+        hamburgerIcon.classList.add("fa-times");
+        hamburgerIcon.style.transform = "rotate(180deg)"; // Rotate cross icon
+      }
+    });
+  </script>
 </body>
 
 </html>
