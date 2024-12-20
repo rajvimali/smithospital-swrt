@@ -17,28 +17,28 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
     integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              trainone: ['"Train One"', 'sans-serif'],
-            },
-            colors: {
-              primary: "#1d4ed8",
-              secondary: "#9333ea",
-            },
-            fontSize: {
-              'custom-size': '110px',
-            },
-            lineHeight: {
-              'custom-line': '111px',
-            },
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            trainone: ['"Train One"', 'sans-serif'],
+          },
+          colors: {
+            primary: "#1d4ed8",
+            secondary: "#9333ea",
+          },
+          fontSize: {
+            'custom-size': '110px',
+          },
+          lineHeight: {
+            'custom-line': '111px',
           },
         },
-        plugins: [],
-      };
-    </script>
+      },
+      plugins: [],
+    };
+  </script>
 </head>
 
 <body class="bg-white">
@@ -117,7 +117,7 @@
   </section>
   <div
     class="font-trainone text-4xl lg:text-custom-size font-normal leading-custom-line  underline-offset-[from-font] decoration-skip-ink"
-    style="color: #0457A70D; position: absolute;";>
+    style="color: #0457A70D; position: absolute;" ;>
     Doctors
   </div>
   <!-------------------- SECTION 1:HEADER & HERO SECTION END -------------------->
@@ -126,12 +126,12 @@
   <section class="py-10" style="background: #E2F1FF; ">
     <div class="max-w-7xl mx-auto px-6" style="
     margin-top: 3%; position: relative;">
-    <div class="vector">
-      <img src="assets/images/Vector.png" alt="" class="src" style="position: absolute;
+      <div class="vector">
+        <img src="assets/images/Vector.png" alt="" class="src" style="position: absolute;
       top: 79%;
       width: 8%;
       left:-8%;">
-    </div>
+      </div>
       <!-- Header Section -->
       <h1 class="text-4xl font-bold text-center mb-10 text-gray-800">Our Dedicated <span
           class="text-green-600">Doctors</span></h1>
@@ -205,10 +205,10 @@
   <!-------------------- SECTION 2:DOCTORS SECTION END -------------------->
 
   <!-------------------- SECTION 3:BIOGRAPHY SECTION START -------------------->
-  <section class=" bg-gray-50 py-16">
+  <section class=" mt-[2%] py-16">
     <div class="max-w-7xl mx-auto flex px-6 grid grid-cols-1 md:grid-cols-2 items-center gap-4 relative z-10">
-      <div class="flex relative z-10 ">
-        <div class="bg-white p-6 rounded-lg relative flex-1 shadow-md ">
+      <div class="flex relative z-10 top-[45%] lg:top-[0%]">
+        <div class="bg-white p-2 lg:p-6 rounded-md relative flex-1 shadow-md ">
           <h2 class="text-3xl font-bold text-gray-800 mb-6">Personal Biography</h2>
           <ul class="space-y-4">
             <li class="flex items-center space-x-3">
@@ -232,11 +232,8 @@
             class="absolute top-2/4  -translate-y-1/2  w-40 h-auto" style="right:15%">
         </div>
 
-        <img src="assets/images/biography.png" alt="Doctor in Lab" class="rounded-lg order-2  shadow-lg object-cover"
-          style="width: 100%;position: absolute;
-            left: 90%;
-            z-index: -1;
-            top: -14%;">
+        <img src="assets/images/biography.png" alt="Doctor in Lab"
+          class="rounded-md order-2 w-full absolute left-0 lg:left-[90%] z-[-1] top-[-50%] lg:top-[-14%] shadow-lg object-cover">
       </div>
     </div>
   </section>
@@ -245,7 +242,7 @@
 
 
   <!-------------------- SECTION 4: FOOTER SECTION START -------------------->
-  <footer class="md:py-10 py-5 md:px-0 px-4">
+  <footer class="md:py-10 py-5 md:px-0 px-4 mt-[15%] lg:mt-[2%]">
     <!-- Newsletter Subscription Section -->
     <div class="md:w-2/5 w-full mx-auto rounded-lg text-white py-8" style="background: #094495">
       <div
