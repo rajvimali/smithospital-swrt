@@ -29,10 +29,6 @@
             primary: "#1d4ed8",
             secondary: "#9333ea",
           },
-          maxWidth: {
-            max-w-[1440px]: "1440px",
-            mxmax-w-[1440px]: "1920px",
-          },
           fontSize: {
             'custom-size': '110px',
           },
@@ -67,7 +63,7 @@
       <nav class="hidden md:flex space-x-4 text-gray-700">
         <a href="index.html" class="hover:text-blue-600 font-semibold">Home</a>
         <a href="aboutus.html" class="hover:text-blue-600 font-semibold">About Us</a>
-        <a href="services.html" class="hover:text-blue-600 font-semibold">Services</a>
+        <a href="services.html" class="text-blue-600 font-semibold">Services</a>
         <a href="gallery.html" class="hover:text-blue-600 font-semibold">Gallery</a>
         <a href="doctors.html" class="hover:text-blue-600 font-semibold">Doctors</a>
         <a href="blogs.html" class="hover:text-blue-600 font-semibold">Blog</a>
@@ -77,8 +73,7 @@
       <!-- Book Appointment Button (visible only on larger screens) -->
       <div class="hidden md:block">
         <a href="contactus.html"
-          class=" inline-flex items-center bg-blue-600 text-white font-semibold px-6 py-3 rounded-md shadow-lg hover:brightness-90 transition duration-300 "
-          style="background: linear-gradient(180deg, #094495 0%, #094495 100%);">
+          class=" inline-flex items-center bg-blue-600 text-white font-semibold px-6 py-3 rounded-md shadow-lg hover:brightness-90 transition duration-300 bg-gradient-to-b from-[#094495] to-[#094495]">
           Book Appointment
           <img src="assets/images/Frame.svg" alt="Arrow Icon" class="w-5 h-5 ml-2">
         </a>
@@ -110,28 +105,21 @@
   </header>
 
   <!-------------------- SERVICE SECTION START -------------------->
-  <section class="relative bg-blue-50" style="height: 570px; background-size: cover; background-position: center;">
+  <section class="relative bg-blue-50 h-[570px] bg-cover bg-center">
     <!-- Background Image -->
-    <div class="absolute inset-0" style="
-           background-image: url('assets/images/aboutus-main.png');
-           background-size: cover;
-           background-position: center;
-         "></div>
+    <div class="absolute inset-0 bg-[url('assets/images/aboutus-main.png')] bg-cover bg-center"></div>
 
     <!-- Content -->
     <div class="max-w-[1440px] mx-auto px-4 relative z-10 flex items-center justify-start h-full">
       <!-- Text Content -->
       <h3 class="text-7xl font-semibold text-gray-800 mb-4">Services</h3>
-      <img src="assets/images/pngwing 2.png" alt="" class="" style="width: 16%;
-      position: absolute;
-      top: 50%;
-      left: 12%;">
+      <img src="assets/images/pngwing 2.png" alt="" class="w-[16%] absolute top-1/2 left-[12%]">
     </div>
   </section>
   <!-------------------- SECTION 1:HEADER & HERO SECTION END -------------------->
 
   <!-------------------- SECTION 2:SERVICE OFFER SECTION START -------------------->
-  <section class="bg-white py-16" style="background: #F8F8F8;">
+  <section class="bg-white py-16 bg-[#F8F8F8]">
     <div class="max-w-[1440px] mx-auto text-center px-4">
       <!-- Section Title -->
       <h2 class="text-4xl font-bold text-gray-800 mb-8">
@@ -139,10 +127,11 @@
       </h2>
 
       <!-- Services Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-4 space-y-4">
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 space-y-4">
 
         <!-- Service 1: Delivery (Highlighted) -->
-        <div class="wow animate__fadeInUp bg-[#094495] text-white rounded-md shadow-sm p-8 flex flex-col items-center"
+        <div
+          class="wow animate__fadeInUp bg-[#094495] text-white rounded-md shadow-sm p-4 lg:p-8 flex flex-col items-center"
           data-wow-duration="2s" data-wow-delay="0.5s">
           <div class="w-16 h-16 flex items-center justify-center border border-transparent" style="
                 border: 1px solid;
@@ -158,8 +147,8 @@
         </div>
 
         <!-- Service 2: Adolescence -->
-        <div class="wow animate__fadeInUp bg-white  shadow-md p-8 flex flex-col items-center" data-wow-duration="2s"
-          data-wow-delay="0.5s" style="
+        <div class="wow animate__fadeInUp bg-white  shadow-md p-4 lg:p-8 flex flex-col items-center"
+          data-wow-duration="2s" data-wow-delay="0.5s" style="
               border: 1px solid;
               border-image-source: linear-gradient(
                 180deg,
@@ -181,7 +170,7 @@
         </div>
 
         <!-- Service 3: Sonography -->
-        <div class="wow animate__fadeInUp bg-white rounded-sm shadow-md p-8 flex flex-col items-center"
+        <div class="wow animate__fadeInUp bg-white rounded-sm shadow-md p-4 lg:p-8 flex flex-col items-center"
           data-wow-duration="2s" data-wow-delay="0.5s">
           <div class="w-16 h-16 flex items-center justify-center rounded-lg border border-transparent" style="
                 border: 1px solid;
@@ -197,7 +186,7 @@
         </div>
 
         <!-- Service 4: Family Planning -->
-        <div class="wow animate__fadeInUp bg-white rounded-sm shadow-md p-8 flex flex-col items-center"
+        <div class="wow animate__fadeInUp bg-white rounded-sm shadow-md p-4 lg:p-8 flex flex-col items-center"
           data-wow-duration="2s" data-wow-delay="0.5s">
           <div class="w-16 h-16 flex items-center justify-center rounded-lg border border-transparent" style="
                 border: 1px solid;
@@ -215,9 +204,10 @@
         </div>
 
         <!-- Service 5: Menopausal -->
-        <div class="wow animate__fadeInUp bg-white rounded-sm shadow-md p-8 flex flex-col items-center"
-          data-wow-duration="2s" data-wow-delay="0.5s">
-          <div class="w-16 h-16 flex items-center justify-center rounded-lg border border-transparent" style="
+        <div class="md:block hidden">
+          <div class="wow animate__fadeInUp bg-white rounded-sm shadow-md p-4 lg:p-8  flex flex-col items-center"
+            data-wow-duration="2s" data-wow-delay="0.5s">
+            <div class="w-16 h-16 flex items-center justify-center rounded-lg border border-transparent" style="
                 border: 1px solid;
                 border-image-source: linear-gradient(
                   180deg,
@@ -225,17 +215,19 @@
                   rgba(6, 117, 188, 0) 100%
                 );
               ">
-            <img src="assets/images/Group 161615 (1).svg" alt="" class="src">
+              <img src="assets/images/Group 161615 (1).svg" alt="" class="src">
+            </div>
+            <p class="font-semibold text-lg mt-4 text-gray-800">
+              Menopausal
+            </p>
           </div>
-          <p class="font-semibold text-lg mt-4 text-gray-800">
-            Menopausal
-          </p>
         </div>
 
         <!-- Service 6: IVF (Lab Tie-Up) -->
-        <div class="wow animate__fadeInUp bg-white rounded-sm shadow-md p-8 flex flex-col items-center"
-          data-wow-duration="2s" data-wow-delay="0.5s">
-          <div class="w-16 h-16 flex items-center justify-center rounded-lg border border-transparent" style="
+        <div class="md:block hidden">
+          <div class="wow animate__fadeInUp bg-white rounded-sm shadow-md p-4 lg:p-8  flex flex-col items-center"
+            data-wow-duration="2s" data-wow-delay="0.5s">
+            <div class="w-16 h-16 flex items-center justify-center rounded-lg border border-transparent" style="
                 border: 1px solid;
                 border-image-source: linear-gradient(
                   180deg,
@@ -243,17 +235,19 @@
                   rgba(6, 117, 188, 0) 100%
                 );
               ">
-            <img src="assets/images/Group 161615 (2).svg" alt="" class="src">
+              <img src="assets/images/Group 161615 (2).svg" alt="" class="src">
+            </div>
+            <p class="font-semibold text-lg mt-4 text-gray-800">
+              IVF (Lab Tie-Up)
+            </p>
           </div>
-          <p class="font-semibold text-lg mt-4 text-gray-800">
-            IVF (Lab Tie-Up)
-          </p>
         </div>
 
         <!-- Service 7: Gynecology -->
-        <div class="wow animate__fadeInUp bg-white rounded-sm shadow-md p-8 flex flex-col items-center"
-          data-wow-duration="2s" data-wow-delay="0.5s">
-          <div class="w-16 h-16 flex items-center justify-center rounded-lg border border-transparent" style="
+        <div class="md:block hidden">
+          <div class="wow animate__fadeInUp bg-white rounded-sm shadow-md p-4 lg:p-8  flex flex-col items-center"
+            data-wow-duration="2s" data-wow-delay="0.5s">
+            <div class="w-16 h-16 flex items-center justify-center rounded-lg border border-transparent" style="
                 border: 1px solid;
                 border-image-source: linear-gradient(
                   180deg,
@@ -261,11 +255,12 @@
                   rgba(6, 117, 188, 0) 100%
                 );
               ">
-            <img src="assets/images/Group 161616 (1).svg" alt="" class="src">
+              <img src="assets/images/Group 161616 (1).svg" alt="" class="src">
+            </div>
+            <p class="font-semibold text-lg mt-4 text-gray-800">
+              Gynecology
+            </p>
           </div>
-          <p class="font-semibold text-lg mt-4 text-gray-800">
-            Gynecology
-          </p>
         </div>
       </div>
     </div>
@@ -281,9 +276,9 @@
       </h2>
       <div class="grid grid-cols-1 lg:grid-cols-2 ">
         <!-- Left Column -->
-        <div class="flex flex-col items-center">
+        <div class="flex flex-col items-center lg:items-end px-5">
           <!-- Tab Section -->
-          <div class="bg-white shadow-md rounded-lg overflow-hidden w-[382px]">
+          <div class="bg-white shadow-md rounded-lg overflow-hidden w-[370px]">
             <div class="flex flex-col">
               <button class="text-left px-6 py-4 bg-[#094495] text-white font-medium hover:bg-blue-600 transition">
                 Garbh Sanskar Kendra
@@ -301,20 +296,21 @@
           </div>
 
           <!-- Image Section -->
-          <div class="rounded-lg overflow-hidden mt-6">
-            <img src="assets/images/baby.png" alt="Baby Image" class=" h-[472px] shadow-md" />
+          <div class="rounded-md overflow-hidden mt-6 mb-6">
+            <img src="assets/images/baby.png" alt="Baby Image" class="h-[430px] lg:h-[480px] shadow-md" />
           </div>
         </div>
 
         <!-- Right Column -->
         <div class="flex flex-col items-center">
           <!-- Anatomy Image -->
-          <div class="mb-6">
-            <img src="assets/images/anatomy.png" alt="Anatomy Image" class=" h-auto rounded-lg shadow-md" />
+          <div class="mb-6 px-4">
+            <img src="assets/images/anatomy.png" alt="Anatomy Image"
+              class=" h-auto rounded-md shadow-sm object-cover" />
           </div>
 
           <!-- Description Section -->
-          <div class="" style="position: relative;">
+          <div class="px-4 relative">
             <p class="text-gray-600 leading-relaxed mb-4">
               The Sanskrit Word - "Garbh" means Foetus and "Sanskar" means Educating the Mind. It is traditionally
               believed that a child's mental & behavioral development starts in the womb as it can be influenced by the
@@ -350,10 +346,10 @@
             <p class="mt-4 text-gray-600">
               Smit Hospital provides all above tasks during "Garbh – Sanskar" sessions.
             </p>
-            <img src="assets/images/Vector.png" alt="" class="src" style="position: absolute;
-            top: 54%;
-            width: 12%;
-            right: -4%;">
+            <div class="hidden lg:block">
+
+              <img src="assets/images/Vector.png" alt="" class="absolute top-[54%] w-[12%] right-[-4%]">
+            </div>
           </div>
         </div>
       </div>
@@ -368,69 +364,75 @@
       <h2 class="text-3xl font-bold text-gray-800">
         Our <span class="text-green-600">Facilities</span>
       </h2>
-      <p class="text-gray-500 mt-2">
+      <p class="text-gray-500 p-1 mt-2">
         Our facilities add a personal touch to help make your Smit Hospital experience comfortable, pleasant, and
         personalized.
       </p>
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-10">
         <!-- Facility Box 1 -->
-        <div class="border rounded-md shadow-sm p-6 flex flex-col items-center">
+        <div class="border rounded-md shadow-sm p-3 lg:p-6 flex flex-col items-center">
           <img src="assets/images/Group 1116601320.svg" alt="" class="src">
-          <h3 class="text-lg font-semibold text-gray-800">Message For Delivery</h3>
+          <h3 class="text-base lg:text-lg font-semibold text-gray-800">Message For Delivery</h3>
         </div>
         <!-- Facility Box 2 -->
-        <div class="border rounded-md shadow-sm p-6 flex flex-col items-center">
+        <div class="border rounded-md shadow-sm p-3 lg:p-6 flex flex-col items-center">
           <img src="assets/images/Frame (2).svg" alt="" class="src">
-          <h3 class="text-lg font-semibold text-gray-800">Daily Snacks For Patient</h3>
+          <h3 class="text-base lg:text-lg font-semibold text-gray-800">Daily Snacks For Patient</h3>
         </div>
         <!-- Facility Box 3 -->
-        <div class="border rounded-md shadow-sm p-6 flex flex-col items-center">
+        <div class="border rounded-md shadow-sm p-3 lg:p-6 flex flex-col items-center">
           <img src="assets/images/Frame (3).svg" alt="" class="src">
-          <h3 class="text-lg font-semibold text-gray-800">Himalayan Baby Kit For <br> New Born Baby</h3>
+          <h3 class="text-base lg:text-lg font-semibold text-gray-800">Himalayan Baby Kit For New Born Baby</h3>
         </div>
         <!-- Facility Box 4 -->
-        <div class="border rounded-md shadow-sm p-6 flex flex-col items-center">
+        <div class="border rounded-md shadow-sm p-3 lg:p-6 flex flex-col items-center">
           <img src="assets/images/Frame (4).svg" alt="" class="src">
-          <h3 class="text-lg font-semibold text-gray-800">Gift For Mother</h3>
+          <h3 class="text-base lg:text-lg font-semibold text-gray-800">Gift For Mother</h3>
         </div>
         <!-- Facility Box 5 -->
-        <div class="border rounded-md shadow-sm p-6 flex flex-col items-center">
-          <img src="assets/images/Frame (5).svg" alt="" class="src">
-          <h3 class="text-lg font-semibold text-gray-800">24*7 Pharmacy</h3>
+        <div class="md:block hidden">
+          <div class="border rounded-md shadow-sm p-6 flex flex-col items-center">
+            <img src="assets/images/Frame (5).svg" alt="" class="src">
+            <h3 class="text-lg font-semibold text-gray-800">24*7 Pharmacy</h3>
+          </div>
         </div>
         <!-- Facility Box 6 -->
-        <div class="border rounded-md shadow-sm p-6 flex flex-col items-center">
-          <img src="assets/images/Frame (6).svg" alt="" class="src">
-          <h3 class="text-lg font-semibold text-gray-800">Women Who Want To <br> Freeze Their Eggs</h3>
+        <div class="md:block hidden">
+          <div class="border rounded-md shadow-sm p-6 flex flex-col items-center">
+            <img src="assets/images/Frame (6).svg" alt="" class="src">
+            <h3 class="text-lg font-semibold text-gray-800">Women Who Want To Freeze Their Eggs</h3>
+          </div>
         </div>
         <!-- Facility Box 7 -->
-        <div class="border rounded-md shadow-sm p-6 flex flex-col items-center">
-          <img src="assets/images/Frame (7).svg" alt="" class="src">
-          <h3 class="text-lg font-semibold text-gray-800">Laboratory</h3>
+        <div class="md:block hidden">
+          <div class="border rounded-md shadow-sm p-6 flex flex-col items-center">
+            <img src="assets/images/Frame (7).svg" alt="" class="src">
+            <h3 class="text-lg font-semibold text-gray-800">Laboratory</h3>
+          </div>
         </div>
         <!-- Facility Box 8 -->
-        <div class="border rounded-md shadow-sm p-6 flex flex-col items-center">
-          <img src="assets/images/Frame (8).svg" alt="" class="src">
-          <h3 class="text-lg font-semibold text-gray-800">Born Baby Welcome <br> Celebration</h3>
+        <div class="md:block hidden">
+          <div class="border rounded-md shadow-sm p-6 flex flex-col items-center">
+            <img src="assets/images/Frame (8).svg" alt="" class="src">
+            <h3 class="text-lg font-semibold text-gray-800">Born Baby Welcome Celebration</h3>
+          </div>
         </div>
       </div>
     </div>
   </section>
-
   <!-------------------- SECTION 4:FACILITIES SECTION END -------------------->
 
-
   <!-------------------- SECTION 5: FOOTER SECTION START -------------------->
-  <footer class=" py-10">
+  <footer class=" md:py-10 py-5 md:px-0 px-4">
     <!-- Newsletter Subscription Section -->
-    <div class="w-2/5 mx-auto rounded-lg text-white py-8" style="background: #094495">
-      <div class="max-w-[1440px] px-4 text-center lg:text-left flex flex-col lg:flex-row items-center justify-between gap-6">
+    <div class="md:w-2/5 w-full mx-auto rounded-lg text-white py-8 bg-[#094495]">
+      <div
+        class="max-w-[1440px] px-4 text-center lg:text-left flex flex-col lg:flex-row items-center justify-between gap-6">
         <h3 class="text-xl font-bold">Subscribe To Our Newsletter</h3>
         <div class="flex items-center w-full lg:w-auto">
           <input type="email" placeholder="Enter your email address"
             class="w-full lg:w-80 px-4 py-2 rounded-l-md focus:outline-none text-gray-700" />
-          <button class="bg-blue-800 hover:bg-blue-900 px-6 py-2 text-white rounded-r-md font-medium"
-            style="background: #072854">
+          <button class=" hover:bg-blue-900 px-6 py-2 text-white rounded-r-md font-medium bg-[#072854]">
             Subscribe
           </button>
         </div>
@@ -438,21 +440,21 @@
     </div>
 
     <!-- Footer Main Content -->
-    <div class="max-w-[1440px] mx-auto px-4">
+    <div class="max-w-[1440px] mx-auto md:px-4 px-0">
       <!-- First Section: Logo and Social Icons -->
       <div class="flex flex-col lg:flex-row justify-between items-center mt-6 mb-4">
         <div class="flex flex-col items-center lg:items-start">
           <img src="assets/images/logo.png" alt="Smit Hospital Logo" class="mb-4 w-40" />
         </div>
         <div class="flex items-center gap-4">
-          <span class=" font-medium" style="color: #094495;">Follow US:</span>
-          <a href="#" class="text-white py-1 px-2 rounded-full hover:text-blue-600" style="background: #094495;"><i
+          <span class=" font-medium text-[#094495]">Follow US:</span>
+          <a href="#" class=" text-white py-1 bg-[#094495] px-2 rounded-full hover:text-blue-600"><i
               class="fa-brands fa-facebook text-md"></i></a>
-          <a href="#" class="text-white py-1 px-2 rounded-full hover:text-blue-600" style="background: #094495;"><i
+          <a href="#" class=" text-white py-1 bg-[#094495] px-2 rounded-full hover:text-blue-600"><i
               class="fa-brands fa-instagram text-md"></i></a>
-          <a href="#" class="text-white py-1 px-2 rounded-full hover:text-blue-600" style="background: #094495;"><i
+          <a href="#" class=" text-white py-1 bg-[#094495] px-2 rounded-full hover:text-blue-600"><i
               class="fa-brands fa-linkedin text-md"></i></a>
-          <a href="#" class="text-white py-1 px-2 rounded-full hover:text-blue-600" style="background: #094495;"><i
+          <a href="#" class=" text-white py-1 bg-[#094495] px-2 rounded-full hover:text-blue-600"><i
               class="fa-brands fa-twitter text-md"></i></a>
         </div>
       </div>
@@ -461,18 +463,18 @@
       <div class="grid grid-cols-1 border-t border-gray-300 lg:grid-cols-4 py-4 gap-8 mb-2">
         <!-- Contact Info -->
         <div>
-          <h4 class=" font-bold text-lg" style="color: #094495;">Contact us</h4>
+          <h4 class=" font-bold text-lg text-[#094495]">Contact us</h4>
           <p class="text-gray-600 mt-2 font-semibold">
-            <i class="fa-solid fa-location-dot " style="color: #094495;"></i> 3rd Floor,
+            <i class="fa-solid fa-location-dot  text-[#094495]"></i> 3rd Floor,
             CTC Building, Varachha Main Road, near Baroda Prestage, Hans
             Society, Surat, Gujarat 395006
           </p>
           <p class="text-gray-600 mt-2 font-semibold">
-            <i class="fa-solid fa-phone "></i> +91 9825312133 /
+            <i class="fa-solid fa-phone  text-[#094495]"></i> +91 9825312133 /
             261 25632332
           </p>
           <p class="text-gray-600 mt-2 font-semibold">
-            <i class="fa-solid fa-envelope " style="color: #094495;"></i>
+            <i class="fa-solid fa-envelope  text-[#094495]"></i>
             <a href="mailto:info@smithospitals.com" class="text-grey-600"></a>
             Email : info@smithospitals.com</a>
           </p>
@@ -480,7 +482,7 @@
 
         <!-- Information -->
         <div>
-          <h4 class=" font-bold text-lg" style="color: #094495;">Information</h4>
+          <h4 class=" font-bold text-lg text-[#094495]">Information</h4>
           <ul class="mt-4 space-y-2">
             <li>
               <a href="services.html" class="text-gray-900 font-semibold hover:text-blue-600">Services & Facilities</a>
@@ -496,7 +498,7 @@
 
         <!-- Quick Links -->
         <div>
-          <h4 class=" font-bold text-lg" style="color: #094495;">Quick Link</h4>
+          <h4 class=" font-bold text-lg text-[#094495]">Quick Link</h4>
           <ul class="mt-4 space-y-2">
             <li>
               <a href="index.html" class="text-gray-900 font-semibold hover:text-blue-600">Home</a>
@@ -515,7 +517,7 @@
 
         <!-- Timing -->
         <div>
-          <h4 class="text-blue-700 font-bold text-lg">Monday to Saturday</h4>
+          <h4 class=" font-bold text-lg text-[#094495]">Monday to Saturday</h4>
           <ul class="mt-4 space-y-2">
             <li class="text-gray-900 font-semibold">10:00 am - 12:00 pm</li>
             <li class="text-gray-900 font-semibold">5:00 pm - 7:00 pm</li>

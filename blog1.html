@@ -65,8 +65,7 @@
       <!-- Book Appointment Button (visible only on larger screens) -->
       <div class="hidden md:block">
         <a href="contactus.html"
-          class=" inline-flex items-center bg-blue-600 text-white font-semibold px-6 py-3 rounded-md shadow-lg hover:brightness-90 transition duration-300 "
-          style="background: linear-gradient(180deg, #094495 0%, #094495 100%);">
+          class=" inline-flex items-center bg-blue-600 text-white font-semibold px-6 py-3 rounded-md shadow-lg hover:brightness-90 transition duration-300 bg-gradient-to-b from-[#094495] to-[#094495]">
           Book Appointment
           <img src="assets/images/Frame.svg" alt="Arrow Icon" class="w-5 h-5 ml-2">
         </a>
@@ -98,48 +97,30 @@
   </header>
 
   <!-------------------- SERVICE SECTION START -------------------->
-  <section class="relative bg-blue-50" style="height: 570px; background-size: cover; background-position: center;">
+  <section class="relative bg-blue-50 h-[570px] bg-cover bg-center">
     <!-- Background Image -->
-    <div class="absolute inset-0" style="
-           background-image: url('assets/images/aboutus-main.png');
-           background-size: cover;
-           background-position: center;
-         "></div>
+    <div class="absolute inset-0 bg-[url('assets/images/aboutus-main.png')] bg-cover bg-center"></div>
 
     <!-- Content -->
     <div class="max-w-[1440px] mx-auto px-4 relative z-10 flex items-center justify-start h-full">
       <!-- Text Content -->
       <h3 class="text-7xl font-semibold text-gray-800 mb-4">Blog</h3>
-      <img src="assets/images/pngwing 2.png" alt="" class="" style="width: 16%;
-      position: absolute;
-      top: 50%;
-      left: 12%;">
+      <img src="assets/images/pngwing 2.png" alt="" class="w-[16%] absolute top-1/2 left-[12%]">
     </div>
     <div
-      class="font-trainone text-4xl lg:text-custom-size font-normal leading-custom-line  underline-offset-[from-font] decoration-skip-ink"
-      style="color: #0457A70D;">
+      class="font-trainone text-4xl lg:text-custom-size font-normal leading-custom-line  underline-offset-[from-font] decoration-skip-ink text-[#0457A70D]">
       Blog
     </div>
   </section>
   <!-------------------- SECTION 1:HEADER & HERO SECTION END -------------------->
 
   <!-------------------- SECTION 2:BLOG SECTION START -------------------->
-  <!DOCTYPE html>
-  <html lang="en">
-
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Page</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
 
   <body class="bg-gray-100">
     <!-- Blog max-w-[1440px] -->
     <div class="max-w-5xl mx-auto mt-10 px-6">
       <!-- Blog Main Section -->
-      <div class="bg-white rounded-lg " style="
-      margin-top: 10%;">
+      <div class="bg-white rounded-lg mt-[10%]">
         <!-- Blog Content Section -->
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <!-- Left: Blog Main Image -->
@@ -181,27 +162,23 @@
             </div>
 
             <!-- Follow Us Section -->
-            <div class="bg-[#F9F7FE] p-4 rounded-sm max-w-sm mx-auto " style="position: absolute;">
+            <div class="bg-[#F9F7FE] p-4 rounded-sm max-w-sm mx-auto absolute">
               <h2 class="text-lg font-semibold text-gray-800 mb-3">Follow Us On</h2>
               <div class="flex justify-center space-x-4">
                 <!-- Facebook -->
-                <a href="#" class="flex items-center justify-center p-3 bg-white rounded-full " style="height: 21%;
-    width: 18%;">
+                <a href="#" class="flex items-center justify-center p-3 bg-white rounded-full h-[21%] w-[18%]">
                   <img src="assets/images/facebook.png" alt="Facebook">
                 </a>
                 <!-- Instagram -->
-                <a href="#" class="flex items-center justify-center p-3 bg-white rounded-full " style="height: 20%;
-    width: 18%;">
+                <a href="#" class="flex items-center justify-center p-3 bg-white rounded-full h-[20%] w-[18%]">
                   <img src="assets/images/instagram.png" alt="Instagram">
                 </a>
                 <!-- LinkedIn -->
-                <a href="#" class="flex items-center justify-center p-3 bg-white rounded-full " style="height: 20%;
-    width: 18%;">
+                <a href="#" class="flex items-center justify-center p-3 bg-white rounded-full h-[20%] w-[18%]">
                   <img src="assets/images/linkedin.png">
                 </a>
                 <!-- Twitter -->
-                <a href="#" class="flex items-center justify-center p-3 bg-white rounded-full " style="height: 20%;
-    width: 18%;">
+                <a href="#" class="flex items-center justify-center p-3 bg-white rounded-full h-[20%] w-[18%]">
                   <img src="assets/images/twitter.png" alt="Twitter">
                 </a>
               </div>
@@ -237,8 +214,9 @@
           </p>
         </div>
         <div class="flex justify-center mt-8">
-          <button class="bg-blue-600 text-white font-semibold px-4 py-2 rounded-md shadow hover:brightness-90"
-            style="background: linear-gradient(180deg, #094495 0%, #094495 100%)"> <a href="blogs.html">
+          <button
+            class="bg-blue-600 text-white font-semibold px-4 py-2 rounded-md shadow hover:brightness-90 bg-gradient-to-b from-[#094495] to-[#094495]">
+            <a href="blogs.html">
               <i class="fa-solid fa-angles-left"></i> Back to Blogs</a>
           </button>
         </div>
@@ -248,17 +226,16 @@
     <!-------------------- SECTION 2:BLOG SECTION END -------------------->
 
     <!-------------------- SECTION 3: FOOTER SECTION START -------------------->
-    <footer class="md:py-10 py-5 md:px-0 px-4">
+    <footer class=" md:py-10 py-5 md:px-0 px-4">
       <!-- Newsletter Subscription Section -->
-      <div class="md:w-2/5 w-full mx-auto rounded-lg text-white py-8" style="background: #094495">
+      <div class="md:w-2/5 w-full mx-auto rounded-lg text-white py-8 bg-[#094495]">
         <div
           class="max-w-[1440px] px-4 text-center lg:text-left flex flex-col lg:flex-row items-center justify-between gap-6">
           <h3 class="text-xl font-bold">Subscribe To Our Newsletter</h3>
           <div class="flex items-center w-full lg:w-auto">
             <input type="email" placeholder="Enter your email address"
               class="w-full lg:w-80 px-4 py-2 rounded-l-md focus:outline-none text-gray-700" />
-            <button class="bg-blue-800 hover:bg-blue-900 px-6 py-2 text-white rounded-r-md font-medium"
-              style="background: #072854">
+            <button class=" hover:bg-blue-900 px-6 py-2 text-white rounded-r-md font-medium bg-[#072854]">
               Subscribe
             </button>
           </div>
@@ -273,14 +250,14 @@
             <img src="assets/images/logo.png" alt="Smit Hospital Logo" class="mb-4 w-40" />
           </div>
           <div class="flex items-center gap-4">
-            <span class="font-medium" style="color: #094495;">Follow US:</span>
-            <a href="#" class="text-white py-1 px-2 rounded-full hover:text-blue-600" style="background: #094495;"><i
+            <span class=" font-medium text-[#094495]">Follow US:</span>
+            <a href="#" class=" text-white py-1 bg-[#094495] px-2 rounded-full hover:text-blue-600"><i
                 class="fa-brands fa-facebook text-md"></i></a>
-            <a href="#" class="text-white py-1 px-2 rounded-full hover:text-blue-600" style="background: #094495;"><i
+            <a href="#" class=" text-white py-1 bg-[#094495] px-2 rounded-full hover:text-blue-600"><i
                 class="fa-brands fa-instagram text-md"></i></a>
-            <a href="#" class="text-white py-1 px-2 rounded-full hover:text-blue-600" style="background: #094495;"><i
+            <a href="#" class=" text-white py-1 bg-[#094495] px-2 rounded-full hover:text-blue-600"><i
                 class="fa-brands fa-linkedin text-md"></i></a>
-            <a href="#" class="text-white py-1 px-2 rounded-full hover:text-blue-600" style="background: #094495;"><i
+            <a href="#" class=" text-white py-1 bg-[#094495] px-2 rounded-full hover:text-blue-600"><i
                 class="fa-brands fa-twitter text-md"></i></a>
           </div>
         </div>
@@ -289,65 +266,62 @@
         <div class="grid grid-cols-1 border-t border-gray-300 lg:grid-cols-4 py-4 gap-8 mb-2">
           <!-- Contact Info -->
           <div>
-            <h4 class=" font-bold text-lg" style="color: #094495;">Contact us</h4>
+            <h4 class=" font-bold text-lg text-[#094495]">Contact us</h4>
             <p class="text-gray-600 mt-2 font-semibold">
-              <i class="fa-solid fa-location-dot " style="color: #094495;"></i> 3rd Floor,
+              <i class="fa-solid fa-location-dot  text-[#094495]"></i> 3rd Floor,
               CTC Building, Varachha Main Road, near Baroda Prestage, Hans
               Society, Surat, Gujarat 395006
             </p>
             <p class="text-gray-600 mt-2 font-semibold">
-              <i class="fa-solid fa-phone " style="color: #094495;"></i> +91 9825312133 /
+              <i class="fa-solid fa-phone  text-[#094495]"></i> +91 9825312133 /
               261 25632332
             </p>
             <p class="text-gray-600 mt-2 font-semibold">
-              <i class="fa-solid fa-envelope" style="color: #094495;"></i>
+              <i class="fa-solid fa-envelope  text-[#094495]"></i>
               <a href="mailto:info@smithospitals.com" class="text-grey-600"></a>
               Email : info@smithospitals.com</a>
             </p>
           </div>
 
           <!-- Information -->
-          <div class="flex md:flex-col flex-row">
-            <!-- Information -->
-            <div class="info flex-1">
-              <h4 class="font-bold text-lg" style="color: #094495;">Information</h4>
-              <ul class="mt-4 space-y-2">
-                <li>
-                  <a href="services.html" class="text-gray-900 font-semibold hover:text-blue-600">Services &
-                    Facilities</a>
-                </li>
-                <li>
-                  <a href="#" class="text-gray-900 font-semibold hover:text-blue-600">Our Culture</a>
-                </li>
-                <li>
-                  <a href="contactus.html" class="text-gray-900 font-semibold hover:text-blue-600">Contact</a>
-                </li>
-              </ul>
-            </div>
+          <div>
+            <h4 class=" font-bold text-lg text-[#094495]">Information</h4>
+            <ul class="mt-4 space-y-2">
+              <li>
+                <a href="services.html" class="text-gray-900 font-semibold hover:text-blue-600">Services &
+                  Facilities</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-900 font-semibold hover:text-blue-600">Our Culture</a>
+              </li>
+              <li>
+                <a href="contactus.html" class="text-gray-900 font-semibold hover:text-blue-600">Contact</a>
+              </li>
+            </ul>
+          </div>
 
-            <!-- Quick Links -->
-            <div class="quick flex-1">
-              <h4 class="font-bold text-lg" style="color: #094495;">Quick Link</h4>
-              <ul class="mt-4 space-y-2">
-                <li>
-                  <a href="index.html" class="text-gray-900 font-semibold hover:text-blue-600">Home</a>
-                </li>
-                <li>
-                  <a href="doctors.html" class="text-gray-900 font-semibold hover:text-blue-600">Doctor</a>
-                </li>
-                <li>
-                  <a href="blogs.html" class="text-gray-900 font-semibold hover:text-blue-600">Blogs</a>
-                </li>
-                <li>
-                  <a href="contactus.html" class="text-gray-900 font-semibold hover:text-blue-600">Appointment</a>
-                </li>
-              </ul>
-            </div>
+          <!-- Quick Links -->
+          <div>
+            <h4 class=" font-bold text-lg text-[#094495]">Quick Link</h4>
+            <ul class="mt-4 space-y-2">
+              <li>
+                <a href="index.html" class="text-gray-900 font-semibold hover:text-blue-600">Home</a>
+              </li>
+              <li>
+                <a href="doctors.html" class="text-gray-900 font-semibold hover:text-blue-600">Doctor</a>
+              </li>
+              <li>
+                <a href="blogs.html" class="text-gray-900 font-semibold hover:text-blue-600">Blogs</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-900 font-semibold hover:text-blue-600">Appointment</a>
+              </li>
+            </ul>
           </div>
 
           <!-- Timing -->
           <div>
-            <h4 class="text-blue-700 font-bold text-lg" style="color: #094495;">Monday to Saturday</h4>
+            <h4 class=" font-bold text-lg text-[#094495]">Monday to Saturday</h4>
             <ul class="mt-4 space-y-2">
               <li class="text-gray-900 font-semibold">10:00 am - 12:00 pm</li>
               <li class="text-gray-900 font-semibold">5:00 pm - 7:00 pm</li>
@@ -388,4 +362,4 @@
     </script>
   </body>
 
-  </html>
+</html>
